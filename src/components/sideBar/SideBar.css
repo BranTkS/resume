@@ -1,0 +1,25 @@
+
+.TBS {
+    width: 100%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+}
+
+.bkgLoad{
+    background-image: url('../../assets/images/TBS.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.sideBar {
+    width: 30%;
+    float:left;
+    background-color: rgb(42, 13, 227);
+    color: aliceblue;
+    text-align: left;
+}
+
+.sidebarText{
+    padding: 0 5% 0 5%;
+}

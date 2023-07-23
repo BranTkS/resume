@@ -1,8 +1,6 @@
 import './App.css'
-import ContactDetails from './components/Contact-details'
-import NameHeader from './components/nameHeader'
-import SideBar from './components/sideBar/sidebar'
-import TBSImage from './assets/images/TBS.jpg'
+import ResumeBody from './components/body/ResumeBody'
+import SideBar from './components/sideBar/SideBar'
 
 function App() {
 
@@ -10,10 +8,9 @@ function App() {
   return (
     <>
       <div>
-        <SideBar TBSImage = {TBSImage}/>
-        <NameHeader/>
-      <ContactDetails/>
-       </div>
+        <SideBar />
+        <ResumeBody />
+      </div>
     </>
   )
 }
