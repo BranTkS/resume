@@ -2,7 +2,7 @@ import NameHeader from './NameHeader'
 import ContactDetails from './Contact-details'
 import WorkHistory from './WorkHistory'
 import Portfolio from './Portfolio'
-import Academics from './Academics'
+import Academics from './academics/Academics'
 
 import './resumeBody.scss'
 
