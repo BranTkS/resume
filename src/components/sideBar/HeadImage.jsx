@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import imgTbs from '../../assets/images/TBS.jpg'
 
 const HeadImage = () => {
 
-    return(
+
+    function loaded() {
+        setShowImg("TBS")
+    }
+
+    const [showImg, setShowImg] = useState("loadingTBS");
+
+    return (
         <div className='bkgLoad'>
-        <img src={imgTbs} alt ="Tanaka picture" className="TBS" loading='lazy'/>
+            <img src={imgTbs} alt="Tanaka picture" className={showImg} loading='lazy' onLoad={loaded} />
         </div>
     )
 

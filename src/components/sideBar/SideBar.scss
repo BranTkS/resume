@@ -1,5 +1,11 @@
 
+.loadingTBS{
+opacity: 0;
+transition: opacity 200ms ease-in-out ;
+}
+
 .TBS {
+    opacity: 1;
     width: 100%;
     height: auto;
     object-position: center;
@@ -7,7 +13,7 @@
 }
 
 .bkgLoad{
-    background-image: url('../../assets/images/TBS.jpg');
+    background-image: url('../../assets/images/TBSmini.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -24,4 +30,8 @@
 .sidebarText{
     padding: 0 5% 0 5%;
     max-width: 100%;
+}
+
+.skillsTitle{
+    font-size: 4vw;
 }

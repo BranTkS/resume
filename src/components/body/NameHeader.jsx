@@ -1,11 +1,13 @@
+import { Fragment } from "react";
+
 const NameHeader = () => {
 
     return (
-        <>
+        <Fragment className="nameHeader">
             <h1>Tanaka B
                 Shumba</h1>
-            <h1>SOFTWARE DEVELOPER</h1>
-        </>
+            <h3>SOFTWARE DEVELOPER</h3>
+        </Fragment>
 
     )
 }

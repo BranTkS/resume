@@ -2,9 +2,11 @@ import NameHeader from './NameHeader'
 import ContactDetails from './Contact-details'
 import WorkHistory from './WorkHistory'
 import Portfolio from './Portfolio'
-import Academics from './academics/Academics'
+import Academics from './Academics'
+import Links from './Links'
 
 import './resumeBody.scss'
+
 
 const ResumeBody = () => {
 
@@ -14,6 +16,7 @@ const ResumeBody = () => {
             <div className='resumeBody'>
                 <NameHeader />
                 <ContactDetails />
+                <Links />
                 <WorkHistory />
                 <Portfolio />
                 <Academics />

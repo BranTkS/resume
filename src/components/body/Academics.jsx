@@ -8,7 +8,7 @@ const Academics = () => {
         },
         {
             school: "ANDELA SCHOLARSHIP PROGRAMS",
-            learnings: "web and app development",
+            learnings: "Web and app development",
             story: <ul className="text-end">
                 <li>We were taught how to make
                     android applications using
@@ -44,8 +44,9 @@ const Academics = () => {
             <ul key={academics.school}>
                 <li>
                     <div className="row">
-                        <h1 id="title1" className="col-md-4 h2 text-start">{academics.school}</h1>
+                        <h1 id="subtitle" className="col-md-3 h2 text-start">{academics.school}</h1>
 
+                        <div className="col-md-1 "></div>
                         <div className="col-md-8 ">
                             <h1 className="h4 text-end">{academics.learnings}</h1>
 
@@ -59,7 +60,7 @@ const Academics = () => {
 
     return (
         <div className="container-fluid">
-            <h1 className="h2">Academic History</h1>
+            <h1 className="title">Academic History</h1>
             {allAcademics}
         </div>
     )

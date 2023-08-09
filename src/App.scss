@@ -1,28 +1,41 @@
+$purple: rgb(42, 13, 227);
+
+
+//page settings.
 #root {
   width: 98%;
   margin: 0 auto;
+  color:$purple;
   text-align: center;
+  overflow: hidden;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1{
+font-size:12vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+p, li{
+  font-size: 2vw;
+}
+
+.title{
+  text-decoration:underline;
+  padding-top: 7dvh;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+  //header
+.nameHeader h1 {
+font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+//link area
+.linkContent{
+  color:$purple
   }
-}
 
+
+//contact area
+.contact {
+    border-top: solid $purple 1dvi;
+}
