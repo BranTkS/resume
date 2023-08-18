@@ -1,21 +1,40 @@
 $purple: rgb(42, 13, 227);
+$smallText: 2vw ;
+$headingText: 12vw ;
 
+
+//canvas
+#bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+//portfolio
+#portfolio{
+  position: absolute;
+  top:0;
+  left: 10vw;
+  width: 80vw;
+  z-index: 1;
+  overflow: hidden;
+}
 
 //page settings.
 #root {
   width: 98%;
-  margin: 0 auto;
+  margin: 0 0 0 0;
   color:$purple;
   text-align: center;
   overflow: hidden;
 }
 
 h1{
-font-size:12vw;
+font-size:$headingText;
 }
 
 p, li{
-  font-size: 2vw;
+  font-size: $smallText;
 }
 
 .title{

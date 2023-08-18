@@ -1,0 +1,80 @@
+section{
+    margin-top: 10vw;
+    width: 80vw;
+    text-align: center;
+    color: rgb(7, 7, 7);
+    display: grid;
+    min-height: 55vw;
+    place-content: center;
+
+
+.title{
+
+}
+
+//link buttons
+    .linkButton{
+            color:aqua;
+            border:0.3vw solid rgb(243, 137, 6);
+            padding: 0.7vw;
+            margin: 0.7vw;
+            justify-content: center;
+
+            
+    }
+
+    div.linkButton{
+        border:0px;
+        margin-top: 3vh;
+    }
+}
+
+
+//videos
+.profileVideo{
+   height: 40vw;
+    width: auto;
+    max-width:50vh
+ }
+
+
+ //pictures
+ .portfolioPic{
+    width: 50%;
+    height: auto;
+    margin-top: 3vh;
+}
+
+//header
+#header{
+    margin-top: 0px;
+}
+
+// contact
+#contact{
+
+    .spacer{
+        margin-top: 5vw;
+    }
+
+}
+
+//footer
+#footer{
+    margin-top: 20vh;
+}
+
+.footerIcons{
+    width:90%;
+
+    svg{
+        flex-direction: row;
+        padding: 5%;
+        width:15%;
+        height:15%;
+        fill: aqua;
+    }
+}
+
+
+

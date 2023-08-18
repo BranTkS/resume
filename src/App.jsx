@@ -1,20 +1,32 @@
 import './App.scss'
-import ResumeBody from './components/body/ResumeBody'
-import SideBar from './components/sideBar/SideBar'
+import FullResume from './components/FullResume'
+import RenderScene from './components/canvasAnimation/RenderScene'
+import Portfolio from './components/portfolio';
+
+import {
+  createBrowserRouter,
+  Route,
+  Outlet,
+  RouterProvider,
+  createRoutesFromElements
+} from 'react-router-dom'
+
+const returnPage = <main><Outlet /></main>;
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={returnPage}>
+      <Route index element={<><Portfolio /> <RenderScene /></>} />
+      <Route path="/resume" element={<FullResume />} />
+    </Route>
+  )
+)
 
 function App() {
 
-
   return (
-    <div className='container-fluid'>
-      <div className="row">
-        <div className="col-4">
-          <SideBar />
-        </div>
-        <div className="col-8">
-          <ResumeBody />
-        </div>
-      </div>
+    <div>
+      <RouterProvider router={router} />
     </div>
   )
 }
