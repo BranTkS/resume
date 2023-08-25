@@ -1,6 +1,6 @@
 $purple: rgb(42, 13, 227);
-$smallText: 2vw ;
-$headingText: 12vw ;
+$smallText: 1.5rem ;
+$headingText: 3rem ;
 
 
 //canvas
@@ -8,16 +8,8 @@ $headingText: 12vw ;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-//portfolio
-#portfolio{
-  position: absolute;
-  top:0;
-  left: 10vw;
-  width: 80vw;
-  z-index: 1;
-  overflow: hidden;
+  min-width: 1150px;
+  min-height: 990px;
 }
 
 //page settings.
@@ -39,7 +31,7 @@ p, li{
 
 .title{
   text-decoration:underline;
-  padding-top: 7dvh;
+  padding-top: 7rem;
   }
 
 

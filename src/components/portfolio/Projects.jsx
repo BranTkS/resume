@@ -1,6 +1,8 @@
 import graphics from '../../assets/images/images/graphics.jpg'
 import websites from '../../assets/images/images/websites.jpg'
 import appImg from '../../assets/images/images/app.jpg'
+import { motion } from "framer-motion"
+
 const Projects = () => {
 
     const projectsData = [
@@ -33,28 +35,28 @@ const Projects = () => {
     const Allprojects = projectsData.map((projectsData) => {
 
         return (<div className="projects" key={projectsData.title}>
-            <div className="container-fluid">
-                <h1 className="ProjTitle">
+            <motion.div className="container-fluid">
+                <motion.h1 className="ProjTitle">
                     {projectsData.title}
-                </h1>
-                <p>{projectsData.info}</p>
+                </motion.h1>
+                <motion.p>{projectsData.info}</motion.p>
                 <p>{projectsData.info2}</p>
-                <div className="row justify-content-center">
-                    <div className="col-md-2">
+                <motion.div className="row justify-content-center">
+                    <motion.div className="col-md-2">
                         <div className='linkButton'>
                             <a href={projectsData.repo} className='linkButton'>repo</a>
                         </div>
-                    </div>
-                    <div className="col-md-3">
+                    </motion.div>
+                    <motion.div className="col-md-3">
                         <div className='linkButton'>
                             <a href={projectsData.url} className='linkButton'>see more</a>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
                 <a href={projectsData.repo} target='_blank' rel='noopener noreferrer'>
                     <img src={projectsData.img} className='portfolioPic' />
                 </a>
-            </div>
+            </motion.div>
         </div>)
 
     })
