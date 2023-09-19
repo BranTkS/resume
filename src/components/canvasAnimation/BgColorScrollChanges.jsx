@@ -9,7 +9,7 @@ const orangeColor = 0xFB9000;
 
 
 
-const BgColorScrollChanges = () => {
+{/*const BgColorScrollChanges = () => {
 
   const [currentBG, setCurrentBG] = useState(spacebg);
 
@@ -19,7 +19,7 @@ const BgColorScrollChanges = () => {
   return (
     { currentBG }
   )
-}
+}*/}
 const currentBackground = spacebg;
 const currentColor = whiteColor;
 

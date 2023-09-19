@@ -79,9 +79,6 @@ const PortfolioBody = () => {
     return (
 
         <div id="portfolio">
-            <motion.div>
-                <Navbar />
-            </motion.div>
             <div ref={ref}>
                 <motion.div
                     initial={initialValue}

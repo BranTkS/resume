@@ -31,7 +31,7 @@ const RenderScene = () => {
 
 
     //torus
-    const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 100);
+    const geometry = new THREE.TorusGeometry(10, 3, 17, 100);
     const material = new THREE.PointsMaterial({
         size: 0.005
     });

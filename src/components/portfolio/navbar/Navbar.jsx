@@ -8,12 +8,17 @@ const Navbar = () => {
     const checkSize = () => {
         console.log(window.innerWidth)
         if (window.innerWidth > 500) {
-            return (navMenu())
+            return (
+                navMenu()
+            )
         }
         else {
             return (
                 <>
-                    <button className='nav-reveal-button' onClick={() => setOpen(!open)}>
+                    <button className='nav-reveal-button' onClick={() => {
+                        setOpen(!open)
+                        console.log(open)
+                    }}>
                         <a href='#'>click</a>
                     </button>
                     {open && navMenu()}
