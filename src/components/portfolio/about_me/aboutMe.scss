@@ -1,0 +1,57 @@
+//about me
+#about{
+    min-height: 100svh;
+    max-width: 98%;
+}
+
+.aboutBody{
+
+}
+
+@media screen and (max-width: 900px) {
+
+    section{
+        margin-top: 1px;
+        width: 98%;
+        max-height: fit-content;
+    }
+
+    #about{
+        display: grid;
+    }
+
+    .title{
+        grid-column: 1 / 12;
+        border: 2px solid red;
+
+        h1{
+            font-size: 3rem;
+        }
+    }
+
+    .aboutBody{
+        grid-column: 1 / 12;
+        grid-template-columns: repeat(12, 1fr);
+        height: fit-content;
+        border: 2px solid green;
+
+        div{
+            font-size: 0.9rem;
+            padding-top: 0.5rem;
+        }
+
+        .snippets{
+            display: grid;
+            text-align: start;
+        }
+
+        .left{
+            grid-column: 1 / span 7;
+        }
+
+        .right{
+            grid-column: 5 / span 7;
+        }
+    }
+
+}

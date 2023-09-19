@@ -1,12 +1,13 @@
-import AboutMe from "./AboutMe";
-import ContactMe from "./ContactMe";
-import Header from "./Header";
-import Projects from "./Projects";
+import AboutMe from "./about_me/AboutMe";
+import ContactMe from "./contact_me/ContactMe";
+import Header from "./header/Header";
+import Projects from "./projects/Projects";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 
 import './PortfolioBody.scss'
 import { useEffect } from "react";
+import Navbar from "./navbar/navbar";
 
 const PortfolioBody = () => {
 
@@ -78,6 +79,9 @@ const PortfolioBody = () => {
     return (
 
         <div id="portfolio">
+            <motion.div>
+                <Navbar />
+            </motion.div>
             <div ref={ref}>
                 <motion.div
                     initial={initialValue}

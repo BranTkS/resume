@@ -8,7 +8,7 @@ $headingText: 3rem ;
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 1150px;
+  min-width: 1400px;
   min-height: 990px;
 }
 
@@ -49,4 +49,13 @@ font-weight: bold;
 //contact area
 .contact {
     border-top: solid $purple 1dvi;
+}
+
+@media screen and (max-width: 900px) {
+
+  #bg{
+    min-width: 1400px;
+    min-height: 990px;
+  }
+
 }
