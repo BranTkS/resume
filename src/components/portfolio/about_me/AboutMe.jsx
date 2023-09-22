@@ -1,59 +1,86 @@
 import { Link } from 'react-router-dom'
 import './aboutMe.scss'
 
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { initialValue, transitionValue } from '../animation'
+
 const AboutMe = () => {
 
-    const sections = document.querySelectorAll('#about');
+    const inviewAttributes = [{ threshold: 0.4 }]
+    const mainControls = useAnimation();
+    const { ref, inView } = useInView(inviewAttributes)
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                entry.target.classList.toggle("show", entry.isIntersecting)
-                console.log(entries)
-            })
-        },
-        { threshold: 0.5, }
-    )
+    useEffect(() => {
+        if (inView) {
+            mainControls.start({
+                opacity: 1, y: 0,
+            });
+        } else {
+            mainControls.start(initialValue);
+        }
 
-    sections.forEach(sections => { observer.observe(sections) }
-    )
+        console.log("check 1", inView)
+
+    }, [inView])
+
 
     return (
-        <section id="about">
+        <section id="about" ref={ref}>
 
 
-            <div className='aboutBody'>
+            <motion.div className='aboutBody'
+
+                initial={initialValue}
+                animate={mainControls}
+                transition={transitionValue}
+            >
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
                     <div className='left'>
-                        I am driven and enthusiastic, and I want to transition from a successful career in the restaurant industry to a dynamic and more challenging role in IT. I am eager to leverage my leadership, adaptability, and self-motivation foundations developed during years of managing and contributing to restaurant operations. I aim to transition my drive and capabilities into the IT sector, where I can further enhance my skills, contribute to a collaborative team environment, and engage with a team dedicated to innovation.
+                        <p>
+                            I am driven and enthusiastic, and I want to transition from a successful career in the restaurant industry to a dynamic and more challenging role in IT. I hope to further improve my skills so I can contribute to a collaborative team environment, and engage with a team dedicated to innovation.
+                        </p>
                     </div>
 
 
                     <div>
-                        <div>
-
-                            **Key Attributes:**
-                        </div>
-
                         <div className='snippets'>
                             <div className='right'>
-                                - **Passionate Learner:** Seeking an opportunity to immerse myself in the world of IT, expand my knowledge, and develop new skills.
-
+                                <p>
+                                    I assisted in the opening of three restaurant locations and trained numerous team members, primarily for management roles and service roles.
+                                </p>
                             </div>
 
                             <div className='left'>
-                                - **Diverse Background:** Successfully managed various roles within the restaurant industry, exhibiting adaptability and an ability to excel in dynamic environments and work efficiently ultimately advancing to assistant manager and manager positions at a young age.
+                                <p>
+                                    I worked with diverse groups to make my store the best performing amongst our chain.
+                                </p>
                             </div>
 
                             <div className='right'>
-
-                                - **Proven Leadership:** Demonstrated leadership by successfully assisting in the opening of three restaurant locations and training numerous team members, primarily for management and service roles, highlighting my ability to manage and motivate diverse groups. I Thrived in high-pressure settings, making quick decisions, and maintaining a friendly, team-oriented mentality, qualities I hope will translate well to the demands of the IT industry
-
+                                <p>
+                                    Accomplished in various roles within the restaurant industry, exemplifying my ability to excel in dynamic environments and work efficiently.
+                                </p>
                             </div>
 
                             <div className='left'>
-                                - **Resourceful Self-Starter:** Beyond formal education, pursued personal growth by learning and mastering new languages and technologies through self-guided courses and programs due to my desire to continually learn and improve.
+                                <p>
+                                    Thanks to my hardworking nature and all the traits already mentioned I advanced to assistant manager and manager positions in a short span of time and at a young age.
+                                </p>
+                            </div>
+
+                            <div className='right'>
+                                <p>
+                                    I Thrive in high-pressure settings, and I maintain a friendly, team-oriented mentality, I hope these  qualities will translate well to the demands of the IT industry.
+                                </p>
+                            </div>
+
+                            <div className='left'>
+                                <p>
+                                    Due to my desire to continually learn and improve, I have been learning and mastering new languages and technologies through various courses and programs.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +93,7 @@ const AboutMe = () => {
                 <div className='linkButton'>
                     <Link to="/resume" className='linkButton'>Resume</Link>
                 </div>
-            </div>
+            </motion.div>
         </section >
     )
 }

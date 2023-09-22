@@ -5,9 +5,14 @@ import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 
 //used at graphic design info 3
 import Gallery from './gallery'
-
-import { motion } from "framer-motion"
 import './projects.scss'
+
+
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { initialValue, transitionValue } from '../animation'
+
 
 
 
@@ -78,16 +83,40 @@ const Projects = () => {
             </div>)
 
     })
-    return (
-        <section className="projects">
 
-            <div>
+    const inviewAttributes = [{ threshold: 0.4 }]
+    const mainControls = useAnimation();
+    const { ref, inView } = useInView(inviewAttributes)
+
+    useEffect(() => {
+        if (inView) {
+            mainControls.start({
+                opacity: 1, y: 0,
+            });
+        } else {
+            mainControls.start(initialValue);
+        }
+
+        console.log("check 1", inView)
+
+    }, [inView])
+
+
+    return (
+        <section className="projects" ref={ref}>
+
+            <motion.div
+
+                initial={initialValue}
+                animate={mainControls}
+                transition={transitionValue}
+            >
                 <h1 className='title'>PROJECTS</h1>
 
                 <div>
                     {Allprojects}
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     )

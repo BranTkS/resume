@@ -70,35 +70,6 @@ padding-top: 1.7dvh;
 
 
 
-// contact
-#contact{
-
-    .spacer{
-        margin-top: 5vw;
-    }
-
-}
-
-//footer
-#footer{
-    margin-top: 20vh;
-}
-
-.footerIcons{
-    width:90%;
-
-    svg{
-        flex-direction: row;
-        padding: 5%;
-        width:15%;
-        height:15%;
-        fill: aqua;
-    }
-}
-
-
-
-
 @media screen and (max-width: 900px) {
     #portfolio{
     width: 90dvw;

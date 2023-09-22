@@ -18,54 +18,56 @@
     margin: 40px;
 }
 
+//
 
-@media screen and (max-width: 900px) {
+.artGalleryWrap{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    margin: 10% auto;
+    cursor: grab;
+}
 
-    .artGalleryWrap{
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        justify-content: center;
-        margin: 10% auto;
-        cursor: grab;
-    }
+.artGallery{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    overflow-x: scroll;
+    border: 1px solid green;
+}
 
-    .artGallery{
-        width: 80%;
-        height: fit-content;
-        display: flex;
-        overflow-x: scroll;
-        border: 1px solid green;
-    }
+.artGallery div{
+    width: fit-content;
+    white-space: nowrap;
+    display: flex;
+    gap: 1svh; 
+    padding: 1svh;
+}
 
-    .artGallery div{
-        width: fit-content;
-        white-space: nowrap;
-        display: flex;
-        gap: 1svh; 
-        padding: 1svh;
-    }
+.artGallery div img{
+    min-width: 7rem;
+    filter: grayscale(0);
+    pointer-events:none;
+}
 
-    .artGallery div img{
-        min-width: 7rem;
-        filter: grayscale(0);
-        pointer-events:none;
-    }
+.artGallery::-webkit-scrollbar{
+    display: none;
 
-    .artGallery::-webkit-scrollbar{
-        display: none;
+}
 
-    }
+.backButton, .nextButton{
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+}
 
-    .backButton, .nextButton{
-        visibility: hidden;
-        width: 0;
-        padding: 0;
-    }
-
-    .artGallery div img:hover{
-        transform:scale(1.1);
-    }
+.artGallery div img:hover{
+    transform:scale(1.1);
+}
 
 
+@media screen and (min-width: 500px) {
+
+  
 }

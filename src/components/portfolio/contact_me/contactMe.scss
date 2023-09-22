@@ -1,18 +1,47 @@
 .contactLogo{
-    visibility:hidden;
+
+    visibility:visible;
+    
+    img{
+        width: 10rem;
+        height: auto;
+        }
 }
 
-@media screen and (max-width: 500px) {
+#contact{
 
-    section{
-        margin-top: 1px;
-        width: 95%;
-        max-height: fit-content;
+    .spacer{
+        margin-top: 5vw;
     }
 
+}
+
+section{
+    margin-top: 1px;
+    width: 95%;
+    max-height: fit-content;
+}
+
+
+#footer{
+margin-top: 20%;
+}
+
+.footerIcons{
+width:90%;
+
+svg{
+    flex-direction: row;
+    padding: 5%;
+    width:17%;
+    height:17%;
+    fill: aqua;
+}
+}
+@media screen and (max-width: 500px) {
+
     .contactLogo{
-        visibility:visible;
-        width: 5rem;
-        height: auto;
+        visibility:hidden;
+     
     }
 }

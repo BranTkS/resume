@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-scroll'
+import { blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor } from '../imagesExports'
+import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 import './navbar.scss'
 
 const Navbar = () => {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        checkSize();
+    }, [setOpen]);
+
+    const closeMenu = () => {
+        setOpen(false)
+    }
+
 
     const checkSize = () => {
-        console.log(window.innerWidth)
         if (window.innerWidth > 500) {
             return (
                 navMenu()
@@ -15,12 +26,13 @@ const Navbar = () => {
         else {
             return (
                 <>
-                    <button className='nav-reveal-button' onClick={() => {
-                        setOpen(!open)
-                        console.log(open)
-                    }}>
-                        <a href='#'>click</a>
-                    </button>
+
+                    <a className='nav-reveal-button' >
+                        <img src={blackMenu} alt="" onClick={() => {
+                            setOpen(!open)
+                        }}
+                        />
+                    </a>
                     {open && navMenu()}
                 </>
             )
@@ -32,16 +44,28 @@ const Navbar = () => {
             <nav className='navbar'>
                 <ul className='nav'>
                     <li className='navLink'>
-                        <a href='#'>Home</a>
+                        <Link to="hero" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>
+                            <img src={tanLogo} alt="Home" className="navIcon" />
+                            Home
+                        </Link>
                     </li>
                     <li className='navLink'>
-                        <a href='#'>About me</a>
+                        <Link to="about" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+                            <img src={AboutBlack} alt="about me" className="navIcon" />
+                            About me
+                        </Link>
                     </li>
                     <li className='navLink'>
-                        <a href='#'>Projects</a>
+                        <Link to="projects" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+                            <img src={projectBlack} alt="projects" className="navIcon" />
+                            Projects
+                        </Link>
                     </li>
                     <li className='navLink'>
-                        <a href='#'>Contact me</a>
+                        <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+                            <img src={contactBlack} alt="contact me" className="navIcon" />
+                            Contact me
+                        </Link>
                     </li>
 
                 </ul>

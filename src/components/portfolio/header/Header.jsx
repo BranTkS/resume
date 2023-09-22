@@ -3,45 +3,77 @@ import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 
 import './header.scss'
 
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { initialValue, transitionValue } from '../animation'
+import { Link } from 'react-scroll'
+
+
+
 const Header = () => {
+
+    const inviewAttributes = [{ threshold: 0.4 }]
+    const mainControls = useAnimation();
+    const { ref, inView } = useInView(inviewAttributes)
+
+    useEffect(() => {
+        if (inView) {
+            mainControls.start({
+                opacity: 1, y: 0,
+            });
+        } else {
+            mainControls.start(initialValue);
+        }
+
+        console.log("check 1", inView)
+
+    }, [inView])
+
+
     return (
-        <section id="header">
-            <div className='hero'>
-                <div className='heroImage'>
+        <section id="header" ref={ref}>
+            <motion.div className='hero'
+
+                initial={initialValue}
+                animate={mainControls}
+                transition={transitionValue}
+            >
+                <motion.div className='heroImage'>
                     <video src={tanVid} className='profileVideo' loop autoPlay={true} muted={true} />
-                </div>
-                <div className='heroText'>
-                    <div>
+                </motion.div>
+                <motion.div className='heroText'>
+                    <motion.div>
                         <h1 className='heroName'>TANAKA B SHUMBA
                         </h1>
-                    </div>
-                    <div className="tanLogo">
+                    </motion.div>
+                    <motion.div className="tanLogo">
                         <img src={tanLogo} alt="Logo" className="tanLogo" />
-                    </div>
-                    <div className='line1'>
+                    </motion.div>
+                    <motion.div className='line1'>
                         <h2>Now that</h2>
-                    </div>
-                    <div className='line2'>
+                    </motion.div>
+                    <motion.div className='line2'>
                         <h2> we&apos;ve</h2>
-                    </div>
-                    <div className='line3'>
+                    </motion.div>
+                    <motion.div className='line3'>
                         <h2> broken the ice</h2>
-                    </div>
+                    </motion.div>
 
-                    <div className='hiText'>
+                    <motion.div className='hiText'>
                         <p>Hi, my name is Tanaka Brandon Shumba
                             I&apos;m a web and software Developer.
                         </p>
-                    </div>
+                    </motion.div>
 
 
 
                     <div className='linkButton'>
-                        <a className='linkButton'>Know more</a>
+                        <Link className='linkButton' to="about" spy={true} smooth={true} offset={0} duration={500}>Know more</Link>
                     </div>
 
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     )
 }

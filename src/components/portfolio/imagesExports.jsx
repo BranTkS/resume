@@ -1,4 +1,17 @@
+import blackMenu from '../../assets/images/svgImages/icons8-circle-menu-96.png'
+import colorMenu from '../../assets/images/svgImages/icons8-menu-96.png'
 
+import AboutBlack from '../../assets/images/svgImages/icons8-user-menu-male-90.png'
+import aboutLogo from '../../assets/images/gallery/noBGLogoPurple.png'
+
+import projectBlack from '../../assets/images/svgImages/icons8-code-90.png'
+import projectColor from '../../assets/images/svgImages/icons8-code-96.png'
+
+import contactBlack from '../../assets/images/svgImages/icons8-user-menu-male-90.png'
+import contactColor from '../../assets/images/svgImages/icons8-call-me-96.png'
+
+
+//social svgs
 const linkedinSVG =
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,4 +42,4 @@ const deviantartSVG =
 
 
 
-export { deviantartSVG, githubSVG, linkedinSVG };
+export { deviantartSVG, githubSVG, linkedinSVG, blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor };

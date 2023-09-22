@@ -15,10 +15,10 @@ $headingText: 3rem ;
 //page settings.
 #root {
   width: 98%;
+  height: fit-content;
   margin: 0 0 0 0;
   color:$purple;
   text-align: center;
-  overflow: hidden;
 }
 
 h1{
@@ -32,6 +32,16 @@ p, li{
 .title{
   text-decoration:underline;
   padding-top: 7rem;
+  }
+
+  //navbar
+  .outerNavbar{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    max-width: 50%;
+    height: fit-content;
+    z-index: 10;
   }
 
 

@@ -1,27 +1,27 @@
 
 
+section{
+    width: 95%;
+    max-height: fit-content;
+}
+
+.projectButtons{
+    display: flex;
+    gap: 1svh;
+}
+
+.linkButton{
+    justify-content: center;
+}
+
+.projects{
+    padding-bottom: 7rem;
+}
 
 
 
+@media screen and (min-width: 500px) {
 
-@media screen and (max-width: 900px) {
 
-    section{
-        width: 95%;
-        max-height: fit-content;
-    }
-
-    .projectButtons{
-        display: flex;
-        gap: 1svh;
-    }
-
-    .linkButton{
-        justify-content: center;
-    }
-
-    .projects{
-        padding-bottom: 7rem;
-    }
 
 }

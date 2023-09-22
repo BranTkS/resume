@@ -1,5 +1,6 @@
 
-import { deviantartSVG, githubSVG, linkedinSVG } from '../SVGExports'
+import { deviantartSVG, githubSVG, linkedinSVG } from '../imagesExports'
+
 const Footer = () => {
 
 
