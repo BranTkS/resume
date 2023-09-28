@@ -61,11 +61,13 @@ font-weight: bold;
     border-top: solid $purple 1dvi;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 500px) {
 
-  #bg{
-    min-width: 1400px;
-    min-height: 990px;
-  }
+    //navbar
+    .outerNavbar{
+      width: 100%;
+      max-width: 100%;
+    }
+
 
 }

@@ -43,28 +43,39 @@ const Navbar = () => {
         return (
             <nav className='navbar'>
                 <ul className='nav'>
-                    <li className='navLink'>
-                        <Link to="hero" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>
-                            <img src={tanLogo} alt="Home" className="navIcon" />
-                            Home
+                    <li>
+                        <Link to="hero" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                            < div className='navLink'>
+
+                                <img src={tanLogo} alt="Home" className="navIcon" />
+                                <p>Home</p>
+                            </div>
                         </Link>
                     </li>
-                    <li className='navLink'>
+                    <li>
                         <Link to="about" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
-                            <img src={AboutBlack} alt="about me" className="navIcon" />
-                            About me
+                            < div className='navLink'>
+
+                                <img src={AboutBlack} alt="about me" className="navIcon" />
+                                <p>About me</p>
+                            </div>
                         </Link>
                     </li>
-                    <li className='navLink'>
+                    <li>
                         <Link to="projects" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
-                            <img src={projectBlack} alt="projects" className="navIcon" />
-                            Projects
+                            < div className='navLink'>
+
+                                <img src={projectBlack} alt="projects" className="navIcon" />
+                                <p>Projects</p>
+                            </div>
                         </Link>
                     </li>
-                    <li className='navLink'>
+                    <li>
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
-                            <img src={contactBlack} alt="contact me" className="navIcon" />
-                            Contact me
+                            < div className='navLink'>
+                                <img src={contactBlack} alt="contact me" className="navIcon" />
+                                <p> Contact me</p>
+                            </div>
                         </Link>
                     </li>
 

@@ -5,6 +5,22 @@
     display: grid;
 }
 
+.lineSVG{
+
+    position: fixed;
+    top: 0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    svg{
+        display: inline-block;
+        height: 100%;
+    }
+}
 
 section{
     margin-top: 1px;

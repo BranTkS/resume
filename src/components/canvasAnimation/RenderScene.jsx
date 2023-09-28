@@ -95,8 +95,8 @@ const RenderScene = () => {
         const elapsedTime = getClock.getElapsedTime();
 
         torus.rotation.x += 0.01;
-        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.000038);
-        particlesMesh.rotation.x = mouseY * (elapsedTime * 0.000038);
+        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.000088);
+        particlesMesh.rotation.x = mouseY * (elapsedTime * 0.000088);
 
         controls.update();
         renderer.render(scene, camera);
