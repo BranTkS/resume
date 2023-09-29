@@ -4,29 +4,20 @@ import Header from "./header/Header";
 import Projects from "./projects/Projects";
 
 import './PortfolioBody.scss'
-import { forwardRef, useRef } from "react";
 
-const PortfolioBody = (props, headerRef, aboutRef, projectsRef, contactRef) => {
+const PortfolioBody = () => {
 
 
     return (
 
         <div id="portfolio">
-            <div>
-                < Header className='introAnimation' ref={headerRef} />
-            </div>
+            < Header className='introAnimation' />
 
-            <div >
-                < AboutMe className='introAnimation' ref={aboutRef} />
-            </div>
+            < AboutMe className='introAnimation' />
 
-            <div>
-                < Projects className='introAnimation' ref={projectsRef} />
-            </div>
+            < Projects className='introAnimation' />
 
-            <div>
-                < ContactMe className='introAnimation' ref={contactRef} />
-            </div>
+            < ContactMe className='introAnimation' />
         </div>
     )
 }

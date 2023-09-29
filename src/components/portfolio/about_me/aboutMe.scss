@@ -1,13 +1,16 @@
 //about me
 #about{
     min-height: 100svh;
+    width: 100%;
     max-width: 98%;
     display: grid;
+    float: right;
+    padding: 0px  0px 12rem 3%;
 }
 
 .lineSVG{
 
-    position: fixed;
+    z-index: -1;
     top: 0;
     left:0;
 
@@ -30,7 +33,6 @@ section{
 
 .title{
     grid-column: 1 / 12;
-    border: 2px solid red;
 
     h1{
         font-size: 3rem;
@@ -41,7 +43,6 @@ section{
     grid-column: 1 / 12;
     grid-template-columns: repeat(12, 1fr);
     height: fit-content;
-    border: 2px solid green;
 
     div{
         font-size: 1.3rem;
@@ -68,7 +69,11 @@ section{
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 500px) {
 
- 
+    #about{
+        width: 100%;
+        float: right;
+        padding: 0px  0px 12rem 12%;
+    }
 }

@@ -17,6 +17,23 @@ const AboutMe = () => {
             mainControls.start({
                 opacity: 1, y: 0,
             });
+
+
+            //svg animation
+            let path = document.querySelector('path');
+            let pathLength = path.getTotalLength();
+
+            path.style.strokeDasharray = pathLength + '' + pathLength;
+
+            path.style.strokeDashoffset = pathLength;
+
+            window.addEventListener('scroll', () => {
+                var scrollPercantage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+                var drawLength = pathLength + scrollPercantage;
+
+                path.style.strokeDashoffset = pathLength - drawLength;
+            })
         } else {
             mainControls.start(initialValue);
         }
@@ -25,7 +42,9 @@ const AboutMe = () => {
 
     }, [inView])
 
-    //svg animation
+    useEffect(() => {
+
+    }, [])
 
     return (
         <section id="about" ref={ref}>

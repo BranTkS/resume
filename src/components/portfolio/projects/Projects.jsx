@@ -62,9 +62,9 @@ const Projects = () => {
                     <a href={projectsData.repo} target='_blank' rel='noopener noreferrer'>
                         <img src={projectsData.img} className='portfolioPic' />
                     </a>
-                    <p>{projectsData.info3}</p>
+                    <>{projectsData.info3}</>
 
-                    <motion.p>{projectsData.info}</motion.p>
+                    <motion.div>{projectsData.info}</motion.div>
                     <p>{projectsData.info2}</p>
 
                     <motion.div className="projectButtons">

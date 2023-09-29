@@ -5,6 +5,11 @@ section{
     max-height: fit-content;
 }
 
+.projects p{
+    width: 90%;
+    padding-left: 10%;
+}
+
 .projectButtons{
     display: flex;
     gap: 1svh;
