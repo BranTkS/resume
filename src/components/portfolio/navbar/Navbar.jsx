@@ -7,10 +7,27 @@ import './navbar.scss'
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
+    const [windowSize, setWindowSize] = useState({
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+    })
+
+    //check if window size requires large navigation or small screen navigation
+    const checkChange = () => {
+        setWindowSize({
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+        })
+        checkSize();
+    }
 
     useEffect(() => {
-        checkSize();
-    }, [setOpen]);
+        window.addEventListener('resize', checkChange)
+
+        return () => {
+            window.removeEventListener('resize', checkChange)
+        }
+    }, [windowSize]);
 
     const closeMenu = () => {
         setOpen(false)
