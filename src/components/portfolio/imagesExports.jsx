@@ -1,3 +1,4 @@
+//navigation svgs
 import blackMenu from '../../assets/images/svgImages/icons8-circle-menu-96.png'
 import colorMenu from '../../assets/images/svgImages/icons8-menu-96.png'
 
@@ -42,4 +43,13 @@ const deviantartSVG =
 
 
 
-export { deviantartSVG, githubSVG, linkedinSVG, blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor };
+//gallery svgs
+
+//graphic designs
+import tanLogo from '../../assets/images/images/nobg-BTSlogo.png'
+import circleImg from '../../assets/images/gallery/circleLogo.jpg'
+import pgb from '../../assets/images/gallery/pgb.jpg'
+import blueYellow from '../../assets/images/gallery/blueYellow.jpg'
+import purpleArrow from '../../assets/images/gallery/purpleArrow.png'
+
+export { deviantartSVG, githubSVG, linkedinSVG, blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor, tanLogo, circleImg, pgb, blueYellow, purpleArrow };

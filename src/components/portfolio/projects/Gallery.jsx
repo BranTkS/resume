@@ -1,8 +1,3 @@
-import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
-import circleImg from '../../../assets/images/gallery/circleLogo.jpg'
-import pgb from '../../../assets/images/gallery/pgb.jpg'
-import blueYellow from '../../../assets/images/gallery/blueYellow.jpg'
-import purpleArrow from '../../../assets/images/gallery/purpleArrow.png'
 
 import { motion } from "framer-motion"
 import './gallery.scss'
@@ -16,7 +11,9 @@ import { useEffect, useRef, useState } from 'react'
 
 
 
-const Gallery = () => {
+const Gallery = (graphicsGallery) => {
+
+    const GraphicsData = Array.from(graphicsGallery.graphicsGallery)
 
     const [width, setWidth] = useState(0);
     const gallery = useRef();
@@ -24,6 +21,19 @@ const Gallery = () => {
     useEffect(() => {
         setWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
     }, [])
+
+
+    const galleryMap = GraphicsData.map((graphicsMap) => {
+
+        return (
+            <span key={graphicsMap.alt}>
+                <img src={graphicsMap.galleryImage}
+                    alt={graphicsMap.alt} />
+            </span>
+
+        )
+    })
+
 
     return (
         <motion.div className='art'>
@@ -43,30 +53,8 @@ const Gallery = () => {
                             left: -width
                         }}
                     >
-                        <span>
-                            <img src={circleImg} alt='Circle image' />
-                        </span>
-                        <span>
-                            <img src={pgb} alt='purple green blue image' />
-                        </span>
-                        <span>
-                            <img src={blueYellow} alt='blueYellow' />
-                        </span>
-                        <span>
-                            <img src={purpleArrow} alt='Purple Arrow image' />
-                        </span>
-                        <span>
-                            <img src={tanLogo} alt='Circle image' />
-                        </span>
-                        <span>
-                            <img src={pgb} alt='pgb image' />
-                        </span>
-                        <span>
-                            <img src={blueYellow} alt='blueYellow' />
-                        </span>
-                        <span>
-                            <img src={purpleArrow} alt='Purple Arrow image' />
-                        </span>
+                        {galleryMap}
+
                     </motion.div>
                 </motion.div>
 

@@ -1,7 +1,8 @@
 import graphics from '../../../assets/images/images/graphics.jpg'
 import websites from '../../../assets/images/images/websites.jpg'
 import appImg from '../../../assets/images/images/app.jpg'
-import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
+import { graphicsGallery, certificatesGallery, repoFilesGallery } from './imagesData'
+
 
 //used at graphic design info 3
 import Gallery from './gallery'
@@ -42,7 +43,10 @@ const Projects = () => {
             title: 'Graphic design',
             info: "I design advertising, logos, banners, and fliers as well as video editing for clients. I've learned to use many tools, applications and softwares to get the job done. Check the links below to see more Project samples.",
             info2: '',
-            info3: <Gallery />,
+            info3: <Gallery
+                graphicsGallery={graphicsGallery}
+            />,
+
             url: 'https://www.deviantart.com/brantshumba',
             repo: 'https://www.deviantart.com/brantshumba', // if no repo, the button will not show up
         },
@@ -64,7 +68,7 @@ const Projects = () => {
                     </a>
                     <>{projectsData.info3}</>
 
-                    <motion.div>{projectsData.info}</motion.div>
+                    <motion.p>{projectsData.info}</motion.p>
                     <p>{projectsData.info2}</p>
 
                     <motion.div className="projectButtons">
