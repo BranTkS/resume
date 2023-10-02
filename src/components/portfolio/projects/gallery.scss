@@ -1,6 +1,8 @@
 
 .artGallery div img{
     width: 17rem;
+    min-height: 12rem;
+    max-height:29rem;
     align-self: flex-end;
     filter: grayscale(100);
     transition: transform 0.5s;
@@ -35,9 +37,10 @@
 
 .artGallery{
     width: 80%;
-    height: 25rem;
+    height: 30rem;
     display: flex;
     overflow-x: scroll;
+    background-image: linear-gradient(180deg, rgba(52,52,56,0) 2%, rgba(92,126,133,1) 98%);
     border: 1px solid green;
 }
 

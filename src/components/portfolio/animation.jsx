@@ -2,7 +2,8 @@ const initialValue = { opacity: 0, y: 75 };
 const transitionValue = {
     duration: 1,
     delay: 0.25,
-    when: "beforeChildren"
+    when: "beforeChildren",
+    staggerChildren: 0.9
 };
 
 const pageVariants = {
@@ -13,7 +14,10 @@ const pageVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        staggerChildren: 0.2
+
+        transition: {
+            staggerChildren: 0.2
+        }
 
     }
 }

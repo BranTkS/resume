@@ -1,18 +1,28 @@
-
-import { motion } from "framer-motion"
 import './gallery.scss'
 import { useEffect, useRef, useState } from 'react'
-
-
-//art gallery
-//let scrollContainer = document.querySelector(".artGallery")
-//let backBtn = document.getElementsByClassName("backButton");
-// let nextBtn = document.getElementsByClassName("nextButton");
-
+import { motion, useAnimation } from "framer-motion"
 
 
 const Gallery = (graphicsGallery) => {
 
+    const Galleryvariant = {
+        galleryRoll: {
+            x: [20, -20],
+
+            transition: {
+                x: {
+                    duration: 5,
+                    ease: "easeOut"
+                },
+
+                repeat: Infinity,
+                repeatType: "reverse",
+            }
+
+        },
+
+
+    }
     const GraphicsData = Array.from(graphicsGallery.graphicsGallery)
 
     const [width, setWidth] = useState(0);
@@ -52,6 +62,9 @@ const Gallery = (graphicsGallery) => {
                             right: 0,
                             left: -width
                         }}
+
+                        variants={Galleryvariant}
+                        animate="galleryRoll"
                     >
                         {galleryMap}
 

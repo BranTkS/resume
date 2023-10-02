@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import './App.scss'
 import FullResume from './components/FullResume'
 import RenderScene from './components/canvasAnimation/RenderScene'
 import Portfolio from './components/portfolio';
 import Navbar from './components/portfolio/navbar/navbar';
 
-import { useRef } from "react";
 
 import {
   createBrowserRouter,
@@ -13,6 +13,8 @@ import {
   RouterProvider,
   createRoutesFromElements
 } from 'react-router-dom'
+import { useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 
 const returnPage = <main><Outlet /></main>;
 
@@ -23,15 +25,10 @@ const router = createBrowserRouter(
         {
           <div>
             <div className="outerNavbar">
-              <Navbar
-                headerRef={App.headerRef}
-                contactRef={App.contactRef}
-              />
+              <Navbar />
             </div>
 
-            <Portfolio
-              headerRef={App.headerRef}
-              contactRef={App.contactRef} />
+            <Portfolio />
             <RenderScene />
           </div>
         }
@@ -42,15 +39,23 @@ const router = createBrowserRouter(
 )
 
 function App() {
+  const [loading, setLoading] = useState(false);
 
-  const headerRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000);
+
+  }, [])
 
   return (
     <div>
-      <RouterProvider router={router} />
+      {loading ?
+        <LoadingScreen loading={loading} />
+        :
+        <RouterProvider router={router} />
+      }
     </div>
   )
 }

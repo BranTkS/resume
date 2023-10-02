@@ -3,8 +3,8 @@ import websites from '../../../assets/images/images/websites.jpg'
 import appImg from '../../../assets/images/images/app.jpg'
 import { graphicsGallery, certificatesGallery, repoFilesGallery } from './imagesData'
 
-
-//used at graphic design info 3
+import { Link } from 'react-router-dom'
+//used at info 3
 import Gallery from './gallery'
 import './projects.scss'
 
@@ -15,29 +15,43 @@ import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 
 
-
-
 const Projects = () => {
+
+    const resumeButton = <div className='linkButton'>
+        <Link to="/resume" className='linkButton'>Resume</Link>
+    </div>;
+
+    const seeMoreButton = <div className='linkButton'>
+        <a href='https://github.com/BranTkS' className='linkButton'>see more</a>
+    </div>;
+
 
     const projectsData = [
         {
-            img: appImg,
-            title: 'Android and VB.NET apps',
-            info: 'I created an android app that allows you to see deals from various travel agents. It uses firebase database and Google authentication.',
-            info2: 'I also created a club management system using Visual basic.NET. Below are links to my github containing their code.',
-            info3: '',
-            url: 'https://github.com/BranTkS',
+            img: '',
+            title: 'Certifications',
+            info: 'Thanks to my love for learning, beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.',
+            info2: 'I also participated in Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.',
+            info3: <Gallery
+                graphicsGallery={certificatesGallery}
+            />,
+            url: resumeButton,
+            repo: '',
+        },
+
+        {
+            img: '',
+            title: 'Repo websites and applications',
+            info: 'android apps I worked on include a travel deals aplication, a notepad application as well as a few projects for courses and school, such as a school registration app for which we worked in teams and an unnecessary number of calculators all of which could easily be replaced with a google search. These appps incoperated firebase, Google authentication and were made using java. I also created a club management system using C# (Visual basic). see their repos below.',
+
+            info2: 'Websites I made include this very website which i made using react, threejs fibre and framer motion. I also created many websites over the years using react, Mongo db,node,ExpresJS, PHP, jquery, SQL and WordPress. I also freelanced several websites including a website for a gym, portfolios, several construction companies and restaurants, a consultancy and my biggest project to date was an online news site. I also occasionally worked in teams where I worked on various aspects of websites',
+            info3: <Gallery
+                graphicsGallery={repoFilesGallery}
+            />,
+            url: seeMoreButton,
             repo: 'https://github.com/BranTkS/travel-deals-app', // if no repo, the button will not show up
         },
-        {
-            img: websites,
-            title: 'Full Stack website development',
-            info: 'I created many websites over the years using react, WordPress and JavaScript. I freelanced several websites including a website for a gym, a construction company, a restaurant and my biggest project to date was a news site with multiple writers, subscriptions and sections.',
-            info2: '',
-            info3: '',
-            url: 'https://github.com/BranTkS',
-            repo: 'https://github.com/BranTkS/Excercise-logger', // if no repo, the button will not show up
-        },
+
         {
             img: '',
             title: 'Graphic design',
@@ -47,7 +61,7 @@ const Projects = () => {
                 graphicsGallery={graphicsGallery}
             />,
 
-            url: 'https://www.deviantart.com/brantshumba',
+            url: seeMoreButton,
             repo: 'https://www.deviantart.com/brantshumba', // if no repo, the button will not show up
         },
     ];
@@ -78,9 +92,7 @@ const Projects = () => {
                             </div>
                         </motion.div>
                         <motion.div className="col-md-3">
-                            <div className='linkButton'>
-                                <a href={projectsData.url} className='linkButton'>see more</a>
-                            </div>
+                            {projectsData.url}
                         </motion.div>
                     </motion.div>
                 </motion.div>

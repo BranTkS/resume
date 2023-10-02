@@ -5,6 +5,9 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
+import { androidSVG } from '../imagesExports'
+import AboutImages from './aboutImages';
+
 
 const AboutMe = () => {
 
@@ -17,23 +20,6 @@ const AboutMe = () => {
             mainControls.start({
                 opacity: 1, y: 0,
             });
-
-
-            //svg animation
-            let path = document.querySelector('path');
-            let pathLength = path.getTotalLength();
-
-            path.style.strokeDasharray = pathLength + '' + pathLength;
-
-            path.style.strokeDashoffset = pathLength;
-
-            window.addEventListener('scroll', () => {
-                var scrollPercantage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-                var drawLength = pathLength + scrollPercantage;
-
-                path.style.strokeDashoffset = pathLength - drawLength;
-            })
         } else {
             mainControls.start(initialValue);
         }
@@ -46,7 +32,34 @@ const AboutMe = () => {
 
     }, [])
 
+    const svgVariants = {
+        hidden: { rotate: -180 },
+
+        visible: {
+            rotate: 0,
+            transition: {
+                duration: 3
+            }
+        },
+    }
+
+    const pathVariants = {
+        hidden: {
+            pathLength: 0,
+        },
+
+        visible: {
+            pathLength: 1,
+
+            transition: {
+                duration: 20,
+                ease: "easeInOut"
+            }
+        }
+    }
+
     return (
+
         <section id="about" ref={ref}>
 
             <div className='lineSVG'>
@@ -65,6 +78,23 @@ const AboutMe = () => {
             >
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
+                    
+                    <motion.div>
+                        <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+
+                            variants={svgVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <motion.path d={androidSVG}
+                                variants={pathVariants}
+                                fill="transparent"
+                                strokeWidth="1"
+                                stroke="black"
+                                strokeLinecap="round"
+                            />
+                        </motion.svg>
+                    </motion.div>
                     <div className='left'>
                         <p>
                             I am driven and enthusiastic, and I want to transition from a successful career in the restaurant industry to a dynamic and more challenging role in IT. I hope to further improve my skills so I can contribute to a collaborative team environment, and engage with a team dedicated to innovation.
@@ -97,7 +127,7 @@ const AboutMe = () => {
                                     Thanks to my hardworking nature and all the traits already mentioned I advanced to assistant manager and manager positions in a short span of time and at a young age.
                                 </p>
                             </div>
-
+                            <AboutImages />
                             <div className='right'>
                                 <p>
                                     I Thrive in high-pressure settings, and I maintain a friendly, team-oriented mentality, I hope these  qualities will translate well to the demands of the IT industry.
