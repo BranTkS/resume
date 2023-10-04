@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports'
 import AboutImages from './aboutImages';
+import { reactSVG } from './aboutSVGs'
 
 
 const AboutMe = () => {
@@ -38,7 +39,7 @@ const AboutMe = () => {
         visible: {
             rotate: 0,
             transition: {
-                duration: 3
+                duration: 3,
             }
         },
     }
@@ -52,8 +53,10 @@ const AboutMe = () => {
             pathLength: 1,
 
             transition: {
-                duration: 20,
-                ease: "easeInOut"
+                duration: 15,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
             }
         }
     }
@@ -78,7 +81,7 @@ const AboutMe = () => {
             >
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
-                    
+
                     <motion.div>
                         <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
 
@@ -95,7 +98,7 @@ const AboutMe = () => {
                             />
                         </motion.svg>
                     </motion.div>
-                    <div className='left'>
+                    <div className='center'>
                         <p>
                             I am driven and enthusiastic, and I want to transition from a successful career in the restaurant industry to a dynamic and more challenging role in IT. I hope to further improve my skills so I can contribute to a collaborative team environment, and engage with a team dedicated to innovation.
                         </p>
@@ -104,6 +107,9 @@ const AboutMe = () => {
 
                     <div>
                         <div className='snippets'>
+                            <div className='left-SVG'>
+                                {reactSVG}
+                            </div>
                             <div className='right'>
                                 <p>
                                     I assisted in the opening of three restaurant locations and trained numerous team members, primarily for management roles and service roles.
@@ -115,7 +121,12 @@ const AboutMe = () => {
                                     I worked with diverse groups to make my store the best performing amongst our chain.
                                 </p>
                             </div>
-
+                            <div className='right-SVG'>
+                                {reactSVG}
+                            </div>
+                            <div className='left-SVG'>
+                                {reactSVG}
+                            </div>
                             <div className='right'>
                                 <p>
                                     Accomplished in various roles within the restaurant industry, exemplifying my ability to excel in dynamic environments and work efficiently.
@@ -127,7 +138,12 @@ const AboutMe = () => {
                                     Thanks to my hardworking nature and all the traits already mentioned I advanced to assistant manager and manager positions in a short span of time and at a young age.
                                 </p>
                             </div>
-                            <AboutImages />
+                            <div className='right-SVG'>
+                                {reactSVG}
+                            </div>
+                            <div className='left-SVG'>
+                                {reactSVG}
+                            </div>
                             <div className='right'>
                                 <p>
                                     I Thrive in high-pressure settings, and I maintain a friendly, team-oriented mentality, I hope these  qualities will translate well to the demands of the IT industry.
@@ -139,9 +155,12 @@ const AboutMe = () => {
                                     Due to my desire to continually learn and improve, I have been learning and mastering new languages and technologies through various courses and programs.
                                 </p>
                             </div>
+                            <div className='right-SVG'>
+                                {reactSVG}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div >
 
                 <p>continue below to find out more about me and my projects.
                 </p>

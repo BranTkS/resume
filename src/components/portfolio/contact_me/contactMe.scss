@@ -1,5 +1,6 @@
 .contactLogo{
 
+    padding-top: 2rem;
     visibility:visible;
     
     img{
@@ -14,31 +15,36 @@
         margin-top: 5vw;
     }
 
+    section{
+        margin-top: 1px;
+        width: 95%;
+        max-height: fit-content;
+    }
 }
 
-section{
-    margin-top: 1px;
-    width: 95%;
-    max-height: fit-content;
-}
+
 
 
 #footer{
 margin-top: 20%;
+display: flex;
+justify-content: center;
+
 }
 
 .footerIcons{
 width:90%;
 
+
 svg{
     flex-direction: row;
     padding: 5%;
-    width:17%;
-    height:17%;
+    width:23%;
+    height:23%;
     fill: aqua;
 }
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
 
     .contactLogo{
         visibility:hidden;

@@ -62,6 +62,8 @@ $headingText: 3rem ;
         padding-left: 0px;
         margin-left: 0px;
     }
+
+
 }
 
 
@@ -72,6 +74,7 @@ $headingText: 3rem ;
     #header{
         min-height: 10svh;
         width: 90%;
+        margin-top: 0px;
     }
 
     .hero{
@@ -113,7 +116,9 @@ $headingText: 3rem ;
 
     .heroText h1{
         width: fit-content;
-        padding-top: 0em;
+        padding-top: 0px;
+        margin-top:0px;
+        margin-bottom:0px;
         grid-column: 1/ span 12;
         grid-row: 1 / span 1;
         font-size: 2.1rem;
@@ -129,6 +134,8 @@ $headingText: 3rem ;
             white-space: nowrap;
             overflow: hidden;
             text-decoration: underline;
+            margin-top:0px;
+            margin-bottom:0px;
         }
 
         .line1{
@@ -150,7 +157,8 @@ $headingText: 3rem ;
             grid-column: 1/ span 12;
             grid-row: 4;
             white-space: nowrap;
-            overflow: hidden;
+            overflow: visible;
+            width: fit-content;
 
             h2{
                 font-size: 2.3rem;
@@ -176,6 +184,6 @@ $headingText: 3rem ;
         width: fit-content;
 
         grid-column: 1;
-        grid-row: 9;
+        grid-row: 10/ span 1;
     }
 }

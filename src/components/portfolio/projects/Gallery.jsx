@@ -5,24 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 const Gallery = (graphicsGallery) => {
 
-    const Galleryvariant = {
-        galleryRoll: {
-            x: [20, -20],
 
-            transition: {
-                x: {
-                    duration: 5,
-                    ease: "easeOut"
-                },
-
-                repeat: Infinity,
-                repeatType: "reverse",
-            }
-
-        },
-
-
-    }
     const GraphicsData = Array.from(graphicsGallery.graphicsGallery)
 
     const [width, setWidth] = useState(0);
@@ -31,6 +14,24 @@ const Gallery = (graphicsGallery) => {
     useEffect(() => {
         setWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
     }, [])
+
+
+    const Galleryvariant = {
+        galleryRoll: {
+            x: -width,
+
+            transition: {
+                x: {
+                    duration: 37,
+                    ease: "easeOut",
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                },
+
+            }
+
+        },
+    }
 
 
     const galleryMap = GraphicsData.map((graphicsMap) => {
@@ -46,7 +47,7 @@ const Gallery = (graphicsGallery) => {
 
 
     return (
-        <motion.div className='art'>
+        <motion.div className='art' >
 
             <motion.div className='artGalleryWrap'
 
@@ -72,7 +73,7 @@ const Gallery = (graphicsGallery) => {
                 </motion.div>
 
             </motion.div>
-        </motion.div>
+        </motion.div >
     )
 }
 

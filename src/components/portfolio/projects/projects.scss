@@ -1,10 +1,17 @@
-
-
-section{
+#projects{
+    padding-bottom: 7rem;
     width: 95%;
     max-height: fit-content;
+
+    .ProjTitle{
+        max-height: 3rem;
+    }
 }
 
+
+.projects .title{
+    height: 3rem;
+}
 .projects p{
     width: 90%;
     padding-left: 10%;
@@ -19,9 +26,6 @@ section{
     justify-content: center;
 }
 
-.projects{
-    padding-bottom: 7rem;
-}
 
 
 

@@ -77,9 +77,6 @@ const Projects = () => {
                         {projectsData.title}
                     </motion.h1>
 
-                    <a href={projectsData.repo} target='_blank' rel='noopener noreferrer'>
-                        <img src={projectsData.img} className='portfolioPic' />
-                    </a>
                     <>{projectsData.info3}</>
 
                     <motion.p>{projectsData.info}</motion.p>
@@ -119,7 +116,7 @@ const Projects = () => {
 
 
     return (
-        <section className="projects" ref={ref}>
+        <section id="projects" ref={ref}>
 
             <motion.div
 

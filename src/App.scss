@@ -2,6 +2,15 @@ $purple: rgb(42, 13, 227);
 $smallText: 1.5rem ;
 $headingText: 3rem ;
 
+//loading
+.Loading-page{
+  width: 100%;
+  height: 100dvh;
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 //canvas
 #bg{
