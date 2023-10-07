@@ -1,7 +1,7 @@
 $smallText: 1.5rem ;
 $headingText: 3rem ;
 
-.section{
+#header .section{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     min-height: 55svh;
@@ -19,7 +19,7 @@ $headingText: 3rem ;
 //header
 #header{
     margin-top: 5rem;
-    min-height: 100svh;
+    min-height: 70svh;
     max-width: 100%;
     width: 100%;
 }

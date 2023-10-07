@@ -7,13 +7,21 @@
     float: right;
     padding: 0px  0px 12rem 3%;
 
-    .center p{
+    .center{
+    display: flex;
+    justify-content: center;
+    
+    p{
         padding-left: 1rem;
-        width: 90%;
+    }
     }
 
     p{
         font-size: 1.3rem;
+    }
+
+    .linkButton{
+        justify-content: center;
     }
 }
 
@@ -60,6 +68,7 @@ section{
     grid-column: 1 / 12;
     grid-template-columns: repeat(12, 1fr);
     height: fit-content;
+    max-width: 100%;
 
     div{
         padding-top: 0.5rem;

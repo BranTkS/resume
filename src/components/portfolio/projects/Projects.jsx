@@ -1,7 +1,7 @@
 import graphics from '../../../assets/images/images/graphics.jpg'
 import websites from '../../../assets/images/images/websites.jpg'
 import appImg from '../../../assets/images/images/app.jpg'
-import { graphicsGallery, certificatesGallery, repoFilesGallery } from './imagesData'
+import { graphicsGallery, certificatesGallery, repoFilesGallery, websiteGallery } from './imagesData'
 
 import { Link } from 'react-router-dom'
 //used at info 3
@@ -28,19 +28,21 @@ const Projects = () => {
 
     const projectsData = [
         {
-            img: '',
+            headImg: <Gallery
+                graphicsGallery={certificatesGallery}
+            />,
             title: 'Certifications',
             info: 'Thanks to my love for learning, beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.',
             info2: 'I also participated in Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.',
-            info3: <Gallery
-                graphicsGallery={certificatesGallery}
-            />,
+            info3: '',
             url: resumeButton,
             repo: '',
         },
 
         {
-            img: '',
+            headImg: <Gallery
+                graphicsGallery={websiteGallery}
+            />,
             title: 'Repo websites and applications',
             info: 'android apps I worked on include a travel deals aplication, a notepad application as well as a few projects for courses and school, such as a school registration app for which we worked in teams and an unnecessary number of calculators all of which could easily be replaced with a google search. These appps incoperated firebase, Google authentication and were made using java. I also created a club management system using C# (Visual basic). see their repos below.',
 
@@ -53,13 +55,13 @@ const Projects = () => {
         },
 
         {
-            img: '',
+            headImg: <Gallery
+                graphicsGallery={graphicsGallery}
+            />,
             title: 'Graphic design',
             info: "I design advertising, logos, banners, and fliers as well as video editing for clients. I've learned to use many tools, applications and softwares to get the job done. Check the links below to see more Project samples.",
             info2: '',
-            info3: <Gallery
-                graphicsGallery={graphicsGallery}
-            />,
+            info3: '',
 
             url: seeMoreButton,
             repo: 'https://www.deviantart.com/brantshumba', // if no repo, the button will not show up
@@ -77,9 +79,11 @@ const Projects = () => {
                         {projectsData.title}
                     </motion.h1>
 
-                    <>{projectsData.info3}</>
+                    <>{projectsData.headImg}</>
 
                     <motion.p>{projectsData.info}</motion.p>
+
+                    <>{projectsData.info3}</>
                     <p>{projectsData.info2}</p>
 
                     <motion.div className="projectButtons">

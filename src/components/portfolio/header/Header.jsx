@@ -63,6 +63,7 @@ const Header = () => {
                     <motion.div className='hiText'>
                         <p>Hi, my name is Tanaka Brandon Shumba
                             I&apos;m a web and software Developer.
+                            brantshumba@gmail.com
                         </p>
                     </motion.div>
 

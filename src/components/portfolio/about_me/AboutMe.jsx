@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports'
 import AboutImages from './aboutImages';
-import { reactSVG } from './aboutSVGs'
+import { reactSVG, signature, computer, javaSVG, team, certificate } from './aboutSVGs'
 
 
 const AboutMe = () => {
@@ -68,7 +68,7 @@ const AboutMe = () => {
             <div className='lineSVG'>
 
                 <svg viewBox="0 0 891 1978" fill="none" preserveAspectRatio='xMidYMax meet'>
-                    <path d="M7 2H883M719 3V275M149 277H718M149 278V511M149 513H705.5C708.123 513 706.987 546.126 707 547V692M708 694H156V917M157 918H733M734 918V1211M166 1212H732M165 1213V1488M166 1490H732M733 1491V1816.33C733 1822.58 723.591 1819.84 719 1820M718 1821V1900C721.053 1900 742.972 1897.89 744 1902M744 1903V1952.5C744 1956.88 741.986 1975 746 1976M2 1976H889" stroke="black" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M7 2H883M719 3V275M149 277H718M149 278V511M149 513H705.5C708.123 513 706.987 546.126 707 547V692M708 694H156V917M157 918H733M734 918V1211M166 1212H732M165 1213V1488M166 1490H732M733 1491V1816.33C733 1822.58 723.591 1819.84 719 1820M718 1821V1900C721.053 1900 742.972 1897.89 744 1902M744 1903V1952.5C744 1956.88 741.986 1975 746 1976M2 1976H889" stroke="black" strokeWidth="9" strokeLinecap="round" />
                 </svg>
 
             </div>
@@ -81,23 +81,9 @@ const AboutMe = () => {
             >
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
-
-                    <motion.div>
-                        <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
-
-                            variants={svgVariants}
-                            initial="hidden"
-                            animate="visible"
-                        >
-                            <motion.path d={androidSVG}
-                                variants={pathVariants}
-                                fill="transparent"
-                                strokeWidth="1"
-                                stroke="black"
-                                strokeLinecap="round"
-                            />
-                        </motion.svg>
-                    </motion.div>
+                    <div className='left-SVG'>
+                        {signature}
+                    </div>
                     <div className='center'>
                         <p>
                             I am driven and enthusiastic, and I want to transition from a successful career in the restaurant industry to a dynamic and more challenging role in IT. I hope to further improve my skills so I can contribute to a collaborative team environment, and engage with a team dedicated to innovation.
@@ -108,24 +94,39 @@ const AboutMe = () => {
                     <div>
                         <div className='snippets'>
                             <div className='left-SVG'>
-                                {reactSVG}
+                                {javaSVG}
                             </div>
                             <div className='right'>
                                 <p>
-                                    I assisted in the opening of three restaurant locations and trained numerous team members, primarily for management roles and service roles.
+                                    I completed umuzis java bootcamp and was among the top learners to pass through the bootcamp.
                                 </p>
                             </div>
 
                             <div className='left'>
                                 <p>
-                                    I worked with diverse groups to make my store the best performing amongst our chain.
+                                    Created websites for clients and self education and participated in challenges to build react websites and android applications.
                                 </p>
                             </div>
                             <div className='right-SVG'>
                                 {reactSVG}
                             </div>
                             <div className='left-SVG'>
-                                {reactSVG}
+                                <motion.div>
+                                    <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+
+                                        variants={svgVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                    >
+                                        <motion.path d={androidSVG}
+                                            variants={pathVariants}
+                                            fill="transparent"
+                                            strokeWidth="1"
+                                            stroke="black"
+                                            strokeLinecap="round"
+                                        />
+                                    </motion.svg>
+                                </motion.div>
                             </div>
                             <div className='right'>
                                 <p>
@@ -135,14 +136,14 @@ const AboutMe = () => {
 
                             <div className='left'>
                                 <p>
-                                    Thanks to my hardworking nature and all the traits already mentioned I advanced to assistant manager and manager positions in a short span of time and at a young age.
+                                    Thanks to my hardworking nature  I advanced to assistant manager and manager positions in a short span of time and at a young age, where I trained numerous groups of diverse team members, primarily for management roles and service roles.
                                 </p>
                             </div>
                             <div className='right-SVG'>
-                                {reactSVG}
+                                {computer}
                             </div>
                             <div className='left-SVG'>
-                                {reactSVG}
+                                {team}
                             </div>
                             <div className='right'>
                                 <p>
@@ -156,7 +157,7 @@ const AboutMe = () => {
                                 </p>
                             </div>
                             <div className='right-SVG'>
-                                {reactSVG}
+                                {certificate}
                             </div>
                         </div>
                     </div>

@@ -1,19 +1,29 @@
 import { tanLogo, circleImg, pgb, blueYellow, purpleArrow, colourful, dots, noBGLogoPurple, onSite, roadntyre, shipping, staryNight, tornSpace, diploma, sdg, jsSololearn, javaIntroSololearn, gads, azure, gpHero, gpMobile, construction, googleSignIn, addTravelDeal, calender, clock, contactPage, notes, signup, login, travel } from '../imagesExports'
 
-const repoFilesGallery = [
+const websiteGallery = [
 
     {
         galleryImage: gpHero,
         alt: 'golden pride hero'
     },
     {
-        galleryImage: gpMobile,
-        alt: 'golden pride mobile hero'
-    },
-    {
         galleryImage: construction,
         alt: 'construction site'
     },
+    {
+        galleryImage: contactPage,
+        alt: 'Contact page screenshot'
+    },
+]
+
+const repoFilesGallery = [
+
+
+    {
+        galleryImage: gpMobile,
+        alt: 'golden pride mobile hero'
+    },
+
     {
         galleryImage: googleSignIn,
         alt: 'google sign in screenshot'
@@ -30,10 +40,7 @@ const repoFilesGallery = [
         galleryImage: clock,
         alt: 'clock screenshot'
     },
-    {
-        galleryImage: contactPage,
-        alt: 'Contact page screenshot'
-    },
+
     {
         galleryImage: notes,
         alt: 'notes screenshot'
@@ -85,6 +92,10 @@ const graphicsGallery = [
 
 
     {
+        galleryImage: tornSpace,
+        alt: 'space image'
+    },
+    {
         galleryImage: circleImg,
         alt: 'circle Logo'
     },
@@ -134,14 +145,11 @@ const graphicsGallery = [
         galleryImage: staryNight,
         alt: 'Tanaka staryNight image'
     },
-    {
-        galleryImage: tornSpace,
-        alt: 'space image'
-    }
+
 
 ]
 
 
 
 
-export { graphicsGallery, certificatesGallery, repoFilesGallery };
+export { graphicsGallery, certificatesGallery, repoFilesGallery, websiteGallery };

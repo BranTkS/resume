@@ -60,7 +60,7 @@ const RenderScene = () => {
     scene.add(torus, particlesMesh);
     scene.add(pointLight, ambientLight);
     scene.add(lightHelper);
-    scene.add(gridHelper);
+    //scene.add(gridHelper);
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -96,7 +96,7 @@ const RenderScene = () => {
 
         torus.rotation.x += 0.01;
         particlesMesh.rotation.y = mouseX * (elapsedTime * 0.000088);
-        particlesMesh.rotation.x = mouseY * (elapsedTime * 0.000088);
+        particlesMesh.rotation.x = mouseY * (elapsedTime * 0.0000188);
 
         controls.update();
         renderer.render(scene, camera);
