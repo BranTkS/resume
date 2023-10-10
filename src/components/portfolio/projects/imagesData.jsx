@@ -6,13 +6,15 @@ const websiteGallery = [
         galleryImage: gpHero,
         alt: 'golden pride hero'
     },
-    {
-        galleryImage: construction,
-        alt: 'construction site'
-    },
+
     {
         galleryImage: contactPage,
         alt: 'Contact page screenshot'
+    },
+
+    {
+        galleryImage: construction,
+        alt: 'construction site'
     },
 ]
 
@@ -104,6 +106,10 @@ const graphicsGallery = [
         alt: 'pink green and blue image'
     },
     {
+        galleryImage: staryNight,
+        alt: 'Tanaka staryNight image'
+    },
+    {
         galleryImage: blueYellow,
         alt: 'blue and yellow image'
     },
@@ -111,11 +117,6 @@ const graphicsGallery = [
         galleryImage: purpleArrow,
         alt: 'purple arrow'
     },
-    {
-        galleryImage: tanLogo,
-        alt: 'Tanaka Logo'
-    },
-
 
     {
         galleryImage: colourful,
@@ -131,7 +132,7 @@ const graphicsGallery = [
     },
     {
         galleryImage: onSite,
-        alt: 'onste image'
+        alt: 'onsite image'
     },
     {
         galleryImage: roadntyre,
@@ -141,9 +142,10 @@ const graphicsGallery = [
         galleryImage: shipping,
         alt: 'shipping pamphlet'
     },
+
     {
-        galleryImage: staryNight,
-        alt: 'Tanaka staryNight image'
+        galleryImage: tanLogo,
+        alt: 'Tanaka Logo'
     },
 
 

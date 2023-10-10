@@ -1,5 +1,6 @@
-$smallText: 1.5rem ;
-$headingText: 3rem ;
+@import "./../PortfolioBody.scss";
+
+$backgroundGradient: blue;
 
 #header .section{
     display: grid;
@@ -12,9 +13,33 @@ $headingText: 3rem ;
 .profileVideo{
    height: 40vw;
     width: auto;
-    max-width:50vh
+    max-width:50vh;
  }
 
+ .animated-letter{
+    font-style: oblique;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+ }
+
+ .animated-letter:hover{
+    font-size: 3.3rem;
+    animation: letterAnimation 1s ease-in-out infinite;
+ }
+
+ @keyframes letterAnimation {
+    0%{
+    font-style: italic;
+    }
+    30%{
+        font-style: normal;
+    }
+    70%{
+        font-style: oblique;
+    }
+
+}
 
 //header
 #header{
@@ -22,6 +47,7 @@ $headingText: 3rem ;
     min-height: 70svh;
     max-width: 100%;
     width: 100%;
+
 }
 
 .hero{
@@ -37,6 +63,49 @@ $headingText: 3rem ;
         font-size: $headingText;
         font-weight: 700;
     }
+
+    .hero-name{
+        background: $black-to-yellow ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 000ms ease-in-out;
+        animation: changeColor 20s ease-in-out infinite;
+    }
+
+    .hero-name:hover{
+        background: $black-to-yellow-alt-three ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+   
+    @keyframes changeColor {
+       0%{
+        background: $black-to-yellow ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+       25%{
+        background: $black-to-yellow-alt-one ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+       50%{
+        background: $black-to-yellow-alt-two ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+       75%{
+        background: $black-to-yellow-alt-one ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+       90%{
+        background: $black-to-yellow ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+   
+   }
 }
 
 .tanLogo{

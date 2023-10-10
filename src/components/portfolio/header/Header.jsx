@@ -17,6 +17,52 @@ const Header = () => {
     const mainControls = useAnimation();
     const { ref, inView } = useInView(inviewAttributes)
 
+
+    const buttonVarriant = {
+        hidden: {
+            x: -500,
+        },
+
+        visible: {
+            x: 0,
+
+            transition: {
+                duration: 3,
+            }
+        }
+    }
+
+    const headerVariant = {
+        yellow: {
+
+        },
+        visible: {
+
+            transition: {
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "reverse",
+                repeatDelay: 3,
+            }
+        }
+    }
+
+
+    const videoVariants = {
+        hidden: {
+
+        },
+
+        visible: {
+            scale: 1.1,
+
+            transition: {
+                duration: 1,
+                delay: 5,
+            }
+        },
+    }
+
     useEffect(() => {
         if (inView) {
             mainControls.start({
@@ -28,7 +74,7 @@ const Header = () => {
 
         console.log("check 1", inView)
 
-    }, [inView])
+    }, [inView]);
 
 
     return (
@@ -40,12 +86,34 @@ const Header = () => {
                 transition={transitionValue}
             >
                 <motion.div className='heroImage'>
-                    <video src={tanVid} className='profileVideo' loop autoPlay={true} muted={true} />
+                    <motion.video
+
+                        variants={videoVariants}
+                        initial="hidden"
+                        animate="visible"
+                        whileHover={{
+                            scale: 1.1,
+                            x: 20,
+                            boxShadow: "1px 0px 3px black, 2px 0px 0px #FD02D7",
+                        }}
+
+                        src={tanVid} className='profileVideo' loop autoPlay={true} muted={true} />
                 </motion.div>
                 <motion.div className='heroText'>
                     <motion.div>
-                        <h1 className='heroName'>TANAKA B SHUMBA
-                        </h1>
+                        <motion.h1 className='hero-name'
+
+                        >TANA
+                            <motion.div
+                                className='animated-letter'>
+                                <motion.div
+                                    className='animated-letter'>
+                                    K
+                                </motion.div>
+                            </motion.div>
+
+                            A B <h1>SHUMBA</h1>
+                        </motion.h1>
                     </motion.div>
                     <motion.div className="tanLogo">
                         <img src={tanLogo} alt="Logo" className="tanLogo" />
@@ -63,15 +131,28 @@ const Header = () => {
                     <motion.div className='hiText'>
                         <p>Hi, my name is Tanaka Brandon Shumba
                             I&apos;m a web and software Developer.
-                            brantshumba@gmail.com
                         </p>
                     </motion.div>
 
 
 
-                    <div className='linkButton'>
-                        <Link className='linkButton' to="about" spy={true} smooth={true} offset={0} duration={500}>Know more</Link>
-                    </div>
+                    <motion.div className='linkButton'
+
+                    >
+                        <motion.div className='remove-padding-margin'
+
+                            variants={buttonVarriant}
+                            initial="hidden"
+                            animate="visible"
+                            whileHover={{
+                                scale: 1.1,
+                                x: 20,
+                                boxShadow: "1px 0px 0px #FD02D7",
+                                textShadow: "0px 0px 7px 0px",
+                            }}>
+                            <Link className='linkButton' to="about" spy={true} smooth={true} offset={0} duration={500}>Know more</Link>
+                        </motion.div>
+                    </motion.div>
 
                 </motion.div>
             </motion.div>

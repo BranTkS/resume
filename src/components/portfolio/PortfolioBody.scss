@@ -1,6 +1,22 @@
-$smallText: 1.5rem ;
 $headingText: 3rem ;
+$subheadingText:2.5rem;
+$largeText:1.7rem;
+$smallText: 1.5rem ;
 
+$smallTextLineHeight: $smallText*1.9;
+$headingTextLineHeight: $smallText*1.7;
+
+
+//colours
+$black-to-yellow:linear-gradient(90deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-one:  linear-gradient(120deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-two:  linear-gradient(140deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-three:  linear-gradient(180deg, #000000 2%, #EEAC07 98%);
+$yellow-to-black: -webkit-linear-gradient(180deg,  #000000 5%, #EEAC07);
+
+$primary-gradient: linear-gradient(280deg, #C15DF2  10%, #FD02D7 90%);
+
+$primary-gradient-alt-one: linear-gradient(150deg, #C15DF2  10%, #FD02D7 90%);
 
 //portfolio
 #portfolio{
@@ -9,6 +25,15 @@ $headingText: 3rem ;
     width: 90%;
     z-index: 1;
     overflow: hidden;
+
+    h1{
+        line-height: $headingTextLineHeight;
+        letter-spacing: -0.5vw;
+    }
+
+    p{
+        line-height: $smallTextLineHeight;
+    }
   }
 
 section{
@@ -27,15 +52,29 @@ section{
 
 //link buttons
     .linkButton{
-            color:aqua;
-            border:0.3vw solid rgb(243, 137, 6);
+            color:black;
+           // border:0.3vw solid rgb(243, 137, 6);
+           //border: 0.3vw solid #FD02D7;
             padding: 0.7vw;
             margin: 0.7vw;
             display: flex;
+            justify-content: center;
             flex-wrap: nowrap;
             white-space: nowrap;
             overflow: hidden;
             align-items:left;
+            min-width: 5rem;
+
+            a{
+                background-image:$primary-gradient;
+                cursor: pointer;
+            }
+
+            a:hover{
+                background-image: $primary-gradient-alt-one;
+
+
+            }
     }
 
     div.linkButton{
@@ -67,6 +106,12 @@ padding-top: 1.7dvh;
     padding-top:4dvh;
 }
 
+.remove-padding-margin{
+    width:fit-content;
+    padding: 0px;
+    margin: 0px;
+
+}
 
 
 @media screen and (max-width: 900px) {

@@ -8,13 +8,14 @@ import { androidSVG } from '../imagesExports'
 const AboutImages = () => {
 
     const inviewAttributes = [{ threshold: 0.4 }]
-    const mainControls = useAnimation();
-    const { ref, inView } = useInView(inviewAttributes)
+    const mainControls2 = useAnimation();
+    const { ref2, inView2 } = useInView(inviewAttributes)
 
     useEffect(() => {
-        if (inView) {
-            mainControls.start({
+        if (inView2) {
+            mainControls2.start({
                 pathLength: 1,
+                rotate: 4,
 
                 transition: {
                     duration: 20,
@@ -22,16 +23,16 @@ const AboutImages = () => {
                 }
             });
         } else {
-            mainControls.start(
+            mainControls2.start(
                 {
                     pathLength: 0,
                 }
             );
         }
 
-        console.log("check android", inView)
+        console.log("check android", inView2)
 
-    }, [inView])
+    }, [inView2])
 
     useEffect(() => {
 
@@ -54,18 +55,18 @@ const AboutImages = () => {
         },
 
         visible: {
-            mainControls
+            mainControls2
         }
 
     }
 
 
-    const androidLogo = <motion.div ref={ref}>
+    const androidLogo = <motion.div ref={ref2}>
         <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
 
             variants={svgVariants}
             initial="hidden"
-            animate="visible"
+            animate={mainControls2}
 
 
         >

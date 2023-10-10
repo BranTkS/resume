@@ -95,6 +95,14 @@ const Navbar = () => {
                             </div>
                         </Link>
                     </li>
+                    <li>
+                        <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+                            < div className='navLink'>
+                                <img src={contactBlack} alt="contact me" className="navIcon" />
+                                <p> brantshumba@gmail.com</p>
+                            </div>
+                        </Link>
+                    </li>
 
                 </ul>
             </nav>

@@ -1,7 +1,9 @@
+@import "./../PortfolioBody.scss";
+
 .contactLogo{
 
     padding-top: 2rem;
-    visibility:visible;
+    display:inline-block;
     
     img{
         width: 10rem;
@@ -30,6 +32,10 @@ margin-top: 20%;
 display: flex;
 justify-content: center;
 
+.spacer .linkButton{
+    justify-content: center;
+    align-content: center;
+}
 }
 
 .footerIcons{
@@ -47,7 +53,16 @@ svg{
 @media screen and (min-width: 500px) {
 
     .contactLogo{
-        visibility:hidden;
+        display:none;
      
     }
+
+    .footerIcons{
+        
+        
+        svg{
+            width:17%;
+            height:auto;
+        }
+        }
 }

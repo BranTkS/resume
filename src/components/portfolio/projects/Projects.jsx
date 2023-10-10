@@ -59,7 +59,7 @@ const Projects = () => {
                 graphicsGallery={graphicsGallery}
             />,
             title: 'Graphic design',
-            info: "I design advertising, logos, banners, and fliers as well as video editing for clients. I've learned to use many tools, applications and softwares to get the job done. Check the links below to see more Project samples.",
+            info: "I designed adverts, logos, banners, and fliers for clients as well as some video editing. I've learned to use many tools, applications and softwares to get the job done. Check the links below to see more Project samples.",
             info2: '',
             info3: '',
 
@@ -73,7 +73,7 @@ const Projects = () => {
 
         return (
 
-            <div className="projects" key={projectsData.title}>
+            <div id="projects" className="projects" key={projectsData.title}>
                 <motion.div className="container-fluid">
                     <motion.h1 className="ProjTitle">
                         {projectsData.title}

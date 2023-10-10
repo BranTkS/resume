@@ -11,13 +11,13 @@ const PortfolioBody = () => {
     return (
 
         <div id="portfolio">
-            < Header className='introAnimation' />
+            < Header />
 
-            < AboutMe className='introAnimation' />
+            < AboutMe />
 
-            < Projects className='introAnimation' />
+            < Projects />
 
-            < ContactMe className='introAnimation' />
+            < ContactMe />
         </div>
     )
 }
