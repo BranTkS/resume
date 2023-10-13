@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { currentBackground, currentColor } from './BgColorScrollChanges';
 
 const whiteColor = 0xffffff;
+const currentBackgroundColor = 0x0A020D;
 const RenderScene = () => {
 
     //scene setup and helpers
@@ -16,7 +17,8 @@ const RenderScene = () => {
 
     // background
     const spacebgTexture = new THREE.TextureLoader().load(currentBackground);
-    scene.background = spacebgTexture;
+    //scene.background = spacebgTexture;
+    scene.background = new THREE.Color(currentBackgroundColor);
 
     //lighting
     const pointLight = new THREE.PointLight(whiteColor);
@@ -38,6 +40,12 @@ const RenderScene = () => {
     const torus = new THREE.Points(geometry, material);
 
 
+    //face
+    const sphere = new THREE.Mesh(
+        new THREE.SphereGeometry(3, 32, 32, 10),
+        material
+    );
+
     //particles
     const particlesGeometry = new THREE.BufferGeometry;
     const particlesMaterial = new THREE.PointsMaterial({
@@ -57,9 +65,9 @@ const RenderScene = () => {
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial)
 
     //scenes
-    scene.add(torus, particlesMesh);
+    scene.add(torus, particlesMesh,);
     scene.add(pointLight, ambientLight);
-    scene.add(lightHelper);
+    //scene.add(lightHelper);
     //scene.add(gridHelper);
 
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -82,6 +90,10 @@ const RenderScene = () => {
         camera.position.x = t * -0.01;
         camera.position.y = t * -0.01;
         camera.position.z = t * -0.01;
+
+        if (t == 819) {
+            console.log("about");
+        }
     }
 
     document.body.onscroll = moveCamera;

@@ -1,6 +1,3 @@
-import tanVid from '../../../assets/videos/profileVideo.mp4'
-import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
-
 import './header.scss'
 
 import { motion, useAnimation } from "framer-motion"
@@ -8,6 +5,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { Link } from 'react-scroll'
+
+import { heroPhoto } from '../imagesExports'
 
 
 
@@ -85,8 +84,9 @@ const Header = () => {
                 animate={mainControls}
                 transition={transitionValue}
             >
-                <motion.div className='heroImage'>
-                    <motion.video
+                <motion.div className='hero-image-container absolute-centered'>
+                    <motion.img src={heroPhoto} alt="Hero photo"
+                        className='profile-image'
 
                         variants={videoVariants}
                         initial="hidden"
@@ -96,11 +96,10 @@ const Header = () => {
                             x: 20,
                             boxShadow: "1px 0px 3px black, 2px 0px 0px #FD02D7",
                         }}
-
-                        src={tanVid} className='profileVideo' loop autoPlay={true} muted={true} />
+                    />
                 </motion.div>
-                <motion.div className='heroText'>
-                    <motion.div>
+                <motion.div className='heroText absolute-centered'>
+                    <motion.div className='hero-title'>
                         <motion.h1 className='hero-name'
 
                         >TANA
@@ -112,20 +111,18 @@ const Header = () => {
                                 </motion.div>
                             </motion.div>
 
-                            A B <h1>SHUMBA</h1>
+                            A B <motion.h1 className=' shumba remove-padding-margin'>SHUMBA</motion.h1 >
                         </motion.h1>
                     </motion.div>
-                    <motion.div className="tanLogo">
-                        <img src={tanLogo} alt="Logo" className="tanLogo" />
-                    </motion.div>
+
                     <motion.div className='line1'>
-                        <h2>Now that</h2>
+                        <h2>Welcome</h2>
                     </motion.div>
                     <motion.div className='line2'>
-                        <h2> we&apos;ve</h2>
+                        <h2> welcome</h2>
                     </motion.div>
                     <motion.div className='line3'>
-                        <h2> broken the ice</h2>
+                        <h2> welcome</h2>
                     </motion.div>
 
                     <motion.div className='hiText'>

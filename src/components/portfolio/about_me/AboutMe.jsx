@@ -5,8 +5,9 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
-import { androidSVG } from '../imagesExports'
+import { androidSVG } from '../imagesExports';
 import AboutImages from './aboutImages';
+import { heroVideo } from './branVideo';
 import { reactSVG, signature, computer, javaSVG, team, certificate } from './aboutSVGs'
 
 
@@ -75,8 +76,8 @@ const AboutMe = () => {
             >
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
-                    <div className='left-SVG'>
-                        {signature}
+                    <div className='center'>
+                        {heroVideo} {signature}
                     </div>
                     <div className='center'>
                         <p>

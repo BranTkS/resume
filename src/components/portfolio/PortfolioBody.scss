@@ -1,18 +1,38 @@
-$headingText: 3rem ;
-$subheadingText:2.5rem;
+$headingText: 2.5rem ;
+$subheadingText:2rem;
 $largeText:1.7rem;
 $smallText: 1.5rem ;
+$extraSmallText: 1.1rem ;
 
 $smallTextLineHeight: $smallText*1.9;
 $headingTextLineHeight: $smallText*1.7;
+$extraSmallTextLineHeight: $extraSmallText*1.3;
 
+//base colours
+$backgroundColor: #0A020D;
+$textColor: #F4F0F5;
+$primaryColor:#FC03D7;
+$secondaryColor: #6F0DA0;
+$accentColor: #FF2600;
+$secondaryAccent: #EEAC07;
+
+
+//fonts
+$headingFont: "Oswald", Impact, "Franklin Gothic Bold", sans-serif;
+$bodyFont: "Lato", "Trebuchet MS", sans-serif;
+$altTextFont:Verdana, Geneva, Tahoma, sans-serif;
+$altHeadingFont:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 //colours
+$black-gradient: linear-gradient(180deg, rgba(52,52,56,0) 1%, rgb(0, 0, 0) 99%);
+
 $black-to-yellow:linear-gradient(90deg, #000000 2%, #EEAC07 98%);
 $black-to-yellow-alt-one:  linear-gradient(120deg, #000000 2%, #EEAC07 98%);
 $black-to-yellow-alt-two:  linear-gradient(140deg, #000000 2%, #EEAC07 98%);
 $black-to-yellow-alt-three:  linear-gradient(180deg, #000000 2%, #EEAC07 98%);
 $yellow-to-black: -webkit-linear-gradient(180deg,  #000000 5%, #EEAC07);
+
+$black-to-purple:linear-gradient(90deg, #000000 2%, $primaryColor 98%);
 
 $primary-gradient: linear-gradient(280deg, #C15DF2  10%, #FD02D7 90%);
 
@@ -22,7 +42,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2  10%, #FD02D7 90%);
 #portfolio{
     position: absolute;
     top:0;
-    width: 90%;
+    width: 100%;
     z-index: 1;
     overflow: hidden;
 
@@ -37,11 +57,11 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2  10%, #FD02D7 90%);
   }
 
 section{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $bodyFont;
     margin-top: 10vw;
-    width: 80%;
+    width: 100%;
     height: fit-content;
-    color: rgb(7, 7, 7);
+    color: $textColor;
 
 
 
@@ -62,8 +82,8 @@ section{
             flex-wrap: nowrap;
             white-space: nowrap;
             overflow: hidden;
-            align-items:left;
             min-width: 5rem;
+            border-radius: 11%;
 
             a{
                 background-image:$primary-gradient;
@@ -115,9 +135,7 @@ padding-top: 1.7dvh;
 
 
 @media screen and (max-width: 900px) {
-    #portfolio{
-    width: 90dvw;
-      }
+
     
     section{
         margin-top: 10vw;
@@ -129,7 +147,7 @@ padding-top: 1.7dvh;
     }
 
     .title{
-        font-size: 2rem;
+        font-size: $subheadingText;
     letter-spacing: -0.27vw;
     }
 }

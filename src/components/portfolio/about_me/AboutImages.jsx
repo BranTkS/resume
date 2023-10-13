@@ -1,7 +1,7 @@
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports'
 
@@ -13,6 +13,7 @@ const AboutImages = () => {
 
     useEffect(() => {
         if (inView2) {
+            console.log("check view", inView2)
             mainControls2.start({
                 pathLength: 1,
                 rotate: 4,
@@ -64,9 +65,9 @@ const AboutImages = () => {
     const androidLogo = <motion.div ref={ref2}>
         <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
 
-            variants={svgVariants}
+            variants={mainControls2}
             initial="hidden"
-            animate={mainControls2}
+            animate="visible"
 
 
         >

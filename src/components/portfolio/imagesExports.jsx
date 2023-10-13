@@ -1,3 +1,6 @@
+//hero
+import heroPhoto from '../../assets/images/heroPhoto.png'
+
 //navigation svgs
 import blackMenu from '../../assets/images/svgImages/icons8-circle-menu-96.png'
 import colorMenu from '../../assets/images/svgImages/icons8-menu-96.png'
@@ -70,7 +73,7 @@ import circleImg from '../../assets/images/gallery/circleLogo.jpg'
 import pgb from '../../assets/images/gallery/pgb.jpg'
 import blueYellow from '../../assets/images/gallery/blueYellow.jpg'
 import purpleArrow from '../../assets/images/gallery/purpleArrow.png'
-import colourful from '../../assets/images/gallery/colourful.jpg'
+import colourful from '../../assets/images/gallery/colourful2.jpg'
 import dots from '../../assets/images/gallery/dots.jpg'
 import noBGLogoPurple from '../../assets/images/gallery/noBGLogoPurple.png'
 import onSite from '../../assets/images/gallery/onSite.jpg'
@@ -96,6 +99,9 @@ import travel from '../../assets/images/projectsImages/travel.jpg'
 
 
 export {
+    //hero
+    heroPhoto,
+
     //contact images
     deviantartSVG, githubSVG, linkedinSVG,
 

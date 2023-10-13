@@ -45,7 +45,7 @@ const Navbar = () => {
                 <>
 
                     <a className='nav-reveal-button' >
-                        <img src={blackMenu} alt="" onClick={() => {
+                        <img src={colorMenu} alt="" onClick={() => {
                             setOpen(!open)
                         }}
                         />

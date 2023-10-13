@@ -2,27 +2,85 @@
 
 #projects{
     padding-bottom: 7rem;
-    width: 95%;
+    width: 100%;
     max-height: fit-content;
+    overflow: hidden;
+}
 
-    .ProjTitle{
-        max-height: 3rem;
-    }
+#projects h3{
+    padding-top: 3rem;
+    font-size: $subheadingText;
+    width: 80%;
+    text-align: left;
+}
+
+#projects p{
+    width: 100%;
+    text-align: left;
+    font-size: $extraSmallText;
+    line-height: $extraSmallTextLineHeight !important;
 }
 
 
-.projects .title{
-    height: 3rem;
+.projects-grid-container{
+    display: grid;
+    //grid-template-columns: repeat(12, 1fr);
+   // grid-template-rows: repeat(12, 1fr);
+   width: 100%;
+   gap: 1dvw;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    '. one one one one .'
+    'two two  two  two two two'
+    '. three three three three . '
+    '. four four four four . '
+    'five five five five five five '
+    'six six six six six six'
+    '. seven seven seven seven .'
+    '. eight eight eight eight .';
 }
-.projects p{
-    width: 90%;
-    padding-left: 10%;
+
+.ProjTitle{
+    max-height: 3rem;
+    grid-column: 1 /span 2;
+    grid-area: one;
+}
+
+.head-image{
+    grid-area: two;
+}
+
+
+.head-image{
+    grid-area: two;
+}
+
+.info-title{
+    grid-area: three;
+}
+
+.info-one{
+    grid-area: four;
+}
+
+.second-gallery{
+    grid-area: five;
+}
+
+#projects .info-title-two{
+    grid-area: six;
+    width: 60%;
+}
+
+.info-two{
+    grid-area: seven;
 }
 
 .projectButtons{
     display: flex;
     gap: 1svh;
     justify-content: center;
+    grid-area: eight;
 }
 
 

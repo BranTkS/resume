@@ -25,6 +25,43 @@ const Projects = () => {
         <a href='https://github.com/BranTkS' className='linkButton'>see more</a>
     </div>;
 
+    const androidStackList = <>
+        <h4>The tech incoperated</h4>
+        <ul>
+            <li>java</li>
+            <li>firebase (authentication and storage)</li>
+            <li>Kotlin(*to a lesser extent*)</li>
+        </ul>
+    </>
+
+    const portfolioStack = <>
+        <ul>
+            <li>React</li>
+            <li>Threejs fibre </li>
+            <li>Framer motion</li>
+            <li>Figma </li>
+        </ul>
+    </>
+
+    const websiteStackList = <>
+        <h4>The tech stacks included</h4>
+        <ul>
+            <li>Mongo db</li>
+            <li>ExpresJS</li>
+            <li>React</li>
+            <li>node</li>
+            <li>Threejs fibre </li>
+            <li>SQL</li>
+            <li>PHP</li>
+            <li>Jquery</li>
+            <li>Framer motion</li>
+            <li>Figma</li>
+            <li>WordPress </li>
+            <li>Joomla *to a lesser extent* </li>
+            <li>Sass </li>
+        </ul>
+    </>
+
 
     const projectsData = [
         {
@@ -32,8 +69,12 @@ const Projects = () => {
                 graphicsGallery={certificatesGallery}
             />,
             title: 'Certifications',
-            info: 'Thanks to my love for learning, beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.',
-            info2: 'I also participated in Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.',
+            infoTitle: 'Thanks to my love for learning...',
+            info: ' Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.',
+
+            infoTitle2: 'I also participated in...',
+            info2: 'Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.',
+
             info3: '',
             url: resumeButton,
             repo: '',
@@ -44,9 +85,13 @@ const Projects = () => {
                 graphicsGallery={websiteGallery}
             />,
             title: 'Repo websites and applications',
-            info: 'android apps I worked on include a travel deals aplication, a notepad application as well as a few projects for courses and school, such as a school registration app for which we worked in teams and an unnecessary number of calculators all of which could easily be replaced with a google search. These appps incoperated firebase, Google authentication and were made using java. I also created a club management system using C# (Visual basic). see their repos below.',
+            infoTitle: 'Websites I made include...',
+            info: <>This very website which i made using ` + {portfolioStack} + `In my freelance carrer I created several websites including a website for a gym, multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site. I also occasionally worked in teams where I worked on various components of websites ${websiteStackList}</>,
 
-            info2: 'Websites I made include this very website which i made using react, threejs fibre and framer motion. I also created many websites over the years using react, Mongo db,node,ExpresJS, PHP, jquery, SQL and WordPress. I also freelanced several websites including a website for a gym, portfolios, several construction companies and restaurants, a consultancy and my biggest project to date was an online news site. I also occasionally worked in teams where I worked on various aspects of websites',
+
+
+            infoTitle2: 'Android apps I worked on include...',
+            info2: `Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. ${androidStackList}I also created a club management system using C# (Visual basic). see their repos below.`,
             info3: <Gallery
                 graphicsGallery={repoFilesGallery}
             />,
@@ -59,7 +104,8 @@ const Projects = () => {
                 graphicsGallery={graphicsGallery}
             />,
             title: 'Graphic design',
-            info: "I designed adverts, logos, banners, and fliers for clients as well as some video editing. I've learned to use many tools, applications and softwares to get the job done. Check the links below to see more Project samples.",
+            infoTitle: 'I designed...',
+            info: "Logos, banners, fliers and any necessary design work for clients as well as some video editing. I've learned to use many tools, applications and resources to get the job done. Check the links below to see more Project samples.",
             info2: '',
             info3: '',
 
@@ -73,26 +119,28 @@ const Projects = () => {
 
         return (
 
-            <div id="projects" className="projects" key={projectsData.title}>
-                <motion.div className="container-fluid">
+            <div key={projectsData.title}>
+                <motion.div className="projects-grid-container">
                     <motion.h1 className="ProjTitle">
                         {projectsData.title}
                     </motion.h1>
 
-                    <>{projectsData.headImg}</>
+                    <fragment className="head-image">{projectsData.headImg}</fragment>
 
-                    <motion.p>{projectsData.info}</motion.p>
+                    <motion.h3 className="info-title">{projectsData.infoTitle}</motion.h3>
+                    <motion.p className="info-one">{projectsData.info}</motion.p>
 
-                    <>{projectsData.info3}</>
-                    <p>{projectsData.info2}</p>
+                    <fragment className="second-gallery">{projectsData.info3}</fragment>
+                    <motion.h3 className="info-title-two">{projectsData.infoTitle2}</motion.h3>
+                    <motion.p className="info-two">{projectsData.info2}</motion.p>
 
                     <motion.div className="projectButtons">
-                        <motion.div className="col-md-2">
-                            <div className='linkButton'>
+                        <motion.div>
+                            <motion.div className='linkButton'>
                                 <a href={projectsData.repo} className='linkButton'>repo</a>
-                            </div>
+                            </motion.div>
                         </motion.div>
-                        <motion.div className="col-md-3">
+                        <motion.div >
                             {projectsData.url}
                         </motion.div>
                     </motion.div>
