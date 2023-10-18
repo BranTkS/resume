@@ -6,7 +6,7 @@
     display:inline-block;
     
     img{
-        width: 10rem;
+        width: 3rem;
         height: auto;
         }
 }
@@ -19,9 +19,87 @@
 
     section{
         margin-top: 1px;
-        width: 95%;
+        width: 100%;
         max-height: fit-content;
     }
+    
+    .contactForm{
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+        h2{
+            text-decoration: underline;
+            width: 100%;
+        }
+
+        form{
+        width: 100%;
+        display: grid;
+        grid-auto-columns: 20%;
+        grid-template-areas: 
+        '. title title title .'
+        '. email email email .'
+        '. field field field .'
+        'message message message message message'
+        '. text_area text_area text_area .'
+        '. . button . .'
+        ;
+
+        h2{
+            grid-area: title;
+        }
+
+        label{
+            font-size:$smallText;
+            margin-top: 3.5rem;
+        }
+
+        label[for~="from_name"]{
+            grid-area: email;
+        }
+
+        label[for~="message"]{
+            grid-area: message;
+        }
+
+        .text_area, .text_field{
+            color: $textColor;
+            background-color: $backgroundColor;
+            border: none;
+            border-bottom: 1px solid $primaryColor;
+            border-top: 1px solid $primaryColor ;
+        }
+
+        .text_area{
+            grid-area: text_area ;
+            height: 5rem;
+            font-size: $smallText;
+        }
+
+        .text_field{
+            grid-area: field;
+            height: 3rem;
+            font-size: $smallText;
+        }
+
+        button{
+            background: none;
+            cursor: pointer;
+            border: none;
+
+        }
+        .linkButton{
+        grid-area: button;
+        margin-top: 1.5rem;
+    }
+    }
+    }
+
+
 }
 
 
@@ -45,8 +123,8 @@ width:90%;
 svg{
     flex-direction: row;
     padding: 5%;
-    width:23%;
-    height:23%;
+    width:25%;
+    height:auto;
     fill: aqua;
 }
 }
@@ -62,7 +140,6 @@ svg{
         
         svg{
             width:17%;
-            height:auto;
         }
         }
 }

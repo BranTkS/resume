@@ -2,6 +2,7 @@ import tanVid from '../../../assets/videos/profileVideo.mp4'
 import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 
 import { motion } from "framer-motion"
+import { signature } from './aboutSVGs'
 
 
 
@@ -23,6 +24,7 @@ const videoVariants = {
 
 const heroVideo = <motion.div className='hero-video'>
 
+    {signature}
     <motion.video
 
         variants={videoVariants}

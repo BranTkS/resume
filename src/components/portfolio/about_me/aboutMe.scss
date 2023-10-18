@@ -10,8 +10,9 @@
 
     .center{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
     max-width: 100%;
+    padding: 5%;
+    grid-template-columns: repeat(12, 1fr);
     justify-content: center;
     
     p{
@@ -21,7 +22,7 @@
 
         //videos
         .profileVideo{
-            height: auto;
+            height: 70dvh;
              width: 100%;
              display: flex;
              justify-content: center;
@@ -34,9 +35,12 @@
          .motion-SVG{
              z-index: 2;
              position: absolute;
-             grid-column: 3 / span 9;
+             padding-top: 95%;
+             width: 80%;
+             height: fit-content;;
+             grid-column: 1 / span 9;
              grid-row: 1 / span 2;
-             border: 1px solid green;
+             border: 1px solid greenyellow;
          }
     }
 

@@ -54,7 +54,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2  10%, #FD02D7 90%);
     p{
         line-height: $smallTextLineHeight;
     }
-  }
+
 
 section{
     font-family: $bodyFont;
@@ -121,9 +121,9 @@ padding-top: 1.7dvh;
 }
 
 .ProjTitle{
-    font-size: 4.5vw;
+    font-size: $smallText;
     font-weight: 500;
-    padding-top:4dvh;
+    padding-top:3dvh;
 }
 
 .remove-padding-margin{
@@ -138,9 +138,9 @@ padding-top: 1.7dvh;
 
     
     section{
-        margin-top: 10vw;
-        min-height: 20svh;
-        width: 98dvw;
+        margin-top: 10dvh;
+        min-height: 20dvh;
+        width: 100%;
     
     div{
         width: 100%;
@@ -151,4 +151,5 @@ padding-top: 1.7dvh;
     letter-spacing: -0.27vw;
     }
 }
+}  
 }

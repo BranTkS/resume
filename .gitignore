@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+#dotenv environment variables
+.env
+.env.test
+
 # Created by https://www.gitignore.io/api/java,gradle,intellij
 # Edit at https://www.gitignore.io/?templates=java,gradle,intellij
 

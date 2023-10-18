@@ -5,20 +5,61 @@
     width: 100%;
     max-height: fit-content;
     overflow: hidden;
-}
 
-#projects h3{
-    padding-top: 3rem;
-    font-size: $subheadingText;
-    width: 80%;
-    text-align: left;
-}
+    h3{
+        padding-top: 3rem;
+        font-size: $subheadingText;
+        width: 80%;
+        text-align: left;
+    }
 
-#projects p{
-    width: 100%;
-    text-align: left;
-    font-size: $extraSmallText;
-    line-height: $extraSmallTextLineHeight !important;
+    p{
+        width: 100%;
+        text-align: left;
+        font-size: $extraSmallText;
+        line-height: $extraSmallTextLineHeight !important;
+
+        img{
+            height: $smallText*0.7;
+            width: auto;
+            padding: 0px 5px 0px;
+        }
+    }
+
+    li{
+        list-style: none;
+        font-size: $smallText*0.7;
+
+        svg, img{
+            height: $smallText * 1.1;
+            width: auto;
+            padding-bottom: 5px;
+        }
+    }
+
+    .website_stackList{
+        display: grid;
+        grid-auto-columns: 20%;
+        grid-template-areas: 
+        '. list_title list_title list_title list_title .'
+        'left_list left_list left_list right_list right_list right_list';
+
+        h4{
+            grid-area: list_title;
+        }
+        ul{
+            padding-inline-start: 0px;
+        }
+
+    .left_list{
+        grid-area: left_list;
+        padding-left: 0px;
+    }
+
+    .right_list{
+        grid-area: right_list;
+    }
+}
 }
 
 
@@ -30,7 +71,7 @@
    gap: 1dvw;
     grid-auto-columns: 1fr;
     grid-template-areas: 
-    '. one one one one .'
+    '. project_title project_title project_title project_title .'
     'two two  two  two two two'
     '. three three three three . '
     '. four four four four . '
@@ -42,8 +83,8 @@
 
 .ProjTitle{
     max-height: 3rem;
-    grid-column: 1 /span 2;
-    grid-area: one;
+    grid-area: project_title;
+    text-decoration: underline;
 }
 
 .head-image{

@@ -1,7 +1,14 @@
-import graphics from '../../../assets/images/images/graphics.jpg'
-import websites from '../../../assets/images/images/websites.jpg'
-import appImg from '../../../assets/images/images/app.jpg'
-import { graphicsGallery, certificatesGallery, repoFilesGallery, websiteGallery } from './imagesData'
+
+import {
+    graphicsGallery, certificatesGallery, mobileGallery, websiteGallery,
+
+    //filler images
+    coffeeImage, makotechImage, rawGymImage, safriviewCornerImage, safriviewNoBgImage
+
+} from './imagesData'
+import {
+    threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, mongoTwoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon
+} from './projectIcons'
 
 import { Link } from 'react-router-dom'
 //used at info 3
@@ -28,39 +35,43 @@ const Projects = () => {
     const androidStackList = <>
         <h4>The tech incoperated</h4>
         <ul>
-            <li>java</li>
-            <li>firebase (authentication and storage)</li>
-            <li>Kotlin(*to a lesser extent*)</li>
+            <li>{javaIcon}java</li>
+            <li>{firebaseIcon} firebase (authentication and storage)</li>
+            <li>{kotlinIcon}Kotlin(*to a lesser extent*)</li>
         </ul>
     </>
 
     const portfolioStack = <>
         <ul>
-            <li>React</li>
-            <li>Threejs fibre </li>
-            <li>Framer motion</li>
-            <li>Figma </li>
+            <li>{reactIcon}React</li>
+            <li>{threejsIcon}Threejs fibre </li>
+            <li>{framerIcon}Framer motion</li>
+            <li>{figmaIcon}Figma </li>
         </ul>
     </>
 
-    const websiteStackList = <>
+    const websiteStackList = <div className='website_stackList'>
         <h4>The tech stacks included</h4>
-        <ul>
-            <li>Mongo db</li>
-            <li>ExpresJS</li>
-            <li>React</li>
-            <li>node</li>
-            <li>Threejs fibre </li>
-            <li>SQL</li>
-            <li>PHP</li>
-            <li>Jquery</li>
-            <li>Framer motion</li>
-            <li>Figma</li>
-            <li>WordPress </li>
-            <li>Joomla *to a lesser extent* </li>
-            <li>Sass </li>
+        <ul className='left_list'>
+            <li>{mongoIcon}mongo db</li>
+            <li>{expressIcon}ExpresJS</li>
+            <li>{reactIcon} React</li>
+            <li>{nodejsIcon}NodeJS</li>
+            <li>{threejsIcon}Threejs fibre </li>
+            <li>{sqlIcon}SQL</li>
+            <li>{sassIcon}Sass </li>
         </ul>
-    </>
+
+        <ul className='right_list'>
+            <li>{phpIcon}PHP</li>
+            <li>{JqueryIcon}Jquery</li>
+            <li>{framerIcon}Framer motion</li>
+            <li>{figmaIcon}Figma</li>
+            <li>{WordPressIcon}WordPress </li>
+            <li>{JoomlaIcon}Joomla *to a lesser extent* </li>
+        </ul>
+
+    </div>
 
 
     const projectsData = [
@@ -70,10 +81,10 @@ const Projects = () => {
             />,
             title: 'Certifications',
             infoTitle: 'Thanks to my love for learning...',
-            info: ' Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.',
+            info: <p> Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.</p>,
 
             infoTitle2: 'I also participated in...',
-            info2: 'Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.',
+            info2: <p>Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.</p>,
 
             info3: '',
             url: resumeButton,
@@ -86,14 +97,14 @@ const Projects = () => {
             />,
             title: 'Repo websites and applications',
             infoTitle: 'Websites I made include...',
-            info: <>This very website which i made using ` + {portfolioStack} + `In my freelance carrer I created several websites including a website for a gym, multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site. I also occasionally worked in teams where I worked on various components of websites ${websiteStackList}</>,
+            info: <div><p>This very website which i made using </p>{portfolioStack} <p>In my freelance carrer I created several websites including a website for a gym</p>{rawGymImage} <p>multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site</p>{safriviewNoBgImage}<p>. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
 
 
 
             infoTitle2: 'Android apps I worked on include...',
-            info2: `Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. ${androidStackList}I also created a club management system using C# (Visual basic). see their repos below.`,
+            info2: <div><p>Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. </p>{androidStackList}<p>I also created a club management system using C# (Visual basic). see their repos below.</p></div>,
             info3: <Gallery
-                graphicsGallery={repoFilesGallery}
+                graphicsGallery={mobileGallery}
             />,
             url: seeMoreButton,
             repo: 'https://github.com/BranTkS/travel-deals-app', // if no repo, the button will not show up
@@ -105,7 +116,7 @@ const Projects = () => {
             />,
             title: 'Graphic design',
             infoTitle: 'I designed...',
-            info: "Logos, banners, fliers and any necessary design work for clients as well as some video editing. I've learned to use many tools, applications and resources to get the job done. Check the links below to see more Project samples.",
+            info: <p>Logos, banners, fliers and any necessary design work for clients as well as some video editing. I`&apos;`ve learned to use many tools, applications and resources to get the job done. Check the links below to see more Project samples.</p>,
             info2: '',
             info3: '',
 
@@ -121,18 +132,18 @@ const Projects = () => {
 
             <div key={projectsData.title}>
                 <motion.div className="projects-grid-container">
-                    <motion.h1 className="ProjTitle">
+                    <motion.h2 className="ProjTitle">
                         {projectsData.title}
-                    </motion.h1>
+                    </motion.h2>
 
                     <fragment className="head-image">{projectsData.headImg}</fragment>
 
                     <motion.h3 className="info-title">{projectsData.infoTitle}</motion.h3>
-                    <motion.p className="info-one">{projectsData.info}</motion.p>
+                    <motion.div className="info-one">{projectsData.info}</motion.div>
 
                     <fragment className="second-gallery">{projectsData.info3}</fragment>
                     <motion.h3 className="info-title-two">{projectsData.infoTitle2}</motion.h3>
-                    <motion.p className="info-two">{projectsData.info2}</motion.p>
+                    <motion.div className="info-two">{projectsData.info2}</motion.div>
 
                     <motion.div className="projectButtons">
                         <motion.div>

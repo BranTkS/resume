@@ -1,4 +1,17 @@
-import { tanLogo, circleImg, pgb, blueYellow, purpleArrow, colourful, dots, noBGLogoPurple, onSite, roadntyre, shipping, staryNight, tornSpace, diploma, sdg, jsSololearn, javaIntroSololearn, gads, azure, gpHero, gpMobile, construction, googleSignIn, addTravelDeal, calender, clock, contactPage, notes, signup, login, travel } from '../imagesExports'
+import {
+    //websites
+    blackHero, collage, constructionSite, inov8, mentalRemedy, mrAbout, mentalSign, gpHero, construction, oldPortfolioHero, oldPortfolioAbout,
+
+    //applications
+    gpMobile, googleSignIn, addTravelDeal, calender, clock, contactPage, notes, signup, login, travel,
+    portfolioAboutMobile,
+    blackMobile, portfolioContactMobile, safriviewArticle, travelmanticsLogin,
+
+    //fillerImages
+    coffee, makotech, rawGym, safriviewCorner, safriviewNoBg,
+
+    tanLogo, circleImg, pgb, blueYellow, purpleArrow, colourful, dots, noBGLogoPurple, onSite, roadntyre, shipping, staryNight, tornSpace, diploma, sdg, jsSololearn, javaIntroSololearn, gads, azure,
+} from './galleryImages'
 
 const websiteGallery = [
 
@@ -8,17 +21,59 @@ const websiteGallery = [
     },
 
     {
-        galleryImage: contactPage,
-        alt: 'Contact page screenshot'
+        galleryImage: inov8,
+        alt: 'inov8 hero image'
     },
 
     {
-        galleryImage: construction,
-        alt: 'construction site'
+        galleryImage: mentalRemedy,
+        alt: 'mental remedy hero'
     },
+
+
+    {
+        galleryImage: blackHero,
+        alt: 'black hero image'
+    },
+
+    {
+        galleryImage: oldPortfolioHero,
+        alt: 'previous portfolio hero image'
+    },
+
+    {
+        galleryImage: mentalSign,
+        alt: 'mental remedy sign in page'
+    },
+
+    {
+        galleryImage: contactPage,
+        alt: 'Contact page section'
+    },
+
+    {
+        galleryImage: oldPortfolioAbout,
+        alt: 'previous portfoilio about section'
+    },
+
+    {
+        galleryImage: mrAbout,
+        alt: 'mental remedy about section'
+    },
+
+    {
+        galleryImage: constructionSite,
+        alt: 'construction site image'
+    },
+
+    {
+        galleryImage: collage,
+        alt: 'website hero collage'
+    },
+
 ]
 
-const repoFilesGallery = [
+const mobileGallery = [
 
 
     {
@@ -27,9 +82,25 @@ const repoFilesGallery = [
     },
 
     {
+        galleryImage: blackMobile,
+        alt: 'black mobile hero'
+    },
+
+    {
         galleryImage: googleSignIn,
         alt: 'google sign in screenshot'
     },
+
+    {
+        galleryImage: travelmanticsLogin,
+        alt: 'travelmantics login page'
+    },
+
+    {
+        galleryImage: portfolioAboutMobile,
+        alt: 'portfolio about page'
+    },
+
     {
         galleryImage: addTravelDeal,
         alt: 'add travel deal screenshot'
@@ -38,6 +109,12 @@ const repoFilesGallery = [
         galleryImage: calender,
         alt: 'calender screenshot'
     },
+
+    {
+        galleryImage: portfolioContactMobile,
+        alt: 'portfolio contact mobile'
+    },
+
     {
         galleryImage: clock,
         alt: 'clock screenshot'
@@ -58,6 +135,16 @@ const repoFilesGallery = [
     {
         galleryImage: travel,
         alt: 'Travelmantics screenshot'
+    },
+
+    {
+        galleryImage: safriviewArticle,
+        alt: 'Safrieview article'
+    },
+
+    {
+        galleryImage: construction,
+        alt: 'construction site'
     },
 ]
 
@@ -148,10 +235,23 @@ const graphicsGallery = [
         alt: 'Tanaka Logo'
     },
 
-
 ]
 
 
+const coffeeImage = <img src={coffee} alt='coffee at the c image' />;
+
+const makotechImage = <img src={makotech} alt='makotech image' />;
+
+const rawGymImage = <img src={rawGym} alt='raw gym image' />;
+
+const safriviewCornerImage = <img src={safriviewCorner} alt='coffee at the c' />;
+
+const safriviewNoBgImage = <img src={safriviewNoBg} alt='safriview no background image' />;
 
 
-export { graphicsGallery, certificatesGallery, repoFilesGallery, websiteGallery };
+export {
+    graphicsGallery, certificatesGallery, mobileGallery, websiteGallery,
+
+    //filler images
+    coffeeImage, makotechImage, rawGymImage, safriviewCornerImage, safriviewNoBgImage
+};

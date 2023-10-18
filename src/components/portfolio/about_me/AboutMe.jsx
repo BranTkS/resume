@@ -8,7 +8,7 @@ import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports';
 import AboutImages from './aboutImages';
 import { heroVideo } from './branVideo';
-import { reactSVG, signature, computer, javaSVG, team, certificate } from './aboutSVGs'
+import { reactSVG, computer, javaSVG, team, certificate } from './aboutSVGs'
 
 
 const AboutMe = () => {
@@ -77,7 +77,7 @@ const AboutMe = () => {
                 <h1 className='title'>ABOUT ME</h1>
                 <div>
                     <div className='center'>
-                        {heroVideo} {signature}
+                        {heroVideo}
                     </div>
                     <div className='center'>
                         <p>

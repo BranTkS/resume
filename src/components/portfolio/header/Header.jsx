@@ -85,18 +85,20 @@ const Header = () => {
                 transition={transitionValue}
             >
                 <motion.div className='hero-image-container absolute-centered'>
-                    <motion.img src={heroPhoto} alt="Hero photo"
-                        className='profile-image'
+                    <Link className='linkButton' to="about" spy={true} smooth={true} offset={0} duration={500}>
+                        <motion.img src={heroPhoto} alt="Hero photo"
+                            className='profile-image'
 
-                        variants={videoVariants}
-                        initial="hidden"
-                        animate="visible"
-                        whileHover={{
-                            scale: 1.1,
-                            x: 20,
-                            boxShadow: "1px 0px 3px black, 2px 0px 0px #FD02D7",
-                        }}
-                    />
+                            variants={videoVariants}
+                            initial="hidden"
+                            animate="visible"
+                            whileHover={{
+                                scale: 1.1,
+                                x: 20,
+                                boxShadow: "1px 0px 3px black, 2px 0px 0px #FD02D7",
+                            }}
+                        />
+                    </Link>
                 </motion.div>
                 <motion.div className='heroText absolute-centered'>
                     <motion.div className='hero-title'>
