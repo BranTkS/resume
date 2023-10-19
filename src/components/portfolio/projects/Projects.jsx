@@ -58,7 +58,7 @@ const Projects = () => {
     </>
 
     const portfolioStack = <>
-        <ul>
+        <ul className='top_list'>
             <li>{reactIcon}React</li>
             <li>{threejsIcon}Threejs fibre </li>
             <li>{framerIcon}Framer motion</li>
@@ -113,7 +113,7 @@ const Projects = () => {
             />,
             title: 'Repo websites and applications',
             infoTitle: 'Websites I made include...',
-            info: <div className='project_text'><p>This very website which i made using </p>{portfolioStack} <p>In my freelance carrer I created several websites including a website for a gym{rawGymImage}multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
+            info: <div className='project_text'><div className='website_tagline'><p >This very website which I made using </p>{portfolioStack}</div> <p className='website_paragraph'>In my freelance carreer I created several websites including a website for a gym{rawGymImage}multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
 
 
 

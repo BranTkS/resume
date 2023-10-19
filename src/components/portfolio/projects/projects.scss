@@ -73,13 +73,19 @@
     grid-auto-columns: 1fr;
     grid-template-areas: 
     '. project_title project_title project_title project_title .'
-    'two two  two  two two two'
-    '. three three three three . '
-    '. four four four four . '
-    'five five five five five five '
-    'six six six six six six'
-    '. seven seven seven seven .'
-    '. eight eight eight eight .';
+
+    'head-image head-image  head-image  head-image head-image head-image'
+
+    '. info-title info-title info-title info-title . '
+    '. info-one info-one info-one info-one . '
+
+    'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery '
+
+    'info-title-two info-title-two info-title-two info-title-two info-title-two info-title-two'
+
+    '. info-two info-two info-two info-two .'
+
+    '. projectButtons projectButtons projectButtons projectButtons .';
 }
 
 .ProjTitle{
@@ -89,40 +95,36 @@
 }
 
 .head-image{
-    grid-area: two;
+    grid-area: head-image;
 }
 
-
-.head-image{
-    grid-area: two;
-}
 
 .info-title{
-    grid-area: three;
+    grid-area: info-title;
 }
 
 .info-one{
-    grid-area: four;
+    grid-area: info-one;
 }
 
 .second-gallery{
-    grid-area: five;
+    grid-area: second-gallery;
 }
 
 #projects .info-title-two{
-    grid-area: six;
+    grid-area: info-title-two;
     width: 60%;
 }
 
 .info-two{
-    grid-area: seven;
+    grid-area: info-two;
 }
 
 .projectButtons{
     display: flex;
     gap: 1svh;
     justify-content: center;
-    grid-area: eight;
+    grid-area: projectButtons;
 }
 
 
@@ -132,6 +134,95 @@
 
 @media screen and (min-width: 500px) {
 
+    #projects{
+        
+        p{
+        font-size: $smallText;
+        }
 
+        li{
+            
+            font-size: $smallText;
+            }
+
+        .top_list{
+            padding-inline-start: 0px;
+        }
+
+    .website_stackList{
+        grid-area: full_stack;
+        padding: 3rem;
+        background-color: $accentColor;
+        border-radius: 3%;
+        grid-auto-columns: 25%;
+        grid-template-areas: 
+        'left_list . . right_list'
+        'left_list list_title list_title right_list'
+        'left_list . . right_list';
+
+        
+        li{
+            list-style: none;
+            font-size: $smallText;
+        }
+    }
+
+
+}
+
+.info-one{
+.project_text{
+    grid-area: info-one;
+    display: grid;
+    gap: 1dvw;
+    grid-auto-columns: 20%;
+    grid-template-areas:
+    '. paragraph paragraph paragraph tagline'
+    
+    '. paragraph paragraph paragraph tagline'
+    
+    '. paragraph paragraph paragraph tagline'
+    
+    '. full_stack full_stack full_stack full_stack';
+}
+
+}
+
+    .website_tagline{
+        grid-area: tagline;
+        background-color: $secondaryColor;
+        border-radius: 5%;
+        padding: 1rem;
+    }
+
+    .website_paragraph{
+        grid-area: paragraph;
+        background-color: $secondaryColorShade;
+        border-radius: 3%;
+        padding: 1rem;
+    }
+
+.info-two{
+    grid-area: info-two;
+}
+
+    .projects-grid-container{
+        grid-template-areas: 
+        '. project_title project_title project_title project_title .'
+    
+        'head-image head-image  head-image  head-image head-image head-image'
+    
+        '. info-title info-title info-title info-title . '
+        
+        '. info-one info-one info-one info-one .'
+    
+        'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery'
+    
+        '. info-title-two info-title-two info-title-two info-title-two info-title-two'
+    
+        '. . info-two info-two info-two .'
+    
+        '. projectButtons projectButtons projectButtons projectButtons .';
+    }
 
 }
