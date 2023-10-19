@@ -1,9 +1,10 @@
 import { motion } from "framer-motion"
-import { androidSVG, reactPath, kitchenSVG, certificateSVG, frontTeamSVG, backTeamSVG } from '../imagesExports'
+import { androidSVG, reactPath, certificateSVG, frontTeamSVG, backTeamSVG } from '../imagesExports'
 import { certificate } from './certificateSVG'
 import { computer } from './computerSVG'
 import { signature } from './signatureSVG'
-import { javaSVG } from './javaSVG'
+import { javaSVG, javaIcon } from './javaSVG'
+import teamSVG from '../projects/projectSVGs/users.svg'
 
 const svgVariants = {
     hidden: { rotate: -180 },
@@ -51,8 +52,8 @@ const reactSVG = <motion.div className="motion-SVG">
         <motion.path d={reactPath}
             variants={pathVariants}
             fill="transparent"
-            strokeWidth="2"
-            stroke="black"
+            strokeWidth="3"
+            stroke="#EEAC07"
             strokeLinecap="round"
         />
     </motion.svg>
@@ -94,10 +95,10 @@ const backTeamVariants = {
 
 
 const frontTeamVariants = {
-    hidden: { x: [-120, 90] },
+    hidden: { x: [-30, 90] },
 
     visible: {
-        x: -100,
+        x: 0,
         transition: {
             duration: 10,
             repeat: Infinity,
@@ -141,4 +142,10 @@ const secondSVG = <motion.div>
     </motion.svg>
 </motion.div>
 
-export { reactSVG, signature, computer, team, certificate, javaSVG }
+const teamIcon = <motion.img src={teamSVG} alt='react icon'
+
+    variants={frontTeamVariants}
+    initial="hidden"
+    animate="visible" />
+
+export { reactSVG, signature, computer, team, teamIcon, certificate, javaSVG, javaIcon }

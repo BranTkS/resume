@@ -2,10 +2,10 @@
 
 .navbar{
 height: fit-content;
-background-color: rgba(128, 128, 128, 0.37);
-top: 1.5rem;
+background-color: rgba(46, 0, 46, 0.719);
+top: 1rem;
 right: 0px;
-border-bottom: 1px solid gray;
+border-bottom: 1px solid $secondaryAccent;
 }
 
 .nav{
@@ -27,7 +27,7 @@ width: 100%;
 
 img{
     float: right;
-    width: 3rem;
+    width: 4rem;
     height: auto;
 }
 }
@@ -45,11 +45,15 @@ img{
     width: 100%;
     z-index: 11;
 
+    #nav_email{
+        font-size: $extraSmallText*0.8;
+    }
+
     p{
-        float: left;
+        margin: 0px;
         color: $textColor;
         text-align: start;
-        font-size: 0.7em;
+        font-size: $smallText*0.7;
         cursor: pointer;
     }
 
@@ -61,6 +65,7 @@ img{
     font-size: 1.3em;
 }
 
+
 .nav li:hover, .nav .active{
     background-color: rgba(128, 128, 128, 0.57);
     border-bottom: aqua;
@@ -70,11 +75,12 @@ img{
 
     .navIcon{
         float: left;
-        width: 2rem;
+        width: 3rem;
         height: auto;
         padding: 0.5rem 0.2rem 0px;
     }
 }
+
 
 
 @media screen and (min-width: 500px) {
@@ -97,11 +103,14 @@ img{
         max-width: 100%;
         width: 100%;
         flex-wrap: nowrap;
+        align-items:end;
+        justify-content: end;
     }
             .nav li{
                 width: fit-content;
                 padding: 1px 0.1rem 1px;
-                border-right: 1px solid gray;
+                margin: 0px 0.3rem 0px;
+                border-bottom: 1px solid gray;
 
                 p{
                     float: left;

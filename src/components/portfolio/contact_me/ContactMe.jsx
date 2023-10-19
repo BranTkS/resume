@@ -25,6 +25,7 @@ const ContactMe = () => {
             import.meta.env.VITE_REACT_APP_PUBLIC_KEY)
     };
 
+
     useEffect(() => {
         if (inView) {
             mainControls.start({
@@ -37,6 +38,20 @@ const ContactMe = () => {
         console.log("check 1", inView)
 
     }, [inView])
+
+    const buttonVarriant = {
+        hidden: {
+            x: -500,
+        },
+
+        visible: {
+            x: 0,
+
+            transition: {
+                duration: 3,
+            }
+        }
+    }
 
     return (
         <section id="contact" ref={ref}>
@@ -60,7 +75,19 @@ const ContactMe = () => {
                         <textarea name="message" id="message" className="text_area" required></textarea>
 
                         <motion.button type="submit" className='linkButton' >
-                            <a className='linkButton'>Send</a>
+                            <motion.div className='remove-padding-margin'
+
+                                variants={buttonVarriant}
+                                initial="hidden"
+                                animate="visible"
+                                whileHover={{
+                                    scale: 1.1,
+                                    x: 20,
+                                    boxShadow: "1px 0px 0px #FD02D7",
+                                    textShadow: "0px 0px 7px 0px",
+                                }}>
+                                <a className='linkButton'>Send</a>
+                            </motion.div>
                         </motion.button>
                     </form>
                 </motion.div>

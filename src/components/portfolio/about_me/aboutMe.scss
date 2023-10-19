@@ -5,8 +5,6 @@
     min-height: 100svh;
     width: 100%;
     display: grid;
-    float: right;
-    padding: 9rem  0px 12rem 0px;
 
     .center{
     display: grid;
@@ -110,6 +108,10 @@ section{
         text-align: start;
     }
 
+    .right, .left{
+        padding-bottom: 3rem;
+    }
+
 
     .left{
         grid-column: 2 / span 6;
@@ -144,6 +146,7 @@ section{
         .motion-SVG{
             padding-top: 5rem;
             padding-bottom: 0px;
+
         }
 }
 

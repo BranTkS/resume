@@ -24,7 +24,23 @@ import { initialValue, transitionValue } from '../animation'
 
 const Projects = () => {
 
+
+    const buttonVarriant = {
+        hidden: {
+            x: -500,
+        },
+
+        visible: {
+            x: 0,
+
+            transition: {
+                duration: 3,
+            }
+        }
+    }
+
     const resumeButton = <div className='linkButton'>
+
         <Link to="/resume" className='linkButton'>Resume</Link>
     </div>;
 
@@ -97,12 +113,12 @@ const Projects = () => {
             />,
             title: 'Repo websites and applications',
             infoTitle: 'Websites I made include...',
-            info: <div><p>This very website which i made using </p>{portfolioStack} <p>In my freelance carrer I created several websites including a website for a gym</p>{rawGymImage} <p>multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site</p>{safriviewNoBgImage}<p>. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
+            info: <div className='project_text'><p>This very website which i made using </p>{portfolioStack} <p>In my freelance carrer I created several websites including a website for a gym{rawGymImage}multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
 
 
 
             infoTitle2: 'Android apps I worked on include...',
-            info2: <div><p>Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. </p>{androidStackList}<p>I also created a club management system using C# (Visual basic). see their repos below.</p></div>,
+            info2: <div className='project_text'><p>Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. </p>{androidStackList}<p>I also created a club management system using C# (Visual basic). see their repos below.</p></div>,
             info3: <Gallery
                 graphicsGallery={mobileGallery}
             />,
@@ -147,12 +163,37 @@ const Projects = () => {
 
                     <motion.div className="projectButtons">
                         <motion.div>
-                            <motion.div className='linkButton'>
-                                <a href={projectsData.repo} className='linkButton'>repo</a>
+                            <motion.div
+                                className='linkButton'>
+                                <motion.div className='remove-padding-margin'
+
+                                    variants={buttonVarriant}
+                                    initial="hidden"
+                                    animate="visible"
+                                    whileHover={{
+                                        scale: 1.1,
+                                        x: 20,
+                                        boxShadow: "1px 0px 0px #FD02D7",
+                                        textShadow: "0px 0px 7px 0px",
+                                    }}>
+                                    <a href={projectsData.repo} className='linkButton'>repo</a>
+                                </motion.div>
                             </motion.div>
                         </motion.div>
                         <motion.div >
-                            {projectsData.url}
+                            <motion.div className='remove-padding-margin'
+
+                                variants={buttonVarriant}
+                                initial="hidden"
+                                animate="visible"
+                                whileHover={{
+                                    scale: 1.1,
+                                    x: 20,
+                                    boxShadow: "1px 0px 0px #FD02D7",
+                                    textShadow: "0px 0px 7px 0px",
+                                }}>
+                                {projectsData.url}
+                            </motion.div>
                         </motion.div>
                     </motion.div>
                 </motion.div>

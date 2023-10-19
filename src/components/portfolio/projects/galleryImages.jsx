@@ -42,11 +42,10 @@ import oldPortfolioAbout from '../../../assets/images/projectsImages/oldPortfoli
 
 //websites
 import gpHero from '../../../assets/images/projectsImages/gpHero.jpg'
-import construction from '../../../assets/images/projectsImages/construction.jpg'
 import contactPage from '../../../assets/images/projectsImages/contactPage.jpg'
 import blackHero from '../../../assets/images/projectsImages/bo.png'
 import collage from '../../../assets/images/projectsImages/callage.png'
-import constructionSite from '../../../assets/images/projectsImages/constructionSite.png'
+import constructionSite from '../../../assets/images/projectsImages/constructionSite1.png'
 import inov8 from '../../../assets/images/projectsImages/inov8.png'
 import mentalRemedy from '../../../assets/images/projectsImages/mentalRemedy.png'
 import mrAbout from '../../../assets/images/projectsImages/mrAbout.png'
@@ -67,7 +66,7 @@ export {
 
 
     //websites
-    blackHero, collage, constructionSite, inov8, mentalRemedy, mrAbout, mentalSign, gpHero, construction, oldPortfolioHero, oldPortfolioAbout,
+    blackHero, collage, constructionSite, inov8, mentalRemedy, mrAbout, mentalSign, gpHero, oldPortfolioHero, oldPortfolioAbout,
 
 
     //certificates

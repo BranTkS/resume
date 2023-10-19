@@ -1,6 +1,6 @@
 import {
     //websites
-    blackHero, collage, constructionSite, inov8, mentalRemedy, mrAbout, mentalSign, gpHero, construction, oldPortfolioHero, oldPortfolioAbout,
+    blackHero, collage, constructionSite, inov8, mentalRemedy, mrAbout, mentalSign, gpHero, oldPortfolioHero, oldPortfolioAbout,
 
     //applications
     gpMobile, googleSignIn, addTravelDeal, calender, clock, contactPage, notes, signup, login, travel,
@@ -140,11 +140,6 @@ const mobileGallery = [
     {
         galleryImage: safriviewArticle,
         alt: 'Safrieview article'
-    },
-
-    {
-        galleryImage: construction,
-        alt: 'construction site'
     },
 ]
 

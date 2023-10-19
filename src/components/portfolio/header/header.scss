@@ -7,7 +7,7 @@
     height: fit-content;
     width: 100%;
     margin-top: 0px;
-    padding-bottom: 40dvh;
+    padding-bottom: 120dvh;
 }
 
 .hero{ 
@@ -195,7 +195,7 @@
     width: fit-content;
 
     grid-column: 1 / span 2;
-    grid-row: 6;
+    grid-row: 6 / span 2;
     z-index: 11;
 }
 
@@ -209,22 +209,10 @@
 @media screen and (min-width: 500px) {
 
     //header
-    #header .section{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        min-height: 55svh;
-        justify-content:left;
-    }
-    
-    
-
-    //header
     #header{
         margin-top: 5rem;
         min-height: 70svh;
-        max-width: 100%;
         width: 100%;
-    
     }
     
     .hero{

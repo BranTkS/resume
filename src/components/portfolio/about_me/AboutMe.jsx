@@ -8,7 +8,7 @@ import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports';
 import AboutImages from './aboutImages';
 import { heroVideo } from './branVideo';
-import { reactSVG, computer, javaSVG, team, certificate } from './aboutSVGs'
+import { reactSVG, computer, javaIcon, team, teamIcon, certificate } from './aboutSVGs'
 
 
 const AboutMe = () => {
@@ -62,6 +62,20 @@ const AboutMe = () => {
         }
     }
 
+    const buttonVarriant = {
+        hidden: {
+            x: -500,
+        },
+
+        visible: {
+            x: 0,
+
+            transition: {
+                duration: 3,
+            }
+        }
+    }
+
     return (
 
         <section id="about" ref={ref}>
@@ -93,12 +107,11 @@ const AboutMe = () => {
                     <div>
                         <div className='snippets'>
                             <div className='left-SVG'>
-                                {javaSVG}
+                                {javaIcon}
                             </div>
                             <div className='right'>
                                 <p>
                                     I completed umuzis java bootcamp and was among the top learners to pass through the bootcamp.
-                                    < AboutImages />
                                 </p>
                             </div>
 
@@ -122,7 +135,7 @@ const AboutMe = () => {
                                             variants={pathVariants}
                                             fill="transparent"
                                             strokeWidth="1"
-                                            stroke="black"
+                                            stroke="#EEAC07"
                                             strokeLinecap="round"
                                         />
                                     </motion.svg>
@@ -143,7 +156,7 @@ const AboutMe = () => {
                                 {computer}
                             </div>
                             <div className='left-SVG'>
-                                {team}
+                                {teamIcon}
                             </div>
                             <div className='right'>
                                 <p>
@@ -168,7 +181,20 @@ const AboutMe = () => {
 
                 <br />
                 <div className='linkButton'>
-                    <Link to="/resume" className='linkButton'>Resume</Link>
+
+                    <motion.div className='remove-padding-margin'
+
+                        variants={buttonVarriant}
+                        initial="hidden"
+                        animate="visible"
+                        whileHover={{
+                            scale: 1.1,
+                            x: 20,
+                            boxShadow: "1px 0px 0px #FD02D7",
+                            textShadow: "0px 0px 7px 0px",
+                        }}>
+                        <Link to="/resume" className='linkButton'>Resume</Link>
+                    </motion.div>
                 </div>
             </motion.div>
         </section >

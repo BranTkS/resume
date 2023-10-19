@@ -1,7 +1,7 @@
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports'
 

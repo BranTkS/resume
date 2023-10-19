@@ -13,9 +13,9 @@ import projectColor from '../../assets/images/svgImages/icons8-code-96.png'
 
 import contactBlack from '../../assets/images/svgImages/icons8-call-me-80.png'
 import contactColor from '../../assets/images/svgImages/icons8-call-me-96.png'
-import computerSVG from '../../assets/images/svgImages/icons8-computer-64.png'
-import kitchenSVG from '../../assets/images/svgImages/icons8-kitchen-100.png'
-import certificateSVG from '../../assets/images/svgImages/icons8-certificate-100.png'
+import computerSVG from '../../assets/images/svgImages/icons8-computer-96.png'
+
+import certificateSVG from '../../assets/images/svgImages/icons8-certificate-101.png'
 import frontTeamSVG from '../../assets/images/svgImages/icons8-team-100.png'
 import backTeamSVG from '../../assets/images/svgImages/icons8-team-100b.png'
 
@@ -74,5 +74,5 @@ export {
 
 
     //about images svgs
-    computerSVG, androidSVG, reactPath, kitchenSVG, certificateSVG, frontTeamSVG, backTeamSVG
+    computerSVG, androidSVG, reactPath, certificateSVG, frontTeamSVG, backTeamSVG
 };

@@ -82,7 +82,7 @@ const Navbar = () => {
                         <Link to="projects" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
                             < div className='navLink'>
 
-                                <img src={projectBlack} alt="projects" className="navIcon" />
+                                <img src={projectColor} alt="projects" className="navIcon" />
                                 <p>Projects</p>
                             </div>
                         </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
                     <li>
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
                             < div className='navLink'>
-                                <img src={contactBlack} alt="contact me" className="navIcon" />
+                                <img src={contactColor} alt="contact me" className="navIcon" />
                                 <p> Contact me</p>
                             </div>
                         </Link>
@@ -98,8 +98,7 @@ const Navbar = () => {
                     <li>
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
                             < div className='navLink'>
-                                <img src={contactBlack} alt="contact me" className="navIcon" />
-                                <p> brantshumba@gmail.com</p>
+                                <p id='nav_email'> brantshumba@gmail.com</p>
                             </div>
                         </Link>
                     </li>

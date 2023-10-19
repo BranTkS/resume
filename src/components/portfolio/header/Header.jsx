@@ -146,7 +146,7 @@ const Header = () => {
                             whileHover={{
                                 scale: 1.1,
                                 x: 20,
-                                boxShadow: "1px 0px 0px #FD02D7",
+                                //boxShadow: "1px 0px 0px #FD02D7",
                                 textShadow: "0px 0px 7px 0px",
                             }}>
                             <Link className='linkButton' to="about" spy={true} smooth={true} offset={0} duration={500}>Know more</Link>
