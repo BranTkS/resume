@@ -48,14 +48,14 @@ const Projects = () => {
         <a href='https://github.com/BranTkS' className='linkButton'>see more</a>
     </div>;
 
-    const androidStackList = <>
+    const androidStackList = <div className='top_list'>
         <h4>The tech incoperated</h4>
         <ul>
             <li>{javaIcon}java</li>
             <li>{firebaseIcon} firebase (authentication and storage)</li>
             <li>{kotlinIcon}Kotlin(*to a lesser extent*)</li>
         </ul>
-    </>
+    </div >
 
     const portfolioStack = <>
         <ul className='top_list'>
@@ -97,10 +97,10 @@ const Projects = () => {
             />,
             title: 'Certifications',
             infoTitle: 'Thanks to my love for learning...',
-            info: <p> Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program, guaranteeing that as a baseline, I have a very strong understanding of the fundamentals of OOP.</p>,
+            info: <p className='first_paragraph'> Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program, guaranteeing that as a baseline, I have a very strong understanding of the fundamentals of OOP.</p>,
 
             infoTitle2: 'I also participated in...',
-            info2: <p>Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.</p>,
+            info2: <p className='second_paragraph'>Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.</p>,
 
             info3: '',
             url: resumeButton,
@@ -118,7 +118,7 @@ const Projects = () => {
 
 
             infoTitle2: 'Android apps I worked on include...',
-            info2: <div className='project_text'><p>Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. </p>{androidStackList}<p>I also created a club management system using C# (Visual basic). see their repos below.</p></div>,
+            info2: <div className='project_text'><p className='website_paragraph'>Small projects like a travel deals application, a notepad application as well as a few projects for courses, such as a school registration app for which we worked in teams. </p>{androidStackList}<p className='exit_paragraph'>I also created a club management system using C# (Visual basic). see their repos below.</p></div>,
             info3: <Gallery
                 graphicsGallery={mobileGallery}
             />,

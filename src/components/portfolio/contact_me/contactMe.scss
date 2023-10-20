@@ -134,20 +134,26 @@ svg{
 
     .contactForm{
 
+        background-color: $secondaryColor;
+        border-radius: 5%;
+        padding: 1rem;
+        width: 30%;    
+        margin-left:50%;
+        transform: translate(-50%, 0);
     form{
         grid-auto-columns: 1fr;
         grid-template-areas: 
-        '. title title title title .'
-        '. email email email email .'
-        '. . field field . .'
-        'message message message message message message'
-        '. . text_area text_area . .'
-        '. . button button . .'
+        'title title '
+        'email email '
+        'field field'
+        'message message'
+        'text_area text_area'
+        'button button'
         ;
 
 
         .text_area, .text_field{
-            border: 1px solid $primaryColor;
+            border: 1px solid $secondaryColorShade;
         }
 
         .text_area{
