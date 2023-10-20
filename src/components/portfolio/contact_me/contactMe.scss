@@ -162,19 +162,23 @@
                 }
 
                 .text_area {
-                    height: 7rem;
+                    height: 5rem;
                     font-size: $smallText;
                     width: 100%;
                 }
 
                 .text_field {
-                    height: 5rem;
+                    height: 3rem;
                     font-size: $smallText;
                     width: 100%;
                 }
 
             }
         }
+    }
+
+    #footer {
+        margin-top: 23%;
     }
 
     .footerIcons {

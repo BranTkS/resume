@@ -4,12 +4,20 @@ import './contactMe.scss'
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, /*useState*/ } from "react";
 import { initialValue, transitionValue } from '../animation'
 
 import emailjs from '@emailjs/browser';
+//import axios from 'axios';
 
 const ContactMe = () => {
+
+    /*const [emailKey, setEmailKey] = useState([])
+    useEffect(() => {
+        axios.get('/getKeys')
+        .then(emailKey => setEmailKey(emailKey.data) )
+        .catch(err => console.log(err))
+    },[])*/
 
     const inviewAttributes = [{ threshold: 0.4 }]
     const mainControls = useAnimation();

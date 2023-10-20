@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
-import { blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor } from '../imagesExports'
+import { colorMenu, AboutColour, projectColor, contactColor } from '../imagesExports'
 import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 import './navbar.scss'
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                         <Link to="about" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
                             < div className='navLink'>
 
-                                <img src={AboutBlack} alt="about me" className="navIcon" />
+                                <img src={AboutColour} alt="about me" className="navIcon" />
                                 <p>About me</p>
                             </div>
                         </Link>

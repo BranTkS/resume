@@ -6,9 +6,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports';
-import AboutImages from './aboutImages';
 import { heroVideo } from './branVideo';
-import { reactSVG, computer, javaIcon, team, teamIcon, certificate } from './aboutSVGs'
+import { reactSVG, computer, javaIcon, teamIcon, certificate } from './aboutSVGs'
 
 
 const AboutMe = () => {

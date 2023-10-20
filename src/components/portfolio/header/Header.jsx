@@ -31,20 +31,6 @@ const Header = () => {
         }
     }
 
-    const headerVariant = {
-        yellow: {
-
-        },
-        visible: {
-
-            transition: {
-                duration: 4,
-                repeat: Infinity,
-                repeatType: "reverse",
-                repeatDelay: 3,
-            }
-        }
-    }
 
 
     const videoVariants = {
@@ -120,6 +106,7 @@ const Header = () => {
                     <motion.div className='line1'>
                         <h2>Welcome</h2>
                     </motion.div>
+
                     <motion.div className='line2'>
                         <h2> welcome</h2>
                     </motion.div>

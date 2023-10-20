@@ -7,17 +7,19 @@ import JoomlaSVG from '../../../assets/images/svgImages/projectSVGs/joomla-svgre
 import JquerySVG from '../../../assets/images/svgImages/projectSVGs/jquery-svgrepo-com.svg'
 import kotlinSVG from '../../../assets/images/svgImages/projectSVGs/kotlin-svgrepo-com.svg'
 import mongoSVG from '../../../assets/images/svgImages/projectSVGs/mongodb-svgrepo-com.svg'
-import mongoTwoSVG from '../../../assets/images/svgImages/projectSVGs/mongo-svgrepo-com.svg'
 import nodejsSVG from '../../../assets/images/svgImages/projectSVGs/nodejs-icon-svgrepo-com.svg'
 import phpSVG from '../../../assets/images/svgImages/projectSVGs/php-svgrepo-com.svg'
 import sqlSVG from '../../../assets/images/svgImages/projectSVGs/sql-svgrepo-com.svg'
 import WordPressSVG from '../../../assets/images/svgImages/projectSVGs/wordpress-svgrepo-com.svg'
 import framerSVG from '../../../assets/images/svgImages/projectSVGs/framer-motion.svg'
 import firebaseSVG from '../../../assets/images/svgImages/projectSVGs/firebase-svgrepo-com.svg'
+import cSharpSVG from '../../../assets/images/svgImages/projectSVGs/cSharp.svg'
+
 
 
 
 //images
+const cSharpIcon = <img src={cSharpSVG} alt='cSharp icon' />
 const reactIcon = <img src={reactSVG} alt='react icon' />
 const figmaIcon = <img src={figmaSVG} alt='figma icon' />
 const javaIcon = <img src={javaSVG} alt='java icon' />
@@ -25,7 +27,6 @@ const JoomlaIcon = <img src={JoomlaSVG} alt='Joomla icon' />
 const JqueryIcon = <img src={JquerySVG} alt='Jquery icon' />
 const kotlinIcon = <img src={kotlinSVG} alt='kotlin icon' />
 const mongoIcon = <img src={mongoSVG} alt='mongoDB icon' />
-const mongoTwoIcon = <img src={mongoTwoSVG} alt='mongoDB icon' />
 const nodejsIcon = <img src={nodejsSVG} alt='nodejs icon' />
 const phpIcon = <img src={phpSVG} alt='php icon' />
 const sqlIcon = <img src={sqlSVG} alt='sql icon' />
@@ -46,6 +47,6 @@ const threejsIcon = <svg fill="none" strokeLinecap="square" strokeMiterlimit="10
 </svg>
 
 export {
-    threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, mongoTwoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon
+    threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon, cSharpIcon
 };
 

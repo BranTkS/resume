@@ -3,11 +3,11 @@ import {
     graphicsGallery, certificatesGallery, mobileGallery, websiteGallery,
 
     //filler images
-    coffeeImage, makotechImage, rawGymImage, safriviewCornerImage, safriviewNoBgImage
+    rawGymImage, safriviewNoBgImage
 
 } from './imagesData'
 import {
-    threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, mongoTwoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon
+    threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon, cSharpIcon
 } from './projectIcons'
 
 import { Link } from 'react-router-dom'
@@ -76,9 +76,12 @@ const Projects = () => {
             <li>{threejsIcon}Threejs fibre </li>
             <li>{sqlIcon}SQL</li>
             <li>{sassIcon}Sass </li>
+            <li>{firebaseIcon} firebase</li>
         </ul>
 
         <ul className='right_list'>
+            <li>{javaIcon}java</li>
+            <li>{cSharpIcon}C#</li>
             <li>{phpIcon}PHP</li>
             <li>{JqueryIcon}Jquery</li>
             <li>{framerIcon}Framer motion</li>
