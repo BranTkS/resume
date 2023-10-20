@@ -84,7 +84,7 @@ section{
             white-space: nowrap;
             overflow: hidden;
             min-width: 5rem;
-            border-radius: 11%;
+            border-radius: 5%;
 
             a{
                 background-image:$primary-gradient;
@@ -121,11 +121,6 @@ section{
 padding-top: 1.7dvh;
 }
 
-.ProjTitle{
-    font-size: $smallText;
-    font-weight: 500;
-    padding-top:3dvh;
-}
 
 .remove-padding-margin{
     width:fit-content;

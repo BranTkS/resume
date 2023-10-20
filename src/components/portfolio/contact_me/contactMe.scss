@@ -130,9 +130,40 @@ svg{
 }
 @media screen and (min-width: 500px) {
 
-    .contactLogo{
-        display:none;
-     
+    #contact{
+
+    .contactForm{
+
+    form{
+        grid-auto-columns: 1fr;
+        grid-template-areas: 
+        '. title title title title .'
+        '. email email email email .'
+        '. . field field . .'
+        'message message message message message message'
+        '. . text_area text_area . .'
+        '. . button button . .'
+        ;
+
+
+        .text_area, .text_field{
+            border: 1px solid $primaryColor;
+        }
+
+        .text_area{
+            height: 7rem;
+            font-size: $smallText;
+            width: 100%;
+        }
+
+        .text_field{
+            height: 5rem;
+            font-size: $smallText;
+            width: 100%;
+        }
+        
+            }
+        }
     }
 
     .footerIcons{
@@ -142,4 +173,6 @@ svg{
             width:17%;
         }
         }
+
+
 }

@@ -1,19 +1,19 @@
-import { sassIcon } from './projectSVGs/brand-sass-svgrepo-com'
-import reactSVG from './projectSVGs/react-js-svgrepo-com.svg';
-import { expressIcon } from './projectSVGs/express-svgrepo-com';
-import figmaSVG from './projectSVGs/figma-svgrepo-com.svg'
-import javaSVG from './projectSVGs/java-logo-svgrepo-com.svg'
-import JoomlaSVG from './projectSVGs/joomla-svgrepo-com.svg'
-import JquerySVG from './projectSVGs/jquery-svgrepo-com.svg'
-import kotlinSVG from './projectSVGs/kotlin-svgrepo-com.svg'
-import mongoSVG from './projectSVGs/mongodb-svgrepo-com.svg'
-import mongoTwoSVG from './projectSVGs/mongo-svgrepo-com.svg'
-import nodejsSVG from './projectSVGs/nodejs-icon-svgrepo-com.svg'
-import phpSVG from './projectSVGs/php-svgrepo-com.svg'
-import sqlSVG from './projectSVGs/sql-svgrepo-com.svg'
-import WordPressSVG from './projectSVGs/wordpress-svgrepo-com.svg'
-import framerSVG from './projectSVGs/framer-motion.svg'
-import firebaseSVG from './projectSVGs/firebase-svgrepo-com.svg'
+import { sassIcon } from '../../../assets/images/svgImages/projectSVGs/brand-sass-svgrepo-com'
+import reactSVG from '../../../assets/images/svgImages/projectSVGs/react-js-svgrepo-com.svg';
+import { expressIcon } from '../../../assets/images/svgImages/projectSVGs/express-svgrepo-com';
+import figmaSVG from '../../../assets/images/svgImages/projectSVGs/figma-svgrepo-com.svg'
+import javaSVG from '../../../assets/images/svgImages/projectSVGs/java-logo-svgrepo-com.svg'
+import JoomlaSVG from '../../../assets/images/svgImages/projectSVGs/joomla-svgrepo-com.svg'
+import JquerySVG from '../../../assets/images/svgImages/projectSVGs/jquery-svgrepo-com.svg'
+import kotlinSVG from '../../../assets/images/svgImages/projectSVGs/kotlin-svgrepo-com.svg'
+import mongoSVG from '../../../assets/images/svgImages/projectSVGs/mongodb-svgrepo-com.svg'
+import mongoTwoSVG from '../../../assets/images/svgImages/projectSVGs/mongo-svgrepo-com.svg'
+import nodejsSVG from '../../../assets/images/svgImages/projectSVGs/nodejs-icon-svgrepo-com.svg'
+import phpSVG from '../../../assets/images/svgImages/projectSVGs/php-svgrepo-com.svg'
+import sqlSVG from '../../../assets/images/svgImages/projectSVGs/sql-svgrepo-com.svg'
+import WordPressSVG from '../../../assets/images/svgImages/projectSVGs/wordpress-svgrepo-com.svg'
+import framerSVG from '../../../assets/images/svgImages/projectSVGs/framer-motion.svg'
+import firebaseSVG from '../../../assets/images/svgImages/projectSVGs/firebase-svgrepo-com.svg'
 
 
 

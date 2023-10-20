@@ -4,7 +4,7 @@ import { certificate } from './certificateSVG'
 import { computer } from './computerSVG'
 import { signature } from './signatureSVG'
 import { javaSVG, javaIcon } from './javaSVG'
-import teamSVG from '../projects/projectSVGs/users.svg'
+import teamSVG from '../../../assets/images/svgImages/projectSVGs/users.svg'
 
 const svgVariants = {
     hidden: { rotate: -180 },

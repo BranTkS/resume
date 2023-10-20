@@ -61,7 +61,7 @@ const ContactMe = () => {
                 animate={mainControls}
                 transition={transitionValue}>
                 <motion.h1 className='title'>CONTACT</motion.h1>
-                Would you like to work with me? Awesome!
+                <motion.h3>Would you like to work with me? Awesome!</motion.h3>
                 <motion.div className="contactLogo">
                     <img src={tanLogo} alt="Logo" />
                 </motion.div>

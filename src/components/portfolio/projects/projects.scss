@@ -92,7 +92,11 @@
     max-height: 3rem;
     grid-area: project_title;
     text-decoration: underline;
+    font-size: $subheadingText;
+    font-weight: 500;
+    margin-top:12rem;
 }
+
 
 .head-image{
     grid-area: head-image;

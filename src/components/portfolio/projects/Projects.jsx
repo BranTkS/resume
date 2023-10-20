@@ -97,7 +97,7 @@ const Projects = () => {
             />,
             title: 'Certifications',
             infoTitle: 'Thanks to my love for learning...',
-            info: <p> Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program.</p>,
+            info: <p> Beyond my diploma for IT from UNISA, I also completed the Umuzi java bootcamp and came out among the top students to be selected for the program, guaranteeing that as a baseline, I have a very strong understanding of the fundamentals of OOP.</p>,
 
             infoTitle2: 'I also participated in...',
             info2: <p>Andelas android development programs and React development program and in both I reached the end by beating tens of thousands of students to reach the final thousand. I also took a few extra courses to sharpen skills and learn new languages.</p>,
@@ -113,7 +113,7 @@ const Projects = () => {
             />,
             title: 'Repo websites and applications',
             infoTitle: 'Websites I made include...',
-            info: <div className='project_text'><div className='website_tagline'><p >This very website which I made using </p>{portfolioStack}</div> <p className='website_paragraph'>In my freelance carreer I created several websites including a website for a gym{rawGymImage}multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
+            info: <div className='project_text'><div className='website_tagline'><p >This very website which I made using </p>{portfolioStack}</div> <p className='website_paragraph'>Several websites which I created during my freelance carreer, including a website for a gym{rawGymImage}, multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
 
 
 
