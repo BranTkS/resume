@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { currentBackground, currentColor } from './BgColorScrollChanges';
-import Face from './models/face';
+//import Face from './models/face';
 
 const whiteColor = 0xffffff;
 const currentBackgroundColor = 0x0A020D;
