@@ -1,74 +1,75 @@
 @import "./../PortfolioBody.scss";
 
 //about me
-#about{
+#about {
     min-height: 100svh;
     width: 100%;
     display: grid;
 
-    .center{
-    display: grid;
-    max-width: 100%;
-    padding: 5%;
-    grid-template-columns: repeat(12, 1fr);
-    justify-content: center;
-    
-    p{
-    font-size: $smallText;
-    grid-column: 2 / span 10;
-    }
+    .center {
+        display: grid;
+        max-width: 100%;
+        padding: 5%;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: center;
+
+        p {
+            font-size: $smallText;
+            grid-column: 2 / span 10;
+        }
 
         //videos
-        .profileVideo{
+        .profileVideo {
             height: 70dvh;
-             width: 100%;
-             display: flex;
-             justify-content: center;
-          }
-         
-         .hero-video{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-video {
             grid-column: 2 / span 10;
-         }
-         
-         .motion-SVG{
-             z-index: 2;
-             position: absolute;
-             padding-top: 95%;
-             width: 80%;
-             height: fit-content;;
-             grid-column: 1 / span 9;
-             grid-row: 1 / span 2;
-         }
+        }
+
+        .motion-SVG {
+            z-index: 2;
+            position: absolute;
+            padding-top: 95%;
+            width: 80%;
+            height: fit-content;
+            ;
+            grid-column: 1 / span 9;
+            grid-row: 1 / span 2;
+        }
     }
 
-    p{
+    p {
         font-size: 1.3rem;
     }
 
-    .linkButton{
+    .linkButton {
         justify-content: center;
     }
 
 }
 
-.lineSVG{
+.lineSVG {
 
     z-index: -1;
     top: 0;
-    left:0;
+    left: 0;
 
     width: 100%;
     height: 100%;
     text-align: center;
     overflow: visible;
 
-    svg{
+    svg {
         display: inline-block;
         height: 100%;
     }
 
 
-    path{
+    path {
         stroke: black;
         stroke-width: 2;
         stroke-linejoin: round;
@@ -76,77 +77,78 @@
     }
 }
 
-section{
+section {
     margin-top: 1px;
     width: 98%;
     max-height: fit-content;
 }
 
-.title{
+.title {
     grid-column: 1 / 12;
 
-    h1{
+    h1 {
         font-size: 3rem;
     }
 }
 
-.aboutBody{
+.aboutBody {
     grid-column: 1 / 12;
     grid-template-columns: repeat(12, 1fr);
     height: fit-content;
     max-width: 100%;
 
-    div{
+    div {
         padding-top: 0.5rem;
         overflow: visible;
     }
 
-    .snippets{
+    .snippets {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         text-align: start;
     }
 
-    .right, .left{
+    .right,
+    .left {
         padding-bottom: 3rem;
     }
 
 
-    .left{
+    .left {
         grid-column: 2 / span 6;
         max-width: 100%;
     }
 
-    .right{
+    .right {
         grid-column: 6 / span 6;
-        max-width:100%;
+        max-width: 100%;
     }
 
-    center{
+    center {
         text-align: left;
         max-width: 70%;
     }
 
-        .right-SVG{
+    .right-SVG {
         grid-column: 8 / span 4;
-        
+
     }
 
-    .left-SVG{
+    .left-SVG {
         grid-column: 2 / span 4;
-        
+
     }
 
-    svg{
+    svg {
         width: 7.5rem;
         height: 7.5rem;
-        }
+    }
 
-        .motion-SVG{
-            padding-top: 5rem;
-            padding-bottom: 0px;
+    .motion-SVG {
+        padding-top: 5rem;
+        padding-bottom: 0px;
 
-        }
+    }
 }
 
 
@@ -157,39 +159,40 @@ section{
 
 @media screen and (min-width: 500px) {
 
-    #about{
+    #about {
         width: 100%;
         float: right;
-        padding: 0px  0px 12rem 12%;
-    
-        div{
-        font-size: 1.3rem;
+        padding: 0px 0px 12rem 12%;
+
+        div {
+            font-size: 1.3rem;
         }
 
-        .center p{
+        .center p {
             width: 70%;
         }
 
-        .center{
+        .center {
             grid-column: 1 / span 11;
             display: flex;
             justify-content: center;
             align-items: center;
 
 
-            .motion-SVG{
+            .motion-SVG {
                 padding-top: 25%;
                 width: fit-content;
             }
         }
-        
 
-        .snippets{
-           padding-bottom: 3rem;
+
+        .snippets {
+            padding-bottom: 3rem;
         }
-        
-        .right, .left{
-           // backdrop-filter: blur(20px);
+
+        .right,
+        .left {
+            // backdrop-filter: blur(20px);
             border-radius: 1%;
             padding-top: 3rem;
             padding-bottom: 5rem;
@@ -197,47 +200,47 @@ section{
             max-width: 100% !important;
         }
 
-        .right{
+        .right {
             grid-column: 7/ span 5;
         }
 
-        .left{
+        .left {
             grid-column: 1 / span 5;
         }
 
-        .right-SVG{
-            grid-column: 9/ span 2 ;
-            
-        }
-    
-        .left-SVG{
-            grid-column: 3/ span 2 ;
-            
+        .right-SVG {
+            grid-column: 9/ span 2;
+
         }
 
-        svg{
+        .left-SVG {
+            grid-column: 3/ span 2;
+
+        }
+
+        svg {
             width: 15rem;
             height: 15rem;
-            }
+        }
 
-            .motion-SVG{
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-    
+        .motion-SVG {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
 
-            .hero-video{
-                grid-column: 2 / span 3;
-            }
 
-            .tanLogo{
-                display: inline;
-                grid-row: 3;
-                grid-column: 7;
-                padding-top: 0.1rem;
-                width: 3rem;
-                height: auto;
-            }
+        .hero-video {
+            grid-column: 2 / span 3;
+        }
+
+        .tanLogo {
+            display: inline;
+            grid-row: 3;
+            grid-column: 7;
+            padding-top: 0.1rem;
+            width: 3rem;
+            height: auto;
+        }
     }
 
 

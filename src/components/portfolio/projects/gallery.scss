@@ -1,26 +1,26 @@
 @import "./../PortfolioBody.scss";
 
-.artGallery div img{
+.artGallery div img {
     width: fit-content;
     min-height: 12rem;
-    max-height:29rem;
+    max-height: 29rem;
     align-self: flex-end;
     filter: grayscale(100);
     transition: transform 0.5s;
-    pointer-events:none;
+    pointer-events: none;
 }
 
-.artGallery div span{
+.artGallery div span {
     display: flex;
 }
 
-.artGallery div img:hover{
+.artGallery div img:hover {
     filter: grayscale(0);
     cursor: pointer;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
-.artGalleryWrap{
+.artGalleryWrap {
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -29,52 +29,48 @@
     cursor: grab;
 }
 
-.artGallery{
+.artGallery {
     width: 100%;
     height: 30rem;
     display: flex;
     overflow-x: scroll;
-    background-image: linear-gradient(180deg, rgba(52,52,56,0) 2%, $secondaryAccent 98%);
+    background-image: linear-gradient(180deg, rgba(52, 52, 56, 0) 2%, $secondaryAccent 98%);
 
 }
 
-.artGallery div{
+.artGallery div {
     width: fit-content;
     white-space: nowrap;
     display: flex;
-    gap: 1svh; 
+    gap: 1svh;
     padding: 1svh;
 }
 
-.artGallery div img{
+.artGallery div img {
     min-width: 7rem;
     filter: grayscale(0);
-    pointer-events:none;
+    pointer-events: none;
 }
 
-.artGallery::-webkit-scrollbar{
+.artGallery::-webkit-scrollbar {
     display: none;
 
 }
 
-.artGallery div img:hover{
-    transform:scale(1.1);
+.artGallery div img:hover {
+    transform: scale(1.1);
 }
 
 
 @media screen and (min-width: 500px) {
 
-    .fade_edges{
+    .fade_edges {
 
-        overflow:hidden;
+        overflow: hidden;
 
-        -webkit-mask: linear-gradient(
-            90deg, transparent, white 20%, white 80%, transparent
-        );
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 
-        mask: linear-gradient(
-            90deg, transparent, white 20%, white 80%, transparent
-        );
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     }
-  
+
 }

@@ -1,8 +1,8 @@
-$headingText: 2.5rem ;
-$subheadingText:2rem;
-$largeText:1.7rem;
-$smallText: 1.5rem ;
-$extraSmallText: 1.1rem ;
+$headingText: 2.5rem;
+$subheadingText: 2rem;
+$largeText: 1.7rem;
+$smallText: 1.5rem;
+$extraSmallText: 1.1rem;
 
 $smallTextLineHeight: $smallText*1.9;
 $headingTextLineHeight: $smallText*1.7;
@@ -11,7 +11,7 @@ $extraSmallTextLineHeight: $extraSmallText*1.3;
 //base colours
 $backgroundColor: #0A020D;
 $textColor: #F4F0F5;
-$primaryColor:#FC03D7;
+$primaryColor: #FC03D7;
 $secondaryColor: #6F0DA0;
 $secondaryColorShade: #2e0344;
 $accentColor: #FF2600;
@@ -21,61 +21,61 @@ $secondaryAccent: #EEAC07;
 //fonts
 $headingFont: "Oswald", Impact, "Franklin Gothic Bold", sans-serif;
 $bodyFont: "Lato", "Trebuchet MS", sans-serif;
-$altTextFont:Verdana, Geneva, Tahoma, sans-serif;
-$altHeadingFont:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$altTextFont: Verdana, Geneva, Tahoma, sans-serif;
+$altHeadingFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 //colours
-$black-gradient: linear-gradient(180deg, rgba(52,52,56,0) 1%, rgb(0, 0, 0) 99%);
+$black-gradient: linear-gradient(180deg, rgba(52, 52, 56, 0) 1%, rgb(0, 0, 0) 99%);
 
-$black-to-yellow:linear-gradient(90deg, #000000 2%, #EEAC07 98%);
-$black-to-yellow-alt-one:  linear-gradient(120deg, #000000 2%, #EEAC07 98%);
-$black-to-yellow-alt-two:  linear-gradient(140deg, #000000 2%, #EEAC07 98%);
-$black-to-yellow-alt-three:  linear-gradient(180deg, #000000 2%, #EEAC07 98%);
-$yellow-to-black: -webkit-linear-gradient(180deg,  #000000 5%, #EEAC07);
+$black-to-yellow: linear-gradient(90deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-one: linear-gradient(120deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-two: linear-gradient(140deg, #000000 2%, #EEAC07 98%);
+$black-to-yellow-alt-three: linear-gradient(180deg, #000000 2%, #EEAC07 98%);
+$yellow-to-black: -webkit-linear-gradient(180deg, #000000 5%, #EEAC07);
 
-$black-to-purple:linear-gradient(90deg, #000000 2%, $primaryColor 98%);
+$black-to-purple: linear-gradient(90deg, #000000 2%, $primaryColor 98%);
 
-$primary-gradient: linear-gradient(280deg, #C15DF2  10%, #FD02D7 90%);
+$primary-gradient: linear-gradient(280deg, #C15DF2 10%, #FD02D7 90%);
 
-$primary-gradient-alt-one: linear-gradient(150deg, #C15DF2  10%, #FD02D7 90%);
+$primary-gradient-alt-one: linear-gradient(150deg, #C15DF2 10%, #FD02D7 90%);
 
 //portfolio
-#portfolio{
+#portfolio {
     position: absolute;
-    top:0;
+    top: 0;
     width: 100%;
     z-index: 1;
     overflow: hidden;
 
-    h1{
+    h1 {
         line-height: $headingTextLineHeight;
         letter-spacing: -0.5vw;
     }
 
-    p{
+    p {
         line-height: $smallTextLineHeight;
     }
 
 
-section{
-    font-family: $bodyFont;
-    margin-top: 10dvw;
-    width: 100%;
-    height: fit-content;
-    color: $textColor;
+    section {
+        font-family: $bodyFont;
+        margin-top: 10dvw;
+        width: 100%;
+        height: fit-content;
+        color: $textColor;
 
 
 
-.title{
-    font-size: $headingText;
-    letter-spacing: -0.27vw;
-}
+        .title {
+            font-size: $headingText;
+            letter-spacing: -0.27vw;
+        }
 
-//link buttons
-    .linkButton{
-            color:black;
-           // border:0.3vw solid rgb(243, 137, 6);
-           //border: 0.3vw solid #FD02D7;
+        //link buttons
+        .linkButton {
+            color: black;
+            // border:0.3vw solid rgb(243, 137, 6);
+            //border: 0.3vw solid #FD02D7;
             padding: 0.7vw;
             margin: 0.7vw;
             display: flex;
@@ -86,66 +86,66 @@ section{
             min-width: 5rem;
             border-radius: 5%;
 
-            a{
-                background-image:$primary-gradient;
+            a {
+                background-image: $primary-gradient;
                 cursor: pointer;
             }
 
-            a:hover{
+            a:hover {
                 background-image: $primary-gradient-alt-one;
 
 
             }
+        }
+
+        div.linkButton {
+            border: 0px;
+            margin-top: 3vh;
+        }
+
+        p {
+            padding-top: 1.7dvh;
+        }
     }
 
-    div.linkButton{
-        border:0px;
+
+    //pictures
+    .portfolioPic {
+        width: 50%;
+        height: auto;
         margin-top: 3vh;
     }
 
-    p{
+    //projects
+    .projects p {
         padding-top: 1.7dvh;
     }
-}
 
 
- //pictures
- .portfolioPic{
-    width: 50%;
-    height: auto;
-    margin-top: 3vh;
-}
+    .remove-padding-margin {
+        width: fit-content;
+        padding: 0px;
+        margin: 0px;
 
-//projects
-.projects p{
-padding-top: 1.7dvh;
-}
-
-
-.remove-padding-margin{
-    width:fit-content;
-    padding: 0px;
-    margin: 0px;
-
-}
-
-
-@media screen and (max-width: 900px) {
-
-    
-    section{
-        margin-top: 10vw;
-        min-height: 20dvh;
-        width: 100%;
-    
-    div{
-        width: 100%;
     }
 
-    .title{
-        font-size: $subheadingText;
-    letter-spacing: -0.27vw;
+
+    @media screen and (max-width: 900px) {
+
+
+        section {
+            margin-top: 10vw;
+            min-height: 20dvh;
+            width: 100%;
+
+            div {
+                width: 100%;
+            }
+
+            .title {
+                font-size: $subheadingText;
+                letter-spacing: -0.27vw;
+            }
+        }
     }
-}
-}  
 }
