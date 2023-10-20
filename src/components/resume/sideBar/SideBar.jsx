@@ -13,7 +13,7 @@ const SideBar = (TBSImage) => {
                 <Skills />
                 <WorkRefernce />
             </div>
-            <Link to="/" className='linkButton'>back</Link>
+            <Link to="/" id='resume_back_button' className='linkButton'>Back</Link>
         </div>
     )
 }

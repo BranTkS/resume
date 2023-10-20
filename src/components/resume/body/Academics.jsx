@@ -7,6 +7,11 @@ const Academics = () => {
             story: "Distinction in app development and many other modules"
         },
         {
+            school: "Umuzi",
+            learnings: "Umuzi Java bootcamp",
+            story: "I completed the Umuzi java bootcamp and came out among the top students to be selected for the program, guaranteeing that as a baseline, I have a very strong understanding of the fundamentals of OOP."
+        },
+        {
             school: "ANDELA SCHOLARSHIP PROGRAMS",
             learnings: "Web and app development",
             story: <ul className="text-end">

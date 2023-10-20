@@ -192,7 +192,7 @@ const AboutMe = () => {
                             boxShadow: "1px 0px 0px #FD02D7",
                             textShadow: "0px 0px 7px 0px",
                         }}>
-                        <Link to="/resume" className='linkButton'>Resume</Link>
+                        <Link target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>
                     </motion.div>
                 </div>
             </motion.div>

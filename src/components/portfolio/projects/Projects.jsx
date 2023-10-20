@@ -41,7 +41,7 @@ const Projects = () => {
 
     const resumeButton = <div className='linkButton'>
 
-        <Link to="/resume" className='linkButton'>Resume</Link>
+        <Link target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>
     </div>;
 
     const seeMoreButton = <div className='linkButton'>
@@ -107,7 +107,7 @@ const Projects = () => {
 
             info3: '',
             url: resumeButton,
-            repo: '',
+            repo: 'https://github.com/BranTkS',
         },
 
         {
@@ -125,7 +125,7 @@ const Projects = () => {
             info3: <Gallery
                 graphicsGallery={mobileGallery}
             />,
-            url: seeMoreButton,
+            url: resumeButton,
             repo: 'https://github.com/BranTkS/travel-deals-app', // if no repo, the button will not show up
         },
 
@@ -139,7 +139,7 @@ const Projects = () => {
             info2: '',
             info3: '',
 
-            url: seeMoreButton,
+            url: resumeButton,
             repo: 'https://www.deviantart.com/brantshumba', // if no repo, the button will not show up
         },
     ];
@@ -179,7 +179,7 @@ const Projects = () => {
                                         boxShadow: "1px 0px 0px #FD02D7",
                                         textShadow: "0px 0px 7px 0px",
                                     }}>
-                                    <a href={projectsData.repo} className='linkButton'>repo</a>
+                                    <a target="_blank" rel="noreferrer" href={projectsData.repo} className='linkButton'>repo</a>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
