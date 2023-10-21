@@ -1,14 +1,14 @@
 @import "./../PortfolioBody.scss";
 
-.navbar{
-height: fit-content;
-background-color: rgba(46, 0, 46, 0.719);
-top: 1rem;
-right: 0px;
-border-bottom: 1px solid $secondaryAccent;
+.navbar {
+    height: fit-content;
+    background-color: rgba(46, 0, 46, 0.719);
+    top: 1rem;
+    right: 0px;
+    border-bottom: 1px solid $secondaryAccent;
 }
 
-.nav{
+.nav {
     z-index: 1000;
     max-width: 100%;
     height: 100%;
@@ -17,39 +17,39 @@ border-bottom: 1px solid $secondaryAccent;
     flex-wrap: wrap;
     flex-direction: row;
     width: max-content;
-    
+
 }
 
-.nav-reveal-button{
-display: block;
-float: right;
-width: 100%;
-
-img{
+.nav-reveal-button {
+    display: block;
     float: right;
-    width: 4rem;
-    height: auto;
-}
+    width: 100%;
+
+    img {
+        float: right;
+        width: 4rem;
+        height: auto;
+    }
 }
 
-.navWrap{
+.navWrap {
     position: fixed;
     max-width: 50%;
     top: 0px;
     right: 0px;
-    }
+}
 
-.nav li{
+.nav li {
     list-style: none;
     padding: 1rem;
     width: 100%;
     z-index: 11;
 
-    #nav_email{
+    #nav_email {
         font-size: $extraSmallText*0.8;
     }
 
-    p{
+    p {
         margin: 0px;
         color: $textColor;
         text-align: start;
@@ -60,20 +60,21 @@ img{
 
 }
 
-.nav li:nth-child(4){
+.nav li:nth-child(4) {
     //nav contact me font size
     font-size: 1.3em;
 }
 
 
-.nav li:hover, .nav .active{
+.nav li:hover,
+.nav .active {
     background-color: rgba(128, 128, 128, 0.57);
     border-bottom: aqua;
 }
 
-.navLink{
+.navLink {
 
-    .navIcon{
+    .navIcon {
         float: left;
         width: 3rem;
         height: auto;
@@ -85,54 +86,55 @@ img{
 
 @media screen and (min-width: 500px) {
 
-    .navbar{
+    .navbar {
         width: 100%;
         background-color: $backgroundColor;
         border-bottom: none;
     }
-    
-    .navWrap{
+
+    .navWrap {
         max-width: 100%;
         width: 100%;
         top: -25px;
         right: 0px;
-        }
+    }
 
-    .nav{
+    .nav {
         z-index: 1000;
         max-width: 100%;
         width: 100%;
         flex-wrap: nowrap;
-        align-items:end;
+        align-items: end;
         justify-content: end;
     }
-            .nav li{
-                width: fit-content;
-                padding: 1px 0.1rem 1px;
-                margin: 0px 0.3rem 0px;
-                border-bottom: 1px solid gray;
 
-                p{
-                    float: left;
-                    text-align: start;
-                    font-size: 0.7em;
-                }
-            }
+    .nav li {
+        width: fit-content;
+        padding: 1px 0.1rem 1px;
+        margin: 0px 0.3rem 0px;
+        border-bottom: 1px solid gray;
 
-            .nav li:nth-child(4) p{
-                //nav contact me font size
-                font-size: 0.8em;
-            }
-            
-            .navLink{
+        p {
+            float: left;
+            text-align: start;
+            font-size: 0.7em;
+        }
+    }
 
-                height: 100%;
-                width: 100%;
+    .nav li:nth-child(4) p {
+        //nav contact me font size
+        font-size: 0.8em;
+    }
 
-                .navIcon{
-                    width: 1.7rem;
-                    height: auto;
-                    padding: 0.1rem 0.2rem 0px;
-                }
-            }
+    .navLink {
+
+        height: 100%;
+        width: 100%;
+
+        .navIcon {
+            width: 1.7rem;
+            height: auto;
+            padding: 0.1rem 0.2rem 0px;
+        }
+    }
 }

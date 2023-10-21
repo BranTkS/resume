@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { currentBackground, currentColor } from './BgColorScrollChanges';
-import Face from './models/face';
+//import { currentBackground, currentColor } from './BgColorScrollChanges';
+//import Face from './models/face';
 
 const whiteColor = 0xffffff;
 const currentBackgroundColor = 0x0A020D;
@@ -17,7 +17,7 @@ const RenderScene = () => {
     const gridHelper = new THREE.GridHelper();
 
     // background
-    const spacebgTexture = new THREE.TextureLoader().load(currentBackground);
+    //const spacebgTexture = new THREE.TextureLoader().load(currentBackground);
     //scene.background = spacebgTexture;
     scene.background = new THREE.Color(currentBackgroundColor);
 
@@ -34,7 +34,7 @@ const RenderScene = () => {
 
 
     //torus
-    const geometry = new THREE.TorusGeometry(10, 3, 17, 100);
+    const geometry = new THREE.SphereGeometry(10, 27, 17, 100);
     const material = new THREE.PointsMaterial({
         size: 0.005
     });
@@ -51,7 +51,7 @@ const RenderScene = () => {
     const particlesGeometry = new THREE.BufferGeometry;
     const particlesMaterial = new THREE.PointsMaterial({
         size: 0.005,
-        color: currentColor,
+        color: whiteColor,
     });
     const particlesCount = 5000;
 

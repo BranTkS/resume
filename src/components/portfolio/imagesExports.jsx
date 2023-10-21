@@ -6,6 +6,7 @@ import blackMenu from '../../assets/images/svgImages/icons8-circle-menu-96.png'
 import colorMenu from '../../assets/images/svgImages/icons8-menu-96.png'
 
 import AboutBlack from '../../assets/images/svgImages/icons8-user-menu-male-90.png'
+import AboutColour from '../../assets/images/svgImages/icons8-about-96.png'
 import aboutLogo from '../../assets/images/gallery/noBGLogoPurple.png'
 
 import projectBlack from '../../assets/images/svgImages/icons8-code-90.png'
@@ -70,7 +71,7 @@ export {
     deviantartSVG, githubSVG, linkedinSVG,
 
     // menu icons
-    blackMenu, colorMenu, AboutBlack, aboutLogo, projectBlack, projectColor, contactBlack, contactColor, tanLogo,
+    blackMenu, colorMenu, AboutBlack, AboutColour, aboutLogo, projectBlack, projectColor, contactBlack, contactColor, tanLogo,
 
 
     //about images svgs

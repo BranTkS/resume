@@ -2,7 +2,7 @@
 
 
 
-#header{
+#header {
     min-height: 100svh;
     height: fit-content;
     width: 100%;
@@ -10,16 +10,16 @@
     padding-bottom: 120dvh;
 }
 
-.hero{ 
+.hero {
     width: 100%;
 
 
 
-    .shumba{
+    .shumba {
         display: inline;
     }
 
-    .hero-name{
+    .hero-name {
         background: $black-to-yellow ;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -27,70 +27,76 @@
         animation: changeColor 20s ease-in-out infinite;
         font-size: $headingText;
 
-        h1, div{
+        h1,
+        div {
             font-size: $headingText;
             font-weight: 700;
         }
     }
 
-    .hero-name:hover{
+    .hero-name:hover {
         background: $black-to-yellow-alt-three ;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-   
+
     @keyframes changeColor {
-       0%{
-        background: $black-to-yellow ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
-       25%{
-        background: $black-to-yellow-alt-one ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
-       50%{
-        background: $black-to-yellow-alt-two ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
-       75%{
-        background: $black-to-yellow-alt-one ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
-       90%{
-        background: $black-to-yellow ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       }
-   
-   }
+        0% {
+            background: $black-to-yellow ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        25% {
+            background: $black-to-yellow-alt-one ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        50% {
+            background: $black-to-yellow-alt-two ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        75% {
+            background: $black-to-yellow-alt-one ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        90% {
+            background: $black-to-yellow ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    }
 }
 
-.hero-image-container{
-    top:33.5dvh;
+.hero-image-container {
+    top: 33.5dvh;
     background-image: $black-gradient;
-    z-index:9;
+    z-index: 9;
 }
-    //hero image
-    .profile-image{
-        height: auto;
-         width: 100dvw;
-         max-width:50vh;
-         border-bottom: 4rem solid black;
-      }
-      
-.absolute-centered{
 
-    position:absolute;
-    left:50%;
+//hero image
+.profile-image {
+    height: auto;
+    width: 100dvw;
+    max-width: 50vh;
+    border-bottom: 4rem solid black;
+}
+
+.absolute-centered {
+
+    position: absolute;
+    left: 50%;
     transform: translate(-50%, 0);
 }
 
 
-.heroText{
+.heroText {
     font-size: 0.7rem;
     width: 100%;
     height: 80dvh;
@@ -101,16 +107,16 @@
     grid-template-rows: repeat(12, 1fr);
 }
 
-.hero-title{
+.hero-title {
     grid-column: 1/ span 10;
     grid-row: 8 / span 2;
 }
 
-.heroText h1{
+.heroText h1 {
     width: fit-content;
     padding-top: 0px;
-    margin-top:0px;
-    margin-bottom:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 2.1rem;
     font-weight: 550;
     font-family: $altTextFont;
@@ -119,76 +125,80 @@
 
 
 
-    .heroText h2{
-        font-size: 2.5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-decoration: underline;
-        margin-top:0px;
-        margin-bottom:0px;
-    }
+.heroText h2 {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
-    .animated-letter{
-        font-style: oblique;
-        display: inline;
-        padding: 0px;
-        margin: 0px;
-     }
-    
-     .animated-letter:hover{
-        font-size: $headingText*1.2;
-        width: $headingText*1.4;
-        animation: letterAnimation 1s ease-in-out infinite;
-     }
-    
-     @keyframes letterAnimation {
-        0%{
+.animated-letter {
+    font-style: oblique;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+.animated-letter:hover {
+    font-size: $headingText*1.2;
+    width: $headingText*1.4;
+    animation: letterAnimation 1s ease-in-out infinite;
+}
+
+@keyframes letterAnimation {
+    0% {
         font-style: italic;
-        }
-        30%{
-            font-style: normal;
-        }
-        70%{
-            font-style: oblique;
-        }
-    
-    }
-    
-
-    .line1, .line2, .line3{
-        grid-row: 9;
-
-        h2{
-            font-size: $largeText;
-        }
     }
 
-    .line1{
+    30% {
+        font-style: normal;
+    }
+
+    70% {
+        font-style: oblique;
+    }
+
+}
+
+
+.line1,
+.line2,
+.line3 {
+    grid-row: 9;
+
+    h2 {
+        font-size: $largeText;
+    }
+}
+
+.line1 {
     grid-column: 1/ span 4;
-    }
+}
 
-    .line2{
-        grid-column: 5 / span 4;
-    }
+.line2 {
+    grid-column: 5 / span 4;
+}
 
-    .line3{
-        grid-column: 9/ span 4;
-    }
+.line3 {
+    grid-column: 9/ span 4;
+}
 
-.hiText{
+.hiText {
     width: fit-content;
     padding-top: 0rem;
     grid-column: 1 / span 8;
     grid-row: 3 / span 4;
     margin-block-start: 0em;
 
-    p{
-    font-size: 1.3rem;
-    text-align: left;
+    p {
+        font-size: 1.3rem;
+        text-align: left;
     }
 }
 
-.heroText .linkButton{
+.heroText .linkButton {
     padding: 0rem;
     margin: 0rem;
     font-size: 1.3rem;
@@ -209,106 +219,111 @@
 @media screen and (min-width: 500px) {
 
     //header
-    #header{
+    #header {
         margin-top: 5rem;
         min-height: 70svh;
         width: 100%;
     }
-    
-    .hero{
+
+    .hero {
         grid-column: span 8;
         width: 100%;
     }
-    
-    .heroText{
+
+    .heroText {
         height: 80dvh;
     }
-    
-    .heroText{
+
+    .heroText {
         text-align: start;
         width: 100%;
         padding-left: 3em;
 
-        .hero-name, .shumba, .animated-letter{    
-             font-size: $headingText*3 !important;
-             height: auto;
+        .hero-name,
+        .shumba,
+        .animated-letter {
+            font-size: $headingText*3 !important;
+            height: auto;
         }
-    
-        .title{
+
+        .title {
             padding-top: 0%;
         }
 
 
-        .hero-title{
+        .hero-title {
             grid-column: 1/ span 10;
             grid-row: 3 / span 3;
         }
 
-        .line1, .line2, .line3{
+        .line1,
+        .line2,
+        .line3 {
             grid-row: 9;
-    
-            h2{
+
+            h2 {
                 font-size: $largeText;
             }
         }
-    
-        .line1{
-        grid-column: 1/ span 4;
+
+        .line1 {
+            grid-column: 1/ span 4;
         }
-    
-        .line2{
+
+        .line2 {
             grid-column: 5 / span 4;
         }
-    
-        .line3{
+
+        .line3 {
             grid-column: 9/ span 4;
         }
-    
-    .hiText{
-        width: fit-content;
-        padding-top: 0rem;
-        grid-column: 1 / span 3;
-        grid-row: 5 / span 2;
-        margin-block-start: 0em;
-    
-        p{
-        font-size: 1.3rem;
-        text-align: left;
+
+        .hiText {
+            width: fit-content;
+            padding-top: 0rem;
+            grid-column: 1 / span 3;
+            grid-row: 4 / span 2;
+            margin-block-start: 0em;
+
+            p {
+                font-size: 1.3rem;
+                text-align: left;
+            }
         }
-    }
 
-    .linkButton{
-        padding: 0px !important;
-        margin: 0px !important;
-        font-size: 1.3rem;
-    
-        grid-column: 1 / span 2;
-        grid-row: 8 / span 2;
-        z-index: 11;
-    }
-    
-    
-    }
+        .linkButton {
+            padding: 0px !important;
+            margin: 0px !important;
+            font-size: 1.3rem;
+
+            grid-column: 1 / span 2;
+            grid-row: 8 / span 2;
+            z-index: 11;
+        }
 
 
-    .hero-image-container{
-        top:10.5dvh;
+    }
+
+
+    .hero-image-container {
+        top: 10.5dvh;
         width: 100%;
         background-image: $black-gradient;
-        z-index:9;
+        z-index: 9;
         display: flex;
         justify-content: center;
 
-        a{
-            width: fit-content;
+        a {
+            width: 100%;
         }
     }
-        //hero image
-        .profile-image{
-            height: auto;
-             width: 190dvw;
-             max-width:60vh;
-             border-bottom: 4rem solid black;
-          }
-    
+
+    //hero image
+    .profile-image {
+        height: auto;
+        width: 190dvw;
+        max-width: 60vh;
+        border-bottom: 4rem solid black;
+    }
+
 }

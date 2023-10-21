@@ -6,9 +6,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG } from '../imagesExports';
-import AboutImages from './aboutImages';
 import { heroVideo } from './branVideo';
-import { reactSVG, computer, javaIcon, team, teamIcon, certificate } from './aboutSVGs'
+import { reactSVG, computer, javaIcon, teamIcon, certificate } from './aboutSVGs'
 
 
 const AboutMe = () => {
@@ -193,7 +192,7 @@ const AboutMe = () => {
                             boxShadow: "1px 0px 0px #FD02D7",
                             textShadow: "0px 0px 7px 0px",
                         }}>
-                        <Link to="/resume" className='linkButton'>Resume</Link>
+                        <Link target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>
                     </motion.div>
                 </div>
             </motion.div>

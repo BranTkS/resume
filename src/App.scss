@@ -1,9 +1,9 @@
 $purple: rgb(42, 13, 227);
-$smallText: 1.5rem ;
-$headingText: 3rem ;
+$smallText: 1.5rem;
+$headingText: 3rem;
 
 //loading
-.Loading-page{
+.Loading-page {
   width: 100%;
   height: 100dvh;
   background-color: cyan;
@@ -13,7 +13,7 @@ $headingText: 3rem ;
 }
 
 //canvas
-#bg{
+#bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,57 +26,58 @@ $headingText: 3rem ;
   width: 100%;
   height: fit-content;
   margin: 0 0 0 0;
-  color:$purple;
+  color: $purple;
   text-align: center;
 }
 
-h1{
-font-size:$headingText;
+h1 {
+  font-size: $headingText;
 }
 
-p, li{
+p,
+li {
   font-size: $smallText;
 }
 
-.title{
-  text-decoration:underline;
+.title {
+  text-decoration: underline;
   padding-top: 7rem;
-  }
+}
 
-  //navbar
-  .outerNavbar{
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    max-width: 50%;
-    height: fit-content;
-    z-index: 10;
-  }
+//navbar
+.outerNavbar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  max-width: 50%;
+  height: fit-content;
+  z-index: 10;
+}
 
 
-  //header
+//header
 .nameHeader h1 {
-font-weight: bold;
+  font-weight: bold;
 }
 
 //link area
-.linkContent{
-  color:$purple
-  }
+.linkContent {
+  color: $purple
+}
 
 
 //contact area
 .contact {
-    border-top: solid $purple 1dvi;
+  border-top: solid $purple 1dvi;
 }
 
 @media screen and (min-width: 500px) {
 
-    //navbar
-    .outerNavbar{
-      width: 100%;
-      max-width: 100%;
-    }
+  //navbar
+  .outerNavbar {
+    width: 100%;
+    max-width: 100%;
+  }
 
 
 }

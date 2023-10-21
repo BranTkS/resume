@@ -1,126 +1,132 @@
 @import "./../PortfolioBody.scss";
 
-#projects{
+#projects {
     padding-bottom: 7rem;
     width: 100%;
     max-height: fit-content;
     overflow: hidden;
 
-    h3{
+    h3 {
         padding-top: 3rem;
         font-size: $subheadingText;
         width: 80%;
         text-align: left;
     }
 
-    p{
+    p {
         width: 100%;
         text-align: left;
         font-size: $extraSmallText;
         line-height: $extraSmallTextLineHeight !important;
 
-        img{
+        img {
             height: $smallText*0.7;
             width: auto;
             padding: 0px 5px 0px;
         }
     }
 
-    li{
+    li {
         list-style: none;
         font-size: $smallText*0.7;
         text-align: left;
 
-        svg, img{
+        svg,
+        img {
             height: $smallText * 1.1;
             width: auto;
             padding-bottom: 5px;
         }
     }
 
-    .website_stackList{
+    .website_stackList {
         display: grid;
         grid-auto-columns: 20%;
-        grid-template-areas: 
-        '. list_title list_title list_title list_title .'
-        'left_list left_list left_list right_list right_list right_list';
+        grid-template-areas:
+            '. list_title list_title list_title list_title .'
+            'left_list left_list left_list right_list right_list right_list';
 
-        h4{
+        h4 {
             grid-area: list_title;
         }
-        ul{
+
+        ul {
             padding-inline-start: 0px;
         }
 
-    .left_list{
-        grid-area: left_list;
-        padding-left: 0px;
-    }
+        .left_list {
+            grid-area: left_list;
+            padding-left: 0px;
+        }
 
-    .right_list{
-        grid-area: right_list;
+        .right_list {
+            grid-area: right_list;
+        }
     }
 }
-}
 
 
-.projects-grid-container{
+.projects-grid-container {
     display: grid;
     //grid-template-columns: repeat(12, 1fr);
-   // grid-template-rows: repeat(12, 1fr);
-   width: 100%;
-   gap: 1dvw;
+    // grid-template-rows: repeat(12, 1fr);
+    width: 100%;
+    gap: 1dvw;
     grid-auto-columns: 1fr;
-    grid-template-areas: 
-    '. project_title project_title project_title project_title .'
+    grid-template-areas:
+        '. project_title project_title project_title project_title .'
 
-    'head-image head-image  head-image  head-image head-image head-image'
+        'head-image head-image  head-image  head-image head-image head-image'
 
-    '. info-title info-title info-title info-title . '
-    '. info-one info-one info-one info-one . '
+        '. info-title info-title info-title info-title . '
+        '. info-one info-one info-one info-one . '
 
-    'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery '
+        'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery '
 
-    'info-title-two info-title-two info-title-two info-title-two info-title-two info-title-two'
+        'info-title-two info-title-two info-title-two info-title-two info-title-two info-title-two'
 
-    '. info-two info-two info-two info-two .'
+        '. info-two info-two info-two info-two .'
 
-    '. projectButtons projectButtons projectButtons projectButtons .';
+        '. projectButtons projectButtons projectButtons projectButtons .';
 }
 
-.ProjTitle{
+.ProjTitle {
     max-height: 3rem;
     grid-area: project_title;
     text-decoration: underline;
+    font-size: $subheadingText;
+    font-weight: 500;
+    margin-top: 12rem;
 }
 
-.head-image{
+
+.head-image {
     grid-area: head-image;
 }
 
 
-.info-title{
+.info-title {
     grid-area: info-title;
 }
 
-.info-one{
+.info-one {
     grid-area: info-one;
 }
 
-.second-gallery{
+.second-gallery {
     grid-area: second-gallery;
 }
 
-#projects .info-title-two{
+#projects .info-title-two {
     grid-area: info-title-two;
     width: 60%;
 }
 
-.info-two{
+.info-two {
     grid-area: info-two;
 }
 
-.projectButtons{
+.projectButtons {
     display: flex;
     gap: 1svh;
     justify-content: center;
@@ -134,95 +140,152 @@
 
 @media screen and (min-width: 500px) {
 
-    #projects{
-        
-        p{
-        font-size: $smallText;
+    #projects {
+
+        p {
+            font-size: $smallText;
         }
 
-        li{
-            
-            font-size: $smallText;
-            }
+        li {
 
-        .top_list{
+            font-size: $smallText;
+        }
+
+        .top_list {
             padding-inline-start: 0px;
         }
 
-    .website_stackList{
-        grid-area: full_stack;
-        padding: 3rem;
-        background-color: $accentColor;
-        border-radius: 3%;
-        grid-auto-columns: 25%;
-        grid-template-areas: 
-        'left_list . . right_list'
-        'left_list list_title list_title right_list'
-        'left_list . . right_list';
-
-        
-        li{
-            list-style: none;
-            font-size: $smallText;
+        .first_paragraph {
+            padding: 3rem;
+            background-color: $secondaryColor;
+            border-radius: 3%;
+            width: 80%;
         }
+
+        .second_paragraph {
+            padding: 3rem;
+            background-color: $accentColor;
+            border-radius: 3%;
+        }
+
+        .website_stackList {
+            grid-area: full_stack;
+            padding: 3rem;
+            background-color: $accentColor;
+            border-radius: 3%;
+            grid-auto-columns: 25%;
+            grid-template-areas:
+                'left_list . . right_list'
+                'left_list list_title list_title right_list'
+                'left_list . . right_list';
+
+
+            li {
+                list-style: none;
+                font-size: $smallText;
+            }
+        }
+
+
     }
 
+    .info-one {
+        .project_text {
+            grid-area: info-one;
+            display: grid;
+            gap: 1dvw;
+            grid-auto-columns: 20%;
+            grid-template-areas:
+                '. paragraph paragraph paragraph tagline'
 
-}
+                '. paragraph paragraph paragraph tagline'
 
-.info-one{
-.project_text{
-    grid-area: info-one;
-    display: grid;
-    gap: 1dvw;
-    grid-auto-columns: 20%;
-    grid-template-areas:
-    '. paragraph paragraph paragraph tagline'
-    
-    '. paragraph paragraph paragraph tagline'
-    
-    '. paragraph paragraph paragraph tagline'
-    
-    '. full_stack full_stack full_stack full_stack';
-}
+                '. paragraph paragraph paragraph tagline'
 
-}
+                '. full_stack full_stack full_stack full_stack';
+        }
 
-    .website_tagline{
+    }
+
+    .website_tagline {
         grid-area: tagline;
         background-color: $secondaryColor;
         border-radius: 5%;
         padding: 1rem;
     }
 
-    .website_paragraph{
+    .website_paragraph {
         grid-area: paragraph;
         background-color: $secondaryColorShade;
         border-radius: 3%;
         padding: 1rem;
     }
 
-.info-two{
-    grid-area: info-two;
-}
+    .info-two {
+        grid-area: info-two;
 
-    .projects-grid-container{
-        grid-template-areas: 
-        '. project_title project_title project_title project_title .'
-    
-        'head-image head-image  head-image  head-image head-image head-image'
-    
-        '. info-title info-title info-title info-title . '
-        
-        '. info-one info-one info-one info-one .'
-    
-        'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery'
-    
-        '. info-title-two info-title-two info-title-two info-title-two info-title-two'
-    
-        '. . info-two info-two info-two .'
-    
-        '. projectButtons projectButtons projectButtons projectButtons .';
+        .project_text {
+            grid-area: info-one;
+            display: grid;
+            gap: 1dvw;
+            grid-auto-columns: 20%;
+            grid-template-areas:
+                'paragraph paragraph paragraph full_stack full_stack'
+
+                'paragraph paragraph paragraph full_stack full_stack'
+
+                'paragraph paragraph paragraph full_stack full_stack'
+
+                'tagline tagline tagline full_stack full_stack';
+
+
+            .website_paragraph {
+                grid-area: paragraph;
+                background-color: $secondaryColorShade;
+                border-radius: 3%;
+                padding: 3rem;
+            }
+
+            .exit_paragraph {
+                grid-area: tagline;
+                background-color: $secondaryColor;
+                border-radius: 5%;
+                padding: 3rem;
+
+            }
+
+
+            .top_list {
+
+                h4 {
+                    text-decoration: underline;
+                }
+
+                grid-area: full_stack;
+                padding: 3rem;
+                background-color: $accentColor;
+                border-radius: 3%;
+            }
+        }
+    }
+
+    .projects-grid-container {
+        grid-template-areas:
+            '. project_title project_title project_title project_title .'
+
+            'head-image head-image  head-image  head-image head-image head-image'
+
+            '. info-title info-title info-title info-title . '
+
+            '. info-one info-one info-one info-one .'
+
+            'second-gallery second-gallery second-gallery second-gallery second-gallery second-gallery'
+
+            '. info-title-two info-title-two info-title-two info-title-two info-title-two'
+
+            '. . info-two info-two info-two .'
+
+            '. projectButtons projectButtons projectButtons projectButtons .';
     }
 
 }
