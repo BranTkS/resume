@@ -10,8 +10,10 @@ import {
     threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon, cSharpIcon
 } from './projectIcons'
 
-import { Link } from 'react-router-dom'
-//used at info 3
+import resumePdf from '../../Tanaka_B_Shumba_resume.pdf'
+import { downloadIcon } from '../imagesExports';
+
+//gallery scroll
 import Gallery from './gallery'
 import './projects.scss'
 
@@ -41,11 +43,12 @@ const Projects = () => {
 
     const resumeButton = <div className='linkButton'>
 
-        <Link target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>
+        {/*<Link /*target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>*/}
+        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}Resume</a>
     </div>;
 
     const seeMoreButton = <div className='linkButton'>
-        <a href='https://github.com/BranTkS' className='linkButton'>see more</a>
+        <a target="_blank" rel="noreferrer" href='https://github.com/BranTkS' className='linkButton'>see more</a>
     </div>;
 
     const androidStackList = <div className='top_list'>
