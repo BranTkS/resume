@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.scss'
-import FullResume from './components/FullResume'
+//import FullResume from './components/FullResume'
 import RenderScene from './components/canvasAnimation/RenderScene'
 import Portfolio from './components/portfolio';
 import Navbar from './components/portfolio/navbar/navbar';
@@ -33,7 +33,7 @@ const router = createBrowserRouter(
           </div>
         }
       />
-      <Route path="/resume" element={<FullResume />} />
+      {/*<Route path="/resume" element={<FullResume />} />*/}
     </Route>
   )
 )
@@ -45,7 +45,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 10000);
+    }, 3000);
 
   }, [])
 

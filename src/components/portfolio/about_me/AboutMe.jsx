@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom'
+
 import './aboutMe.scss'
+import resumePdf from '../../Tanaka_B_Shumba_resume.pdf'
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
-import { androidSVG } from '../imagesExports';
+import { androidSVG, downloadIcon } from '../imagesExports';
 import { heroVideo } from './branVideo';
 import { reactSVG, computer, javaIcon, teamIcon, certificate } from './aboutSVGs'
 
@@ -192,7 +193,9 @@ const AboutMe = () => {
                             boxShadow: "1px 0px 0px #FD02D7",
                             textShadow: "0px 0px 7px 0px",
                         }}>
-                        <Link target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>
+                        { /*<Link /*target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>*/
+                        }
+                        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}Resume</a>
                     </motion.div>
                 </div>
             </motion.div>
