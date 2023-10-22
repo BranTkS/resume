@@ -158,12 +158,12 @@ const Projects = () => {
                         {projectsData.title}
                     </motion.h2>
 
-                    <fragment className="head-image">{projectsData.headImg}</fragment>
+                    <div className="head-image">{projectsData.headImg}</div>
 
                     <motion.h3 className="info-title">{projectsData.infoTitle}</motion.h3>
                     <motion.div className="info-one">{projectsData.info}</motion.div>
 
-                    <fragment className="second-gallery">{projectsData.info3}</fragment>
+                    <div className="second-gallery">{projectsData.info3}</div>
                     <motion.h3 className="info-title-two">{projectsData.infoTitle2}</motion.h3>
                     <motion.div className="info-two">{projectsData.info2}</motion.div>
 

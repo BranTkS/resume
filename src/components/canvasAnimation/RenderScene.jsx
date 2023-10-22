@@ -66,8 +66,8 @@ const RenderScene = () => {
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial)
 
     //scenes
-    scene.add(torus, particlesMesh,);
-    scene.add(pointLight, ambientLight);
+    scene.add(torus, particlesMesh, pointLight, ambientLight);
+    //scene.add(pointLight, ambientLight);
     //scene.add(lightHelper);
     //scene.add(gridHelper);
 

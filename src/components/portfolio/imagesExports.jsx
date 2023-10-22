@@ -62,7 +62,7 @@ const reactPath = "M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3
 
 import downloadLogo from '../../assets/images/svgImages/download-svgrepo-com.svg'
 
-const downloadIcon = <img src={downloadLogo} alt='downloadLogo' width="30rem" />
+const downloadIcon = <img src={downloadLogo} alt='downloadLogo' width="20rem" />
 import tanLogo from '../../assets/images/images/nobg-BTSlogo.png'
 
 export {
