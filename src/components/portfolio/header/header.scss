@@ -189,7 +189,7 @@
     width: fit-content;
     padding-top: 0rem;
     grid-column: 1 / span 8;
-    grid-row: 3 / span 4;
+    grid-row: 2 / span 4;
     margin-block-start: 0em;
 
     p {
@@ -204,9 +204,8 @@
     font-size: 1.3rem;
     width: fit-content;
 
-    grid-column: 1 / span 2;
-    grid-row: 6 / span 2;
-    z-index: 11;
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 2;
 }
 
 

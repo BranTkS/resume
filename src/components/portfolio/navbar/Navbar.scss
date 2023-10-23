@@ -67,9 +67,9 @@
 
 
 .nav li:hover,
-.nav .active {
+.nav li.active {
     background-color: rgba(128, 128, 128, 0.57);
-    border-bottom: aqua;
+    border-bottom: 1px solid aqua;
 }
 
 .navLink {
