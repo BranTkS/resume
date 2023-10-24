@@ -46,17 +46,16 @@
     z-index: 11;
 
     #nav_email {
-        font-size: $extraSmallText*0.8;
+        font-size: $extraSmallText*0.7;
     }
 
     p {
         margin: 0px;
         color: $textColor;
         text-align: start;
-        font-size: $smallText*0.7;
-        cursor: pointer;
+        font-size: $extraSmallText*0.9;
+        padding-top: 1rem;
     }
-
 
 }
 
@@ -76,7 +75,7 @@
 
     .navIcon {
         float: left;
-        width: 3rem;
+        width: 2.5rem;
         height: auto;
         padding: 0.5rem 0.2rem 0px;
     }
@@ -114,16 +113,22 @@
         margin: 0px 0.3rem 0px;
         border-bottom: 1px solid gray;
 
+
         p {
             float: left;
             text-align: start;
             font-size: 0.7em;
+            padding-top: 0px;
         }
+
+        #nav_email {
+            font-size: $extraSmallText*0.8;
+        }
+
     }
 
-    .nav li:nth-child(4) p {
-        //nav contact me font size
-        font-size: 0.8em;
+    .nav li:nth-child(5) {
+        border-bottom: none;
     }
 
     .navLink {
@@ -132,6 +137,7 @@
         width: 100%;
 
         .navIcon {
+            display: none;
             width: 1.7rem;
             height: auto;
             padding: 0.1rem 0.2rem 0px;

@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { initialValueFromLeft, transitionValue } from '../animation'
+
 import { colorMenu, AboutColour, projectColor, contactColor } from '../imagesExports'
 import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 import './navbar.scss'
@@ -11,6 +15,10 @@ const Navbar = () => {
         windowWidth: window.innerWidth,
         windowHeight: window.innerHeight,
     })
+
+    const inviewAttributes = [{ threshold: 0.4 }]
+    const mainControls = useAnimation();
+    const { ref, inView } = useInView(inviewAttributes)
 
     //check if window size requires large navigation or small screen navigation
     const checkChange = () => {
@@ -56,10 +64,30 @@ const Navbar = () => {
         }
     }
 
+
+
+
+    useEffect(() => {
+        if (inView) {
+            mainControls.start({
+                opacity: 1, x: 0,
+            });
+        } else {
+            mainControls.start(initialValueFromLeft);
+        }
+
+        console.log("check 1", inView)
+
+    }, [inView, open]);
+
     const navMenu = () => {
         return (
-            <nav className='navbar'>
-                <ul className='nav'>
+            <nav className='navbar' ref={ref}>
+                <motion.ul className='nav'
+
+                    initial={initialValueFromLeft}
+                    animate={mainControls}
+                    transition={transitionValue}>
                     <li>
                         <Link to="hero" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                             < div className='navLink'>
@@ -103,7 +131,7 @@ const Navbar = () => {
                         </Link>
                     </li>
 
-                </ul>
+                </motion.ul>
             </nav>
         )
     }

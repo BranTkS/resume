@@ -1,7 +1,9 @@
 const initialValue = { opacity: 0, y: 75 };
+const initialValueFromLeft = { opacity: 0, x: 75 };
+
 const transitionValue = {
     duration: 1,
-    delay: 0.25,
+    delayChildren: 0.5,
     when: "beforeChildren",
     staggerChildren: 0.9
 };
@@ -38,4 +40,4 @@ const observer = new IntersectionObserver(
 sections.forEach(sections => { observer.observe(sections) }
 )
 
-export { initialValue, transitionValue, pageVariants }
+export { initialValue, initialValueFromLeft, transitionValue, pageVariants }
