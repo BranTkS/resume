@@ -47,6 +47,7 @@
                 'message message message message message'
                 '. text_area text_area text_area .'
                 '. . button . .'
+                '. success success success .'
             ;
 
             h2 {
@@ -101,7 +102,9 @@
         }
     }
 
-
+    .form_success_text {
+        grid-area: success;
+    }
 }
 
 
@@ -159,6 +162,7 @@
                     'message message'
                     'text_area text_area'
                     'button button'
+                    'success success'
                 ;
 
 

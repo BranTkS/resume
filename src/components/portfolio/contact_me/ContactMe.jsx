@@ -22,7 +22,9 @@ const ContactMe = () => {
     const inviewAttributes = [{ threshold: 0.4 }]
     const mainControls = useAnimation();
     const { ref, inView } = useInView(inviewAttributes)
-    const { submitConfirm, setSubmitConfirm } = useState(true)
+    const [submitConfirm, setSubmitConfirm] = useState(false)
+
+    const submitText = !submitConfirm ? ("") : (<p className="form_success_text">Succesfully sent!</p>)
 
     const sendEmail = (e) => {
         e.preventDefault(import.meta.env.REACT_APP_PUBLIC_KEY);
@@ -33,7 +35,6 @@ const ContactMe = () => {
             import.meta.env.VITE_REACT_APP_PUBLIC_KEY)
 
         setSubmitConfirm(false);
-
         setTimeout(() => {
             setSubmitConfirm(true)
         }, 1000);
@@ -85,7 +86,7 @@ const ContactMe = () => {
                         <h2>send me a message</h2>
                         <label htmlFor="from_name">Email*</label>
                         <input type="email" name="from_name" id="from_name" className="text_field" required />
-                        <label htmlFor="message">Message*:</label>
+                        <label htmlFor="message">Message*</label>
 
                         <textarea name="message" id="message" className="text_area" required></textarea>
 
@@ -104,7 +105,7 @@ const ContactMe = () => {
                                 <a className='linkButton'>Send</a>
                             </motion.div>
                         </motion.button>
-                        {submitConfirm && <p className="form_success_text">Succesfully sent!</p>}
+                        {submitText}
                     </form>
                 </motion.div>
             </motion.div>
