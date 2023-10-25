@@ -4,7 +4,7 @@ import './contactMe.scss'
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-import { useEffect, /*useState*/ } from "react";
+import { useEffect, useState, /*useState*/ } from "react";
 import { initialValue, transitionValue } from '../animation'
 
 import emailjs from '@emailjs/browser';
@@ -22,15 +22,22 @@ const ContactMe = () => {
     const inviewAttributes = [{ threshold: 0.4 }]
     const mainControls = useAnimation();
     const { ref, inView } = useInView(inviewAttributes)
+    const { submitConfirm, setSubmitConfirm } = useState(true)
 
     const sendEmail = (e) => {
         e.preventDefault(import.meta.env.REACT_APP_PUBLIC_KEY);
-        console.log(import.meta.env.REACT_APP_SERVICE_ID)
         emailjs.sendForm(
             import.meta.env.VITE_REACT_APP_SERVICE_ID,
             import.meta.env.VITE_REACT_APP_TEMPLATE_ID,
             e.target,
             import.meta.env.VITE_REACT_APP_PUBLIC_KEY)
+
+        setSubmitConfirm(false);
+
+        setTimeout(() => {
+            setSubmitConfirm(true)
+        }, 1000);
+
     };
 
 
@@ -97,6 +104,7 @@ const ContactMe = () => {
                                 <a className='linkButton'>Send</a>
                             </motion.div>
                         </motion.button>
+                        {submitConfirm && <p className="form_success_text">Succesfully sent!</p>}
                     </form>
                 </motion.div>
             </motion.div>

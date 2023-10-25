@@ -6,10 +6,10 @@ import { motion } from "framer-motion"
 const LoadingScreen = (loading) => {
 
     const svgVariants = {
-        hidden: { rotate: -180 },
+        hidden: { scale: 1 },
 
         visible: {
-            rotate: 0,
+            scale: 0.9,
             transition: {
                 duration: 3
             }
@@ -25,8 +25,10 @@ const LoadingScreen = (loading) => {
             pathLength: 1,
 
             transition: {
-                duration: 20,
-                ease: "easeInOut"
+                duration: 3,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
             }
         }
     }
@@ -40,8 +42,8 @@ const LoadingScreen = (loading) => {
 
 
     const loadingSVG =
-        <motion.div>
-            <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 450 1150"
+        <motion.div className="loadingSVG">
+            <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500" height="500" viewBox="0 0 1150 1350"
 
                 variants={svgVariants}
                 initial="hidden"
@@ -51,8 +53,8 @@ const LoadingScreen = (loading) => {
                 <motion.path d={loadingPath}
                     variants={pathVariants}
                     fill="transparent"
-                    strokeWidth="1"
-                    stroke="black"
+                    strokeWidth="3"
+                    stroke="#FC03D7"
                     strokeLinecap="round"
                 />
             </motion.svg>
