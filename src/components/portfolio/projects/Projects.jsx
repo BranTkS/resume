@@ -15,7 +15,6 @@ import { downloadIcon } from '../imagesExports';
 
 //gallery scroll
 import Gallery from './gallery'
-import './projects.scss'
 
 
 import { motion, useAnimation } from "framer-motion"
@@ -23,6 +22,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 
+import './projects.scss'
 
 const Projects = () => {
 

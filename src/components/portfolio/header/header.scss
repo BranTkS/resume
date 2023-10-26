@@ -78,6 +78,10 @@
     top: 33.5dvh;
     background-image: $black-gradient;
     z-index: 9;
+
+    a {
+        overflow: visible;
+    }
 }
 
 //hero image

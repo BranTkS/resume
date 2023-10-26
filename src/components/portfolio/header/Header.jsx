@@ -1,4 +1,6 @@
 import './header.scss'
+//gallery scroll
+import { welcomeText } from './welcomeScroller';
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
@@ -7,6 +9,7 @@ import { initialValue, transitionValue } from '../animation'
 import { Link } from 'react-scroll'
 
 import { heroPhoto } from '../imagesExports'
+import HeaderGallery from './headerGallery';
 
 
 
@@ -16,6 +19,9 @@ const Header = () => {
     const mainControls = useAnimation();
     const { ref, inView } = useInView(inviewAttributes)
 
+    const welcomeScroller = <HeaderGallery
+        welcomeGallery={welcomeText}
+    />
 
     const buttonVarriant = {
         hidden: {
@@ -104,14 +110,15 @@ const Header = () => {
                     </motion.div>
 
                     <motion.div className='line1'>
-                        <h2>Welcome</h2>
+                        {welcomeScroller}
                     </motion.div>
 
                     <motion.div className='line2'>
-                        <h2> welcome</h2>
+                        {welcomeScroller}
                     </motion.div>
+
                     <motion.div className='line3'>
-                        <h2> welcome</h2>
+                        {welcomeScroller}
                     </motion.div>
 
                     <motion.div className='hiText'>
