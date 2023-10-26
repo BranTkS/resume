@@ -17,8 +17,14 @@ function App() {
 
   useEffect(() => {
     setLoading(true)
-    window.addEventListener("load", pageLoaded);
-    return () => window.removeEventListener("load", pageLoaded);
+    if (document.readyState === "complete") {
+      setLoading(false)
+    } else {
+      window.addEventListener("load", pageLoaded);
+
+
+      return () => window.removeEventListener("load", pageLoaded)
+    }
 
   }, [])
 

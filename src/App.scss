@@ -15,8 +15,13 @@ $headingText: 3rem;
   flex-direction: column;
 
   .loadingSVG {
-    width: fit-content;
+    width: 100%;
     height: 20%;
+
+    svg {
+      width: 80%;
+      height: auto;
+    }
   }
 }
 
@@ -87,5 +92,9 @@ li {
     max-width: 100%;
   }
 
+  .Loading-page .loadingSVG svg {
+    width: 45%;
+    height: auto;
+  }
 
 }

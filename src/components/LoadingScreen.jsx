@@ -43,7 +43,7 @@ const LoadingScreen = (loading) => {
 
     const loadingSVG =
         <motion.div className="loadingSVG">
-            <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500" height="500" viewBox="0 0 1150 1350"
+            <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1150 1350"
 
                 variants={svgVariants}
                 initial="hidden"
