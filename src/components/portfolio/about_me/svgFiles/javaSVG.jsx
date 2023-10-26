@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-import javaSVG from '../../../assets/images/svgImages/projectSVGs/java-4.svg'
+import javaSVG from '../../../../assets/images/svgImages/projectSVGs/java-4.svg'
 
 
 

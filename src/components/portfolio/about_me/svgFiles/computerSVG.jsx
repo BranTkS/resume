@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { computerSVG } from '../imagesExports'
+import { computerSVG } from '../../imagesExports'
 
 const pathVariants = {
     hidden: {

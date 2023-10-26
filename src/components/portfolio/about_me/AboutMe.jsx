@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { initialValue, transitionValue } from '../animation'
 import { androidSVG, downloadIcon } from '../imagesExports';
 import { heroVideo } from './branVideo';
-import { reactSVG, computer, javaIcon, teamIcon, certificate } from './aboutSVGs'
+import { reactSVG, computer, javaIcon, teamIcon, certificate } from './svgFiles/aboutSVGs'
 
 
 const AboutMe = () => {
@@ -195,7 +195,7 @@ const AboutMe = () => {
                         }}>
                         { /*<Link /*target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>*/
                         }
-                        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}Resume</a>
+                        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}R&eacute;sum&eacute;</a>
                     </motion.div>
                 </div>
             </motion.div>

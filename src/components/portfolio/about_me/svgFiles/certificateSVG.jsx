@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { certificateSVG } from '../imagesExports'
+import { certificateSVG } from '../../imagesExports'
 
 //certificate
 

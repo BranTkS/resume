@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
-import { androidSVG, reactPath, certificateSVG, frontTeamSVG, backTeamSVG } from '../imagesExports'
+import { androidSVG, reactPath, certificateSVG, frontTeamSVG, backTeamSVG } from '../../imagesExports'
 import { certificate } from './certificateSVG'
 import { computer } from './computerSVG'
 import { signature } from './signatureSVG'
 import { javaSVG, javaIcon } from './javaSVG'
-import teamSVG from '../../../assets/images/svgImages/projectSVGs/users.svg'
+import teamSVG from '../../../../assets/images/svgImages/projectSVGs/users.svg'
 
 const svgVariants = {
     hidden: { rotate: -180 },

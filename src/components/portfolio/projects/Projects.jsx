@@ -5,10 +5,10 @@ import {
     //filler images
     rawGymImage, safriviewNoBgImage
 
-} from './imagesData'
+} from './projectData/imagesData'
 import {
     threejsIcon, sassIcon, reactIcon, expressIcon, figmaIcon, javaIcon, JoomlaIcon, JqueryIcon, kotlinIcon, mongoIcon, nodejsIcon, phpIcon, sqlIcon, WordPressIcon, framerIcon, firebaseIcon, cSharpIcon
-} from './projectIcons'
+} from './projectData/projectIcons'
 
 import resumePdf from '../../Tanaka_B_Shumba_resume.pdf'
 import { downloadIcon } from '../imagesExports';
@@ -44,7 +44,7 @@ const Projects = () => {
     const resumeButton = <div className='linkButton'>
 
         {/*<Link /*target="_blank" rel="noreferrer" to="/resume" className='linkButton'>Resume</Link>*/}
-        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}Resume</a>
+        <a target="_blank" rel="noreferrer" href={resumePdf} download="Tanaka B Shumba resume" className='linkButton'>{downloadIcon}R&eacute;sum&eacute;</a>
     </div>;
 
     const seeMoreButton = <div className='linkButton'>
@@ -70,7 +70,7 @@ const Projects = () => {
     </>
 
     const websiteStackList = <div className='website_stackList'>
-        <h4>The tech stacks included</h4>
+        <h4>Other tech stacks included</h4>
         <ul className='left_list'>
             <li>{mongoIcon}mongo db</li>
             <li>{expressIcon}ExpresJS</li>
@@ -117,7 +117,7 @@ const Projects = () => {
             headImg: <Gallery
                 graphicsGallery={websiteGallery}
             />,
-            title: 'Repo websites and applications',
+            title: 'Websites and applications',
             infoTitle: 'Websites I made include...',
             info: <div className='project_text'><div className='website_tagline'><p >This very website which I made using </p>{portfolioStack}</div> <p className='website_paragraph'>Several websites which I created during my freelance carreer, including a website for a gym{rawGymImage}, multiple blogs, portfolios, several construction companies, restaurants, a consultancy and an online news site{safriviewNoBgImage}. I also occasionally worked in teams where I worked on various components of websites </p>{websiteStackList}</div>,
 
@@ -138,7 +138,7 @@ const Projects = () => {
             />,
             title: 'Graphic design',
             infoTitle: 'I designed...',
-            info: <p>Logos, banners, fliers and any necessary design work for clients as well as some video editing. I`&apos;`ve learned to use many tools, applications and resources to get the job done. Check the links below to see more Project samples.</p>,
+            info: <p>Logos, banners, fliers and any necessary design work for clients as well as some video editing. I&apos;ve learned to use many tools, applications and resources to get the job done. Check the links below to see more Project samples.</p>,
             info2: '',
             info3: '',
 

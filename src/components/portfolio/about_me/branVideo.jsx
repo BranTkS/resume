@@ -2,7 +2,7 @@ import tanVid from '../../../assets/videos/profileVideo.mp4'
 import tanLogo from '../../../assets/images/images/nobg-BTSlogo.png'
 
 import { motion } from "framer-motion"
-import { signature } from './aboutSVGs'
+import { signature } from './svgFiles/aboutSVGs'
 
 
 
