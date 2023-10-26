@@ -71,7 +71,7 @@
     //grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: repeat(12, 1fr);
     width: 100%;
-    gap: 1dvw;
+    gap: 1vw;
     grid-auto-columns: 1fr;
     grid-template-areas:
         '. project_title project_title project_title project_title .'
@@ -114,6 +114,22 @@
 
 .info-one {
     grid-area: info-one;
+
+    project_text {
+        grid-area: info-one;
+        display: grid;
+        gap: 1vw;
+        grid-auto-columns: 20%;
+        grid-template-areas:
+            '. paragraph paragraph paragraph tagline'
+
+            '. paragraph paragraph paragraph tagline'
+
+            '. paragraph paragraph paragraph tagline'
+
+            '. full_stack full_stack full_stack full_stack';
+    }
+
 }
 
 .second-gallery {
@@ -131,7 +147,7 @@
 
 .projectButtons {
     display: flex;
-    gap: 1svh;
+    gap: 1vh;
     justify-content: center;
     grid-area: projectButtons;
 }
@@ -196,7 +212,7 @@
         .project_text {
             grid-area: info-one;
             display: grid;
-            gap: 1dvw;
+            gap: 1vw;
             grid-auto-columns: 20%;
             grid-template-areas:
                 '. paragraph paragraph paragraph tagline'
@@ -207,7 +223,6 @@
 
                 '. full_stack full_stack full_stack full_stack';
         }
-
     }
 
     .website_tagline {
@@ -230,7 +245,7 @@
         .project_text {
             grid-area: info-one;
             display: grid;
-            gap: 1dvw;
+            gap: 1rem;
             grid-auto-columns: 20%;
             grid-template-areas:
                 'paragraph paragraph paragraph full_stack full_stack'

@@ -59,7 +59,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2 10%, #FD02D7 90%);
 
     section {
         font-family: $bodyFont;
-        margin-top: 10dvw;
+        margin-top: 10vw;
         width: 100%;
         height: fit-content;
         color: $textColor;
@@ -102,7 +102,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2 10%, #FD02D7 90%);
         }
 
         p {
-            padding-top: 1.7dvh;
+            padding-top: 1.7vh;
         }
     }
 
@@ -116,7 +116,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2 10%, #FD02D7 90%);
 
     //projects
     .projects p {
-        padding-top: 1.7dvh;
+        padding-top: 1.7vh;
     }
 
 
@@ -133,7 +133,7 @@ $primary-gradient-alt-one: linear-gradient(150deg, #C15DF2 10%, #FD02D7 90%);
 
         section {
             margin-top: 10vw;
-            min-height: 20dvh;
+            min-height: 20vh;
             width: 100%;
 
             div {

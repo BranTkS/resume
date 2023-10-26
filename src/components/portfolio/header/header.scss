@@ -3,11 +3,11 @@
 
 
 #header {
-    min-height: 100svh;
+    min-height: 100vh;
     height: fit-content;
     width: 100%;
     margin-top: 0px;
-    padding-bottom: 120dvh;
+    padding-bottom: 70rem;
 }
 
 .hero {
@@ -75,19 +75,20 @@
 }
 
 .hero-image-container {
-    top: 33.5dvh;
+    top: 17.5rem;
     background-image: $black-gradient;
     z-index: 9;
+    padding-bottom: 2rem;
 
     a {
-        overflow: visible;
+        overflow: visible !important;
     }
 }
 
 //hero image
 .profile-image {
     height: auto;
-    width: 100dvw;
+    width: 100vw;
     max-width: 50vh;
     border-bottom: 4rem solid black;
 }
@@ -103,7 +104,7 @@
 .heroText {
     font-size: 0.7rem;
     width: 100%;
-    height: 80dvh;
+    height: 80vh;
     padding-left: 0em;
 
     display: grid;
@@ -224,8 +225,9 @@
     //header
     #header {
         margin-top: 5rem;
-        min-height: 70svh;
+        min-height: 70vh;
         width: 100%;
+        padding-bottom: 43rem;
     }
 
     .hero {
@@ -234,7 +236,7 @@
     }
 
     .heroText {
-        height: 80dvh;
+        height: 80vh;
     }
 
     .heroText {
@@ -309,7 +311,7 @@
 
 
     .hero-image-container {
-        top: 10.5dvh;
+        top: 4.5rem;
         width: 100%;
         background-image: $black-gradient;
         z-index: 9;
@@ -324,7 +326,7 @@
     //hero image
     .profile-image {
         height: auto;
-        width: 190dvw;
+        width: 190vw;
         max-width: 60vh;
         border-bottom: 4rem solid black;
     }
