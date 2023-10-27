@@ -109,7 +109,7 @@
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 4rem);
 }
 
 .hero-title {
@@ -236,13 +236,11 @@
     }
 
     .heroText {
-        height: 80vh;
-    }
-
-    .heroText {
         text-align: start;
+        height: 80vh;
         width: 100%;
         padding-left: 3em;
+        grid-template-rows: repeat(12, 1fr);
 
         .hero-name,
         .shumba,
