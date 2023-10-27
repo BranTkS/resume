@@ -1,6 +1,7 @@
 @import "./../PortfolioBody.scss";
 
 #bottomScroller {
+    background-color: $backgroundColor;
 
     .artGallery div h2 {
         width: fit-content;
