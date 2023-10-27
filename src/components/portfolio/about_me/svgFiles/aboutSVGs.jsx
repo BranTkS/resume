@@ -53,7 +53,7 @@ const reactSVG = <motion.div className="motion-SVG">
             variants={pathVariants}
             fill="transparent"
             strokeWidth="3"
-            stroke="#EEAC07"
+            stroke="rgb(0, 119, 255)"
             strokeLinecap="round"
         />
     </motion.svg>

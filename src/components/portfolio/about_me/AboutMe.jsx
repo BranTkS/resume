@@ -106,26 +106,26 @@ const AboutMe = () => {
 
                     <div>
                         <div className='snippets'>
-                            <div className='left-SVG'>
+                            <div className='java_SVG'>
                                 {javaIcon}
                             </div>
-                            <div className='right'>
+                            <div className='first_paragraph'>
                                 <p>
                                     I completed umuzis java bootcamp and was among the top learners to pass through the bootcamp.
                                 </p>
                             </div>
 
-                            <div className='left'>
+                            <div className='second_paragraph'>
                                 <p>
                                     Created websites for clients and self education and participated in challenges to build react websites and android applications.
                                 </p>
                             </div>
-                            <div className='right-SVG'>
+                            <div className='react_SVG'>
                                 {reactSVG}
                             </div>
-                            <div className='left-SVG'>
+                            <div className='android_SVG'>
                                 <motion.div>
-                                    <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"
+                                    <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="5 0 55 55"
 
                                         variants={svgVariants}
                                         initial="hidden"
@@ -141,35 +141,35 @@ const AboutMe = () => {
                                     </motion.svg>
                                 </motion.div>
                             </div>
-                            <div className='right'>
+                            <div className='third_paragraph'>
                                 <p>
                                     Accomplished in various roles within the restaurant industry, exemplifying my ability to excel in dynamic environments and work efficiently.
                                 </p>
                             </div>
 
-                            <div className='left'>
+                            <div className='fourth_paragraph'>
                                 <p>
                                     Thanks to my hardworking nature  I advanced to assistant manager and manager positions in a short span of time and at a young age, where I trained numerous groups of diverse team members, primarily for management roles and service roles.
                                 </p>
                             </div>
-                            <div className='right-SVG'>
+                            <div className='computer_SVG'>
                                 {computer}
                             </div>
-                            <div className='left-SVG'>
+                            <div className='team_SVG'>
                                 {teamIcon}
                             </div>
-                            <div className='right'>
+                            <div className='fifth_paragraph'>
                                 <p>
                                     I Thrive in high-pressure settings, and I maintain a friendly, team-oriented mentality, I hope these  qualities will translate well to the demands of the IT industry.
                                 </p>
                             </div>
 
-                            <div className='left'>
+                            <div className='sixth_paragraph'>
                                 <p>
                                     Due to my desire to continually learn and improve, I have been learning and mastering new languages and technologies through various courses and programs.
                                 </p>
                             </div>
-                            <div className='right-SVG'>
+                            <div className='certificate_SVG'>
                                 {certificate}
                             </div>
                         </div>

@@ -104,10 +104,99 @@ section {
         overflow: visible;
     }
 
+    //boards grid
     .snippets {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        //grid-template-columns: repeat(12, 1fr);
         text-align: start;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        gap: 1rem;
+        grid-auto-columns: 15.5%;
+        grid-template-areas:
+            'first_paragraph first_paragraph first_paragraph java_svg react_SVG react_SVG'
+
+            'third_paragraph  third_paragraph android_SVG android_SVG second_paragraph second_paragraph '
+
+
+            ' fifth_paragraph fifth_paragraph fifth_paragraph team_SVG computer_SVG computer_SVG '
+
+            'fourth_paragraph fourth_paragraph fourth_paragraph certificate_SVG sixth_paragraph sixth_paragraph'
+
+
+        ;
+
+        div {
+            padding: 3rem;
+            border-radius: 5%;
+        }
+    }
+
+    .java_SVG {
+        grid-area: java_svg;
+    }
+
+    .first_paragraph {
+        grid-area: first_paragraph;
+        background-color: $secondaryColor;
+    }
+
+    .second_paragraph {
+        grid-area: second_paragraph;
+        background-color: $secondaryColorShade;
+    }
+
+    .react_SVG {
+        grid-area: react_SVG;
+    }
+
+    .android_SVG {
+        grid-area: android_SVG;
+        background-color: $accentColor;
+    }
+
+    .third_paragraph {
+        grid-area: third_paragraph;
+    }
+
+    .computer_SVG {
+        grid-area: computer_SVG;
+    }
+
+    .fourth_paragraph {
+        grid-area: fourth_paragraph;
+        background-color: $accentColor;
+    }
+
+    .fifth_paragraph {
+        grid-area: fifth_paragraph;
+        background-color: $backgroundColoraccent;
+    }
+
+    .team_SVG {
+        grid-area: team_SVG;
+        background-color: $backgroundColor;
+    }
+
+    .sixth_paragraph {
+        grid-area: sixth_paragraph;
+        background-color: $secondaryColor;
+    }
+
+    .certificate_SVG {
+        grid-area: certificate_SVG;
+
+        .motion-SVG {
+            padding: 0px;
+        }
+    }
+
+    //first and last center aligned areas.
+    .center {
+        text-align: left;
+        max-width: 70%;
     }
 
     .right,
@@ -115,7 +204,7 @@ section {
         padding-bottom: 3rem;
     }
 
-
+    /*
     .left {
         grid-column: 2 / span 6;
         max-width: 100%;
@@ -124,11 +213,6 @@ section {
     .right {
         grid-column: 6 / span 6;
         max-width: 100%;
-    }
-
-    center {
-        text-align: left;
-        max-width: 70%;
     }
 
     .right-SVG {
@@ -140,7 +224,7 @@ section {
         grid-column: 2 / span 4;
 
     }
-
+*/
     svg {
         width: 7.5rem;
         height: 7.5rem;
@@ -164,7 +248,7 @@ section {
     #about {
         width: 100%;
         float: right;
-        padding: 0px 0px 12rem 12%;
+        padding: 0px 0px 12rem 0px;
 
         div {
             font-size: 1.3rem;
@@ -191,9 +275,25 @@ section {
             }
         }
 
-
+        //mobile boards grid
         .snippets {
             padding-bottom: 3rem;
+
+            /*
+            grid-template-areas:
+                'first_paragraph first_paragraph first_paragraph first_paragraph java_svg java_svg'
+
+                'react_SVG react_SVG second_paragraph second_paragraph second_paragraph second_paragraph'
+
+                'third_paragraph third_paragraph third_paragraph third_paragraph android_SVG android_SVG'
+
+                'computer_SVG computer_SVG fourth_paragraph fourth_paragraph fourth_paragraph fourth_paragraph'
+
+                'fifth_paragraph fifth_paragraph fifth_paragraph fifth_paragraph team_SVG team_SVG'
+
+                'certificate_SVG certificate_SVG sixth_paragraph sixth_paragraph sixth_paragraph sixth_paragraph'
+            ;
+        */
         }
 
         .right,
@@ -206,6 +306,7 @@ section {
             max-width: 100% !important;
         }
 
+        /*
         .right {
             grid-column: 7/ span 5;
         }
@@ -223,7 +324,7 @@ section {
             grid-column: 3/ span 2;
 
         }
-
+*/
         svg {
             width: 15rem;
             height: 15rem;

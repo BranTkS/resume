@@ -68,7 +68,7 @@
 .nav li:hover,
 .nav li.active {
     background-color: rgba(128, 128, 128, 0.57);
-    border-bottom: 1px solid aqua;
+    border-bottom: 1px solid $secondaryAccent;
 }
 
 .navLink {
