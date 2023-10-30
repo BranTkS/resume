@@ -116,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $backgroundColor;
 
     .spacer .linkButton {
         justify-content: center;
@@ -149,9 +150,8 @@
         .contactForm {
 
             background-color: $backgroundColoraccent;
-            border-radius: 5%;
             padding: 1rem;
-            width: 30%;
+            width: 100%;
             margin-left: 50%;
             transform: translate(-50%, 0);
 
@@ -171,18 +171,19 @@
                 .text_area,
                 .text_field {
                     border: 1px solid $secondaryColorShade;
+                    width: 30%;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
 
                 .text_area {
                     height: 5rem;
                     font-size: $smallText;
-                    width: 100%;
                 }
 
                 .text_field {
                     height: 3rem;
                     font-size: $smallText;
-                    width: 100%;
                 }
 
             }
@@ -190,7 +191,7 @@
     }
 
     #footer {
-        margin-top: 23%;
+        margin-top: 30%;
     }
 
     .footerIcons {
