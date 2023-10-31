@@ -7,17 +7,17 @@ const FooterGallery = (welcomeGallery) => {
 
     const GraphicsData = Array.from(welcomeGallery.welcomeGallery)
 
-    const [width, setWidth] = useState(0);
+    const [footerWidth, setFooterWidth] = useState(0);
     const gallery = useRef();
 
     useEffect(() => {
-        setWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
+        setFooterWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
     }, [])
 
 
     const Galleryvariant = {
         galleryRoll: {
-            x: -width,
+            x: -footerWidth,
 
             transition: {
                 x: {
@@ -59,7 +59,7 @@ const FooterGallery = (welcomeGallery) => {
                         whileTap={{ cursor: "grabbing" }}
                         dragConstraints={{
                             right: 0,
-                            left: -width
+                            left: -footerWidth
                         }}
 
                         variants={Galleryvariant}

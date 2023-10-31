@@ -1,6 +1,6 @@
 import './headerGallery.scss'
 import { useEffect, useRef, useState } from 'react'
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
 
 const HeaderGallery = (welcomeGallery) => {
@@ -8,17 +8,17 @@ const HeaderGallery = (welcomeGallery) => {
 
     const GraphicsData = Array.from(welcomeGallery.welcomeGallery)
 
-    const [width, setWidth] = useState(0);
+    const [welcomeWidth, setWelcomeWidth] = useState(0);
     const gallery = useRef();
 
     useEffect(() => {
-        setWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
+        setWelcomeWidth(gallery.current.scrollWidth - gallery.current.offsetWidth);
     }, [])
 
 
     const Galleryvariant = {
         galleryRoll: {
-            x: -width,
+            x: -welcomeWidth,
 
             transition: {
                 x: {
@@ -60,7 +60,7 @@ const HeaderGallery = (welcomeGallery) => {
                         whileTap={{ cursor: "grabbing" }}
                         dragConstraints={{
                             right: 0,
-                            left: -width
+                            left: -welcomeWidth
                         }}
 
                         variants={Galleryvariant}
