@@ -8,7 +8,7 @@ const javaPath = "M277.74 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-4
 
 const svgVariants = {
     hidden: {
-        scale: 1
+        scale: 0.7
     },
 
     visible: {
